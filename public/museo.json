@@ -1762,5 +1762,26 @@
   "notas": "",
   "creado": 84,
   "editado": 84
+ },
+ {
+  "id": "p085",
+  "equipo": "Selección Uruguaya",
+  "tipo": "Selección",
+  "pais": "Uruguay",
+  "temporada": "2026",
+  "version": "",
+  "tieneNumero": true,
+  "dorsal": "14",
+  "tieneParches": true,
+  "parches": "Mundial 2026",
+  "regaloDe": "Agustín Canobbio",
+  "nacionalidad": "Uruguay",
+  "color1": "#5bc8ff",
+  "color2": "#111111",
+  "patron": "cuello",
+  "escudo": "uruguay",
+  "notas": "Mundial 2026, fase de grupos: Uruguay 0-1 España, 26 de junio de 2026 en Guadalajara. Canobbio fue expulsado en el final del partido.",
+  "creado": 85,
+  "editado": 85
  }
 ]
