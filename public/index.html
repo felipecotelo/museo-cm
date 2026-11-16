@@ -426,6 +426,24 @@ textarea.inp{min-height:80px;resize:vertical}
   function inp(id,v,ph){var i=el('input','inp');i.type='text';i.id=id;i.value=v||'';if(ph)i.placeholder=ph;return i}
   function fld(lbl,node,full,forId){var f=el('div','fld'+(full?' full':''));var l=el(forId?'label':'span',forId?null:'lbl',lbl);if(forId)l.htmlFor=forId;add(f,l,node);return f}
 
+  /* ---- orden de llegada ---- */
+  function orderSelect(id,curId){
+    var full=numbered(),all=full.filter(function(x){return x.id!==curId});
+    var s=el('select','inp');s.id=id;
+    function opt(v,t){var o=el('option',null,t);o.value=v;s.appendChild(o)}
+    opt('__first','Fue la primera de todas');
+    all.forEach(function(x){opt(x.id,'Después de N.º '+pad(x._n)+' · '+x.equipo+(x.temporada?' '+x.temporada:'')+' · '+(x.regaloDe||''))});
+    var def=all.length?all[all.length-1].id:'__first';
+    if(curId){var i=full.map(function(x){return x.id}).indexOf(curId);def=i>0?full[i-1].id:'__first'}
+    s.value=def;return s;
+  }
+  function creadoAfter(v,curId){
+    var all=numbered().filter(function(x){return x.id!==curId});
+    if(v==='__first')return (all.length?(all[0].creado||1):1)-1;
+    var i=all.map(function(x){return x.id}).indexOf(v);if(i<0)return (all.length?all[all.length-1].creado:0)+1;
+    var a=all[i].creado||0,b=all[i+1]?all[i+1].creado:null;return b==null?a+1:(a+b)/2;
+  }
+
   /* ---- ficha con completar ---- */
   var ov=document.getElementById('ov');
   function closeSheet(){ov.hidden=true;ov.textContent='';st.current=null}
@@ -458,6 +476,8 @@ textarea.inp{min-height:80px;resize:vertical}
     add(fillBox,fld('¿Tiene parches?',prr));
     var notas=el('textarea','inp');notas.id='c-notas';notas.value=r.notas||'';notas.placeholder='Algo para recordar de esta camiseta';notas.addEventListener('input',function(){save({notas:notas.value.trim()})});
     add(fillBox,fld('Notas',notas,false,'c-notas'));
+    var ord=orderSelect('c-orden',r.id);ord.addEventListener('change',function(){flush();msg.className='msg';msg.textContent='Guardando…';col.doc(r.id).update({creado:creadoAfter(ord.value,r.id),editado:Date.now()}).then(function(){openSheet(r.id,soloFaltan)}).catch(function(){msg.className='msg err';msg.textContent='No se pudo guardar. Probá de nuevo.'})});
+    add(fillBox,fld('Orden de llegada',ord,false,'c-orden'));
     add(b,fillBox);
     // navegación
     var list=soloFaltan?all.filter(function(x){return missing(x).length||x.id===r.id}):all;
@@ -515,6 +535,7 @@ textarea.inp{min-height:80px;resize:vertical}
     foto.addEventListener('change',function(){v.file=foto.files&&foto.files[0]||null;if(v.file)v.quitarFoto=false;draw()});
     draw();
     var notas=el('textarea','inp');notas.id='f-notas';notas.value=r.notas||'';notas.placeholder='La historia de la camiseta';
+    var ord=orderSelect('f-orden',ed?ed.id:null);
     var acts=el('div','actions');var save=el('button','btn',ed?'Guardar cambios':'Sumar al museo');save.type='submit';
     var cancel=el('button','btn ghost','Cancelar');cancel.type='button';cancel.addEventListener('click',function(){st.editing=null;go('vitrina')});
     var msg=el('span','msg');add(acts,save,cancel,msg);
@@ -522,7 +543,7 @@ textarea.inp{min-height:80px;resize:vertical}
       fld('País del club',pais,false,'f-pais'),fld('Año',anio,false,'f-anio'),
       fld('Jugador que la regaló',jug,false,'f-jugador'),fld('Nacionalidad del jugador',nac,false,'f-nac'),
       fld('Versión',seg(VERSIONES,v.version,function(x){v.version=x}),true),
-      fld('¿Tiene número?',nr),fld('¿Tiene parches?',prr),des,fld('Notas',notas,true,'f-notas'),acts);
+      fld('¿Tiene número?',nr),fld('¿Tiene parches?',prr),fld('Orden de llegada',ord,true,'f-orden'),des,fld('Notas',notas,true,'f-notas'),acts);
     f.addEventListener('submit',function(e){
       e.preventDefault();msg.className='msg';
       if(!equipo.value.trim()){msg.className='msg err';msg.textContent='Falta el club o la selección.';equipo.focus();return}
@@ -532,7 +553,7 @@ textarea.inp{min-height:80px;resize:vertical}
       var maxC=DATA.reduce(function(m,x){return Math.max(m,x.creado||0)},0);
       var d={equipo:equipo.value.trim(),tipo:v.tipo,pais:pais.value.trim(),temporada:anio.value.trim(),version:v.version||'',tieneNumero:v.tieneNumero,dorsal:v.tieneNumero?dor.value.trim():'',tieneParches:v.tieneParches,parches:v.tieneParches?par.value.trim():'',
         regaloDe:jug.value.trim(),nacionalidad:nac.value.trim(),color1:c1.value,color2:c2.value,patron:v.patron,escudo:escFor(),notas:notas.value.trim(),
-        fotoId:ed&&!v.quitarFoto?(ed.fotoId||''):'',fotoUrl:ed&&!v.quitarFoto?(ed.fotoUrl||''):'',creado:ed?(ed.creado||maxC+1):maxC+1,editado:Date.now()};
+        fotoId:ed&&!v.quitarFoto?(ed.fotoId||''):'',fotoUrl:ed&&!v.quitarFoto?(ed.fotoUrl||''):'',creado:creadoAfter(ord.value,ed?ed.id:null),editado:Date.now()};
       var up=Promise.resolve();
       up.then(function(){var id=ed?ed.id:'c'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);return col.doc(id).set(d).then(function(){return id})})
         .then(function(id){st.editing=null;go('vitrina');setTimeout(function(){openSheet(id)},250)})
@@ -584,7 +605,7 @@ textarea.inp{min-height:80px;resize:vertical}
       a.download='museo-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)});
     add(d,b);add(bar,d);
   }
-  fetch('museo.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){BASE=Array.isArray(j)?j:[]}).catch(function(){BASE=[]}).then(function(){st.loaded=true;refresh()});
+  fetch('museo.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){BASE=Array.isArray(j)?j:[]}).catch(function(){BASE=[]}).then(function(){st.loaded=true;refresh();if(st.tab==='nueva')renderNueva()});
 })();
 </script>
 </body>
