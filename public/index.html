@@ -55,7 +55,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .btn.danger{background:rgba(248,113,113,.14);color:#fecaca;border:1px solid rgba(248,113,113,.45)}
 .btn[disabled]{opacity:.45;pointer-events:none}
 .sel{padding:8px 12px;border-radius:999px;border:1px solid var(--line2);background:var(--bg);color:var(--mut);font-size:12px}
-.flag{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-size:1.05em;line-height:1}
+.flag{width:18px;height:12px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(255,255,255,.18);flex:none;display:inline-block;vertical-align:middle}
 .crest{width:22px;height:22px;object-fit:contain;flex:none}
 
 /* perchero */
@@ -218,7 +218,7 @@ textarea.inp{min-height:80px;resize:vertical}
   var PATRONES=[['lisa','Lisa'],['rayas','Rayas'],['aros','Aros'],['mitad','Mitades'],['banda','Banda ↘'],['bandaI','Banda ↗'],['cuello','Cuello y mangas']];
   var ESC=['athletico-paranaense','atletico-mineiro','boavista','cerrito','danubio','espanyol','extremadura','flamengo','galatasaray','getafe','inter','juarez','junior','juventud-de-las-piedras','kitchee','liga-de-quito','liverpool-montevideo','liverpool','malaga','minnesota-united','nacional','newell-s','olimpo-de-bahia-blanca','osmanlspor','palmeiras','penarol','plaza-colonia','progreso','racing','rampla-juniors','rayo-vallecano','real-madrid','river-plate','san-marcos-de-arica','santos','sporting-braga','sporting-lisboa','sud-america','talleres','tenerife','uruguay','valladolid','vasco-da-gama','villa-teresa','wanderers','wolves','xanthi'];
   var ISO={'uruguay':'UY','argentina':'AR','brasil':'BR','espana':'ES','portugal':'PT','italia':'IT','turquia':'TR','grecia':'GR','chile':'CL','colombia':'CO','ecuador':'EC','mexico':'MX','estados unidos':'US','hong kong':'HK','paraguay':'PY','peru':'PE','bolivia':'BO','venezuela':'VE','francia':'FR','alemania':'DE','paises bajos':'NL','holanda':'NL','belgica':'BE','suiza':'CH','rusia':'RU','ucrania':'UA','croacia':'HR','canada':'CA','china':'CN','japon':'JP','corea del sur':'KR','australia':'AU','arabia saudita':'SA','qatar':'QA','emiratos arabes unidos':'AE','israel':'IL','chipre':'CY','austria':'AT','dinamarca':'DK','suecia':'SE','noruega':'NO','polonia':'PL','rumania':'RO','serbia':'RS','costa rica':'CR','honduras':'HN','guatemala':'GT','el salvador':'SV','panama':'PA','irlanda':'IE','india':'IN','egipto':'EG','marruecos':'MA','sudafrica':'ZA'};
-  var SUB={'inglaterra':'gbeng','escocia':'gbsct','gales':'gbwls'};
+  var SUB={'inglaterra':'gb-eng','escocia':'gb-sct','gales':'gb-wls'};
   var st={tab:'vitrina',vista:'camisetas',q:'',orden:'llegada',editing:null,loaded:false,current:null};
   var DATA=[],BASE=[],col=null,assets=null;
 
@@ -229,8 +229,7 @@ textarea.inp{min-height:80px;resize:vertical}
   function pill(t,c){return el('span','pill'+(c?' '+c:''),t)}
   function pad(n){return String(n).padStart(3,'0')}
   function safeHex(c,d){return /^#[0-9a-fA-F]{6}$/.test(c||'')?c:d}
-  function flagTxt(p){var k=norm(p);if(SUB[k]){var s='\u{1F3F4}';SUB[k].split('').forEach(function(ch){s+=String.fromCodePoint(0xE0000+ch.charCodeAt(0))});return s+String.fromCodePoint(0xE007F)}var c=ISO[k];if(!c)return '';return String.fromCodePoint(0x1F1E6+c.charCodeAt(0)-65,0x1F1E6+c.charCodeAt(1)-65)}
-  function flag(p){var f=flagTxt(p);if(!f)return null;var s=el('span','flag',f);s.title=p;s.setAttribute('aria-label',p);s.setAttribute('role','img');return s}
+  function flag(p){var k=norm(p);var c=SUB[k]||(ISO[k]||'').toLowerCase();if(!c)return null;var i=el('img','flag');i.src='banderas/'+c+'.svg';i.alt=p;i.title=p;i.loading='lazy';return i}
   function crestSrc(r){var s=r.escudo;if(s&&ESC.indexOf(s)>=0)return 'escudos/'+s+'.png';return ''}
   function crestImg(r,cls){var s=crestSrc(r);if(!s)return null;var i=el('img',cls||'crest');i.src=s;i.alt='';i.loading='lazy';return i}
   function photoSrc(r){if(r.fotoId&&/^[A-Za-z0-9_-]+$/.test(r.fotoId))return '/_blob/'+r.fotoId;if(r.fotoUrl&&/^(https:|\/)/.test(r.fotoUrl))return r.fotoUrl;return ''}
@@ -274,7 +273,7 @@ textarea.inp{min-height:80px;resize:vertical}
     else if(orden==='jugador')a.sort(function(x,y){return norm(x.regaloDe)<norm(y.regaloDe)?-1:norm(x.regaloDe)>norm(y.regaloDe)?1:x._n-y._n});
     return a;
   }
-  function clubLine(r,cls){var d=el('div',cls||'club');add(d,crestImg(r),el('b',null,r.equipo),flag(r.pais));return d}
+  function clubLine(r,cls){var d=el('div',cls||'club');add(d,crestImg(r),el('b',null,r.equipo));return d}
   function playerLine(r,cls){var d=el('div',cls||'g');add(d,el('span',null,r.regaloDe||'—'),flag(r.nacionalidad));return d}
 
   /* ---- vitrina ---- */
@@ -380,7 +379,7 @@ textarea.inp{min-height:80px;resize:vertical}
     );
     var two2=el('div','two');
     var clubs=count(all,function(r){return r.equipo+'|'+(r.pais||'')}).slice(0,12);
-    add(two2,barCard('Clubes','Los que más se repiten',clubs,function(r){var s=el('span');add(s,crestImg(r.r),el('span',null,r.r.equipo),flag(r.r.pais));return s}));
+    add(two2,barCard('Clubes','Los que más se repiten',clubs,function(r){var s=el('span');add(s,crestImg(r.r),el('span',null,r.r.equipo));return s}));
     var c=el('div','card');add(c,el('div','lbl','Completitud'),el('h2','h2','Cuánto falta cargar'));
     var pr=el('div','prog');
     [['Año',function(r){return !!r.temporada}],['Versión',function(r){return !!r.version}],['Número',function(r){return r.tieneNumero===false||(r.tieneNumero===true&&!!r.dorsal)}],['Parches',function(r){return r.tieneParches===true||r.tieneParches===false}]].forEach(function(x){
@@ -405,7 +404,7 @@ textarea.inp{min-height:80px;resize:vertical}
     ov.textContent='';var s=el('div','card sheet');s.setAttribute('role','dialog');s.setAttribute('aria-modal','true');s.setAttribute('aria-label','Ficha de '+r.equipo);
     var sg=el('div','stage');var vis=visual(r);add(sg,vis,el('span','no','N.º '+pad(r._n)));
     var b=el('div','body');
-    var h3=el('h3');add(h3,crestImg(r),el('span',null,r.equipo),flag(r.pais));
+    var h3=el('h3');add(h3,crestImg(r),el('span',null,r.equipo));
     var tags=el('div');tags.style.display='flex';tags.style.gap='6px';tags.style.flexWrap='wrap';add(tags,pill(r.tipo==='Selección'?'Selección':'Club',r.tipo==='Selección'?'acc':''),r.pais?pill(r.pais):null);
     var who=el('div','who');add(who,el('span','lbl','Regalo de'),el('b',null,r.regaloDe||'—'),flag(r.nacionalidad));
     add(b,tags,h3,who);
