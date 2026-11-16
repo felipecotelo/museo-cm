@@ -70,10 +70,16 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hang{all:unset;position:relative;flex:none;width:128px;margin-right:-70px;display:flex;flex-direction:column;align-items:center;cursor:pointer;transition:transform .18s ease;transform-origin:50% 0}
 .hang:hover,.hang:focus-visible,.hang.on{transform:translateY(-6px) scale(1.06);z-index:5}
 .hang:focus-visible{outline:none}
-.hang:focus-visible svg.shirt{outline:2px solid var(--ice);outline-offset:2px;border-radius:8px}
+.hang:focus-visible .flip{outline:2px solid var(--ice);outline-offset:2px;border-radius:8px}
+.flip{perspective:700px;max-width:100%}
+.flip-in{position:relative;transition:transform .55s cubic-bezier(.3,.7,.3,1);transform-style:preserve-3d}
+.flip-in>svg{display:block;width:100%;height:auto;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip-in>svg.back{position:absolute;inset:0;transform:rotateY(180deg)}
+.hang:hover .flip-in,.hang:focus-visible .flip-in,.piece:hover .flip-in,.piece:focus-visible .flip-in,.flip.on .flip-in{transform:rotateY(180deg)}
+@media (hover:none){.piece:hover .flip-in,.hang:hover .flip-in{transform:none}}
 .hook{width:24px;height:32px;margin-top:-14px;margin-bottom:-9px;z-index:1}
 .hook path{fill:none;stroke:#c9ced6;stroke-width:2.2;stroke-linecap:round}
-.hang svg.shirt{width:128px;height:auto;filter:drop-shadow(-6px 4px 6px rgba(0,0,0,.55))}
+.hang .flip{width:128px;filter:drop-shadow(-6px 4px 6px rgba(0,0,0,.55))}
 .rack-cap{display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 24px 16px;border-top:1px solid var(--line);flex-wrap:wrap}
 .rack-cap .no{font:600 11px var(--body);letter-spacing:.14em;color:var(--acc);font-variant-numeric:tabular-nums}
 .rack-cap b{font:600 15px var(--disp);display:inline-flex;align-items:center;gap:6px}
@@ -98,7 +104,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .piece:hover{border-color:var(--acc-line);transform:translateY(-2px)}
 .stage{position:relative;aspect-ratio:1/1;max-width:100%;display:grid;place-items:center;background:radial-gradient(70% 60% at 50% 40%,#1b1f29,#0b0c11)}
 .stage img.photo{width:100%;height:100%;object-fit:cover}
-.stage svg.shirt{width:66%;height:auto;filter:drop-shadow(0 10px 18px rgba(0,0,0,.55))}
+.stage .flip{width:66%;filter:drop-shadow(0 10px 18px rgba(0,0,0,.55))}
 .stage .no{position:absolute;left:12px;top:12px;font:600 10px/1 var(--body);letter-spacing:.14em;color:var(--mut);background:rgba(7,8,11,.75);padding:6px 8px;border-radius:8px;font-variant-numeric:tabular-nums}
 .stage .tags{position:absolute;right:10px;top:10px;display:flex;gap:6px}
 .piece .info{padding:12px 14px 14px;display:flex;flex-direction:column;gap:5px;min-width:0}
@@ -163,7 +169,8 @@ textarea.inp{min-height:80px;resize:vertical}
 .ov{position:fixed;inset:0;z-index:20;background:rgba(3,4,6,.8);backdrop-filter:blur(6px);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));overflow:auto}
 .sheet{position:relative;width:min(100%,900px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);padding:0;overflow:hidden}
 .sheet .stage{aspect-ratio:auto;min-height:100%}
-.sheet .stage svg.shirt{width:64%}
+.sheet .stage .flip{width:64%;cursor:pointer}
+.flip-hint{position:absolute;left:0;right:0;bottom:14px;text-align:center;color:var(--dim);font-size:12px}
 .sheet .body{padding:26px;display:flex;flex-direction:column;gap:16px;min-width:0}
 .sheet h3{margin:0;font:700 28px/1.05 var(--disp);letter-spacing:-.03em;overflow-wrap:anywhere;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .sheet h3 .crest{width:36px;height:36px}
@@ -186,7 +193,7 @@ textarea.inp{min-height:80px;resize:vertical}
   form.f{grid-template-columns:1fr}.designer{grid-template-columns:110px minmax(0,1fr)}
   .sheet{grid-template-columns:1fr}.sheet .stage{aspect-ratio:4/3}.sheet .body{padding:20px}
 }
-@media (max-width:480px){.stat:last-child{grid-column:1/-1}.hang{width:100px;margin-right:-56px}.hang svg.shirt{width:100px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:14px}.tab svg{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.piece .info{padding:10px 11px 12px}.club b{font-size:13.5px}.designer{grid-template-columns:1fr}.designer .prev{width:140px}.prog{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.stat:last-child{grid-column:1/-1}.hang{width:100px;margin-right:-56px}.hang .flip{width:100px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:14px}.tab svg{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.piece .info{padding:10px 11px 12px}.club b{font-size:13.5px}.designer{grid-template-columns:1fr}.designer .prev{width:140px}.prog{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -261,7 +268,32 @@ textarea.inp{min-height:80px;resize:vertical}
     if(!opt.noNum&&r.tieneNumero&&r.dorsal){var plain=(p==='lisa'||p==='cuello');var t=S('text',{x:'60',y:'88','text-anchor':'middle','font-family':'Space Grotesk,Inter,sans-serif','font-weight':'700','font-size':'26',fill:plain?c2:c1,stroke:plain?'none':c2,'stroke-width':'1.2','paint-order':'stroke'});t.textContent=String(r.dorsal).slice(0,3);s.appendChild(t)}
     return s;
   }
-  function visual(r,opt){var src=photoSrc(r);if(src){var im=el('img','photo');im.src=src;im.alt='Foto de la camiseta de '+(r.equipo||'');im.loading='lazy';return im}return shirt(r,opt)}
+  function lum(h){h=safeHex(h,'#888888');var c=[1,3,5].map(function(i){var v=parseInt(h.substr(i,2),16)/255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*c[0]+.7152*c[1]+.0722*c[2]}
+  function backName(n){var w=String(n||'').replace(/[‘’'"]/g,'').trim().split(/\s+/);if(!w[0])return '';var out=[w.pop()];var P=['de','la','del','da','dos','van','von'];while(w.length>1&&P.indexOf(norm(w[w.length-1]))>=0)out.unshift(w.pop());return out.join(' ').toUpperCase()}
+  function shirtBack(r){
+    var c1=safeHex(r.color1,'#e5e5e5'),c2=safeHex(r.color2,'#1a1a1a'),p=r.patron||'lisa',id='cb'+(++sid);
+    var s=S('svg',{viewBox:'0 0 120 120','class':'shirt back','aria-hidden':'true'});
+    var defs=S('defs',{}),cp=S('clipPath',{id:id});cp.appendChild(S('path',{d:BODY}));defs.appendChild(cp);s.appendChild(defs);
+    s.appendChild(S('path',{d:BODY,fill:c1}));
+    var g=S('g',{'clip-path':'url(#'+id+')'});
+    if(p==='rayas'){for(var x=33;x<92;x+=16)g.appendChild(S('rect',{x:x,y:0,width:8,height:120,fill:c2}))}
+    else if(p==='aros'){for(var y=34;y<112;y+=18)g.appendChild(S('rect',{x:0,y:y,width:120,height:9,fill:c2}))}
+    else if(p==='mitad'){g.appendChild(S('rect',{x:0,y:0,width:60,height:120,fill:c2}))}
+    else if(p==='banda'){g.appendChild(S('polygon',{points:'100,40 80,20 10,95 30,115',fill:c2}))}
+    else if(p==='bandaI'){g.appendChild(S('polygon',{points:'20,40 40,20 110,95 90,115',fill:c2}))}
+    else if(p==='cuello'){g.appendChild(S('polygon',{points:'5,37 18,54 22,51 9,34',fill:c2}));g.appendChild(S('polygon',{points:'115,37 102,54 98,51 111,34',fill:c2}))}
+    g.appendChild(S('path',{d:'M91 47 L91 110 L84 110 L84 50 Z',fill:'rgba(0,0,0,.12)'}));
+    s.appendChild(g);
+    s.appendChild(S('path',{d:'M40 14 Q60 19 80 14 L77 12.5 Q60 16.5 43 12.5 Z',fill:c2}));
+    s.appendChild(S('path',{d:BODY,fill:'none',stroke:'rgba(255,255,255,.16)','stroke-width':'1'}));
+    var ink=lum(c1)>.45?'#111318':'#ffffff',edge=lum(c1)>.45?'#ffffff':'#111318',busy=(p!=='lisa'&&p!=='cuello');
+    var nm=backName(r.regaloDe);
+    if(nm){var fs=nm.length>12?7:nm.length>9?8.5:10;var t=S('text',{x:'60',y:'38','text-anchor':'middle','font-family':'Space Grotesk,Inter,sans-serif','font-weight':'700','font-size':String(fs),'letter-spacing':'.6',fill:ink});if(busy){t.setAttribute('stroke',edge);t.setAttribute('stroke-width','1.6');t.setAttribute('paint-order','stroke')}t.textContent=nm;s.appendChild(t)}
+    if(r.tieneNumero&&r.dorsal){var n=S('text',{x:'60',y:'86','text-anchor':'middle','font-family':'Space Grotesk,Inter,sans-serif','font-weight':'700','font-size':'40',fill:ink});if(busy){n.setAttribute('stroke',edge);n.setAttribute('stroke-width','2.4');n.setAttribute('paint-order','stroke')}n.textContent=String(r.dorsal).slice(0,3);s.appendChild(n)}
+    return s;
+  }
+  function flipShirt(r){var f=el('div','flip');var i=el('div','flip-in');add(i,shirt(r,{noNum:true}),shirtBack(r));add(f,i);return f}
+  function visual(r,opt){var src=photoSrc(r);if(src){var im=el('img','photo');im.src=src;im.alt='Foto de la camiseta de '+(r.equipo||'');im.loading='lazy';return im}return flipShirt(r)}
 
   /* ---- datos ---- */
   function numbered(){var a=DATA.slice().sort(function(x,y){return (x.creado||0)-(y.creado||0)});a.forEach(function(r,i){r._n=i+1});return a}
@@ -297,7 +329,7 @@ textarea.inp{min-height:80px;resize:vertical}
     sorted(all,st.orden).forEach(function(r){
       var b=el('button','hang');b.type='button';b.setAttribute('aria-label','N.º '+pad(r._n)+': '+r.equipo+(r.temporada?' '+r.temporada:'')+', de '+(r.regaloDe||''));
       var hk=S('svg',{viewBox:'0 0 22 30','class':'hook','aria-hidden':'true'});hk.appendChild(S('path',{d:'M11 28 V14 C11 9 18 9 18 4.5 C18 1.5 15 0.5 13 1.5'}));
-      add(b,hk,shirt(r,{noNum:true}));
+      add(b,hk,flipShirt(r));
       b.addEventListener('mouseenter',function(){caption(r)});b.addEventListener('focus',function(){caption(r)});
       b.addEventListener('click',function(){if(moved)return;openSheet(r.id)});
       add(rail,b);
@@ -402,7 +434,8 @@ textarea.inp{min-height:80px;resize:vertical}
   function openSheet(id,soloFaltan){
     var all=numbered();var r=byId(id);if(!r)return;st.current=id;
     ov.textContent='';var s=el('div','card sheet');s.setAttribute('role','dialog');s.setAttribute('aria-modal','true');s.setAttribute('aria-label','Ficha de '+r.equipo);
-    var sg=el('div','stage');var vis=visual(r);add(sg,vis,el('span','no','N.º '+pad(r._n)));
+    var sg=el('div','stage');var vis=visual(r);add(sg,vis,el('span','no','N.º '+pad(r._n)),el('span','flip-hint','Tocá la camiseta para darla vuelta'));
+    sg.addEventListener('click',function(){var f=sg.querySelector('.flip');if(f)f.classList.toggle('on')});
     var b=el('div','body');
     var h3=el('h3');add(h3,crestImg(r),el('span',null,r.equipo));
     var tags=el('div');tags.style.display='flex';tags.style.gap='6px';tags.style.flexWrap='wrap';add(tags,pill(r.tipo==='Selección'?'Selección':'Club',r.tipo==='Selección'?'acc':''),r.pais?pill(r.pais):null);
@@ -411,7 +444,7 @@ textarea.inp{min-height:80px;resize:vertical}
     // completar
     var fillBox=el('div','fill');var fh=el('div','fill-h');var msg=el('span','msg');add(fh,el('span','lbl','Completar'),msg);add(fillBox,fh);
     var pending={},timer=null;
-    function save(patch,now){Object.keys(patch).forEach(function(k){pending[k]=patch[k];r[k]=patch[k]});var nv=visual(r);sg.replaceChild(nv,vis);vis=nv;clearTimeout(timer);msg.className='msg';msg.textContent='Guardando…';timer=setTimeout(flush,now?0:600)}
+    function save(patch,now){Object.keys(patch).forEach(function(k){pending[k]=patch[k];r[k]=patch[k]});var was=vis.classList&&vis.classList.contains('on');var nv=visual(r);if(was&&nv.classList)nv.classList.add('on');sg.replaceChild(nv,vis);vis=nv;clearTimeout(timer);msg.className='msg';msg.textContent='Guardando…';timer=setTimeout(flush,now?0:600)}
     function flush(){var p=pending;pending={};if(!Object.keys(p).length)return;p.editado=Date.now();if(!col){msg.className='msg err';msg.textContent='Todavía se están cargando las camisetas.';return}
       col.doc(r.id).update(p).then(function(){msg.className='msg ok';msg.textContent='Guardado'}).catch(function(){msg.className='msg err';msg.textContent='No se pudo guardar. Probá de nuevo.'})}
     var anio=inp('c-anio',r.temporada,'Ej.: 2019 o 2023-24');anio.inputMode='text';anio.addEventListener('input',function(){save({temporada:anio.value.trim()})});
