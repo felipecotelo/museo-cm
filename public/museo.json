@@ -1441,7 +1441,9 @@
    "espaldaAbajo": "ASSIST CARD",
    "nombreAbajo": true,
    "fuente": "slab"
-  }
+  },
+  "fotoFrente": "fotos/p068-frente.jpg",
+  "fotoEspalda": "fotos/p068-espalda.jpg"
  },
  {
   "id": "p069",
