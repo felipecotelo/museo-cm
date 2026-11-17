@@ -1681,10 +1681,10 @@
   "equipo": "Wolverhampton Wanderers",
   "tipo": "Club",
   "pais": "Inglaterra",
-  "temporada": "2023",
-  "version": "",
-  "tieneNumero": null,
-  "dorsal": "",
+  "temporada": "2023-24",
+  "version": "Titular",
+  "tieneNumero": true,
+  "dorsal": "4",
   "tieneParches": null,
   "parches": "",
   "regaloDe": "Santiago Bueno",
@@ -1693,7 +1693,7 @@
   "color2": "#111111",
   "patron": "cuello",
   "escudo": "wolves",
-  "notas": "",
+  "notas": "Titular Castore 2023-24 con AstroPay de sponsor.",
   "creado": 80,
   "editado": 80
  },
@@ -1862,7 +1862,9 @@
    "nombreColor": "#0f7a3c",
    "numeroColor": "#0f7a3c",
    "fuente": "oswald"
-  }
+  },
+  "fotoFrente": "fotos/p084-frente.jpg",
+  "fotoEspalda": "fotos/p084-espalda.jpg"
  },
  {
   "id": "p085",
@@ -1877,11 +1879,11 @@
   "parches": "Mundial 2026",
   "regaloDe": "Agustín Canobbio",
   "nacionalidad": "Uruguay",
-  "color1": "#1c2240",
-  "color2": "#ff6a1a",
+  "color1": "#1b2340",
+  "color2": "#2f7bff",
   "patron": "cuello",
   "escudo": "uruguay",
-  "notas": "Mundial 2026, fase de grupos: Uruguay 0-1 España, 26 de junio de 2026 en Guadalajara. Canobbio fue expulsado en el final del partido. Camiseta alternativa Nike \"Obsidiana Oscura\" (azul índigo con detalles naranja y azul eléctrico), inspirada en el Art Déco de Montevideo.",
+  "notas": "Mundial 2026, fase de grupos: Uruguay 0-1 España, 26 de junio de 2026 en Guadalajara. Canobbio fue expulsado en el final del partido. Alternativa Nike azul marino con estampado azul eléctrico.",
   "creado": 85,
   "editado": 85
  },
