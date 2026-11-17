@@ -1971,7 +1971,9 @@
   },
   "notas": "Visitante Joma granate y blanca de la temporada 2026-27, con Tecnocasa Group de sponsor y la bandera de España en la espalda. Satriano usa el 10 en el Getafe.",
   "creado": 84.6,
-  "editado": 87
+  "editado": 87,
+  "fotoFrente": "fotos/p087-frente.jpg",
+  "fotoEspalda": "fotos/p087-espalda.jpg"
  },
  {
   "id": "p088",
@@ -2046,6 +2048,8 @@
   },
   "notas": "Titular Nike de Eliminatorias, con los parches de las Eliminatorias al Mundial 2026 y \"Football Unites the World\". Uruguay estrenó Nike en la Copa América 2024, y el único partido de Eliminatorias que Suárez jugó con esta camiseta fue su despedida: Uruguay 0-0 Paraguay, 6 de setiembre de 2024, en el Centenario.",
   "creado": 82.7,
-  "editado": 89
+  "editado": 89,
+  "fotoFrente": "fotos/p089-frente.jpg",
+  "fotoEspalda": "fotos/p089-espalda.jpg"
  }
 ]
