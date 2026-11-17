@@ -1741,7 +1741,9 @@
    "fuente": "saira",
    "emblemaEspalda": "97"
   },
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p081-frente.jpg",
+  "fotoEspalda": "fotos/p081-espalda.jpg"
  },
  {
   "id": "p082",

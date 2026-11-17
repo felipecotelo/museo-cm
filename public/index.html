@@ -117,6 +117,26 @@ button,input,select,textarea{font:inherit;color:inherit}
 .tick svg{width:15px;height:15px;fill:none;stroke:var(--acc-ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 .piece.inc{opacity:.42;filter:saturate(.6)}
 .piece.inc:hover,.piece.inc:focus-visible{opacity:1;filter:none}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.prog-card{all:unset;box-sizing:border-box;cursor:pointer;position:relative;overflow:hidden;display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;padding:22px 26px;border-radius:24px;border:1px solid rgba(255,255,255,.08);transition:transform .2s,border-color .2s,box-shadow .2s}
+.prog-card::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none}
+.prog-card.tu{background:linear-gradient(135deg,rgba(47,107,255,.32),rgba(91,200,255,.10) 45%,var(--bg2) 85%)}
+.prog-card.tu::before{background:radial-gradient(220px 160px at 12% 20%,rgba(127,216,255,.30),transparent 70%)}
+.prog-card.mia{background:linear-gradient(135deg,rgba(167,139,250,.32),rgba(91,200,255,.10) 45%,var(--bg2) 85%)}
+.prog-card.mia::before{background:radial-gradient(220px 160px at 12% 20%,rgba(196,181,253,.30),transparent 70%)}
+.prog-card>*{position:relative;z-index:1}
+.prog-card:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.22);box-shadow:0 18px 40px -18px rgba(91,200,255,.45)}
+.prog-card[aria-pressed="true"]{border-color:var(--acc)}
+.ring{width:96px;height:96px;filter:drop-shadow(0 6px 18px rgba(91,200,255,.35))}
+.pc-t{display:flex;flex-direction:column;gap:4px;min-width:0}
+.pc-eye{font:600 10px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.pc-title{font:600 17px/1.2 var(--disp);color:var(--fg)}
+.pc-n{display:flex;align-items:baseline;gap:6px;margin-top:4px}
+.pc-big{font:700 clamp(2.4rem,5vw,3.2rem)/1 var(--disp);letter-spacing:-.04em;font-variant-numeric:tabular-nums;background:linear-gradient(120deg,#ffffff,#a6e2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.prog-card.mia .pc-big{background:linear-gradient(120deg,#ffffff,#d8ccff);-webkit-background-clip:text;background-clip:text}
+.pc-of{font:600 16px var(--disp);color:rgba(255,255,255,.45)}
+.pc-note{font-size:12.5px;color:rgba(255,255,255,.62)}
+@media (max-width:620px){.duo{grid-template-columns:1fr}.prog-card{padding:18px 20px;gap:16px}.ring{width:78px;height:78px}}
 .stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
 .stat{all:unset;box-sizing:border-box;cursor:pointer;padding:16px 18px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(to bottom right,var(--bg3),var(--bg2));display:flex;flex-direction:column;gap:8px;min-width:0;transition:border-color .15s,background .15s}
 .stat:hover{border-color:var(--mut)}
@@ -375,6 +395,7 @@ textarea.inp{min-height:80px;resize:vertical}
     }
     return s;
   }
+  function flipBack(r){var f=el('div','flip');var i=el('div','flip-in');var bk=shirtBack(r);bk.classList.remove('back');var fr=shirt(r,{noNum:true});fr.classList.add('back');add(i,bk,fr);add(f,i);return f}
   function flipShirt(r){var f=el('div','flip');var i=el('div','flip-in');add(i,shirt(r,{noNum:true}),shirtBack(r));add(f,i);return f}
   function fotoFlip(r){var f=el('div','flip foto');var i=el('div','flip-in');var a=el('img');a.src=r.fotoFrente;a.alt=r.equipo+' de '+(r.regaloDe||'')+', frente';a.loading='lazy';add(i,a);
     if(r.fotoEspalda){var b=el('img','back');b.src=r.fotoEspalda;b.alt=r.equipo+' de '+(r.regaloDe||'')+', espalda';b.loading='lazy';add(i,b)}add(f,i);return f}
@@ -414,7 +435,7 @@ textarea.inp{min-height:80px;resize:vertical}
     sorted(all,st.orden).forEach(function(r){
       var b=el('button','hang');b.type='button';b.setAttribute('aria-label','N.º '+pad(r._n)+': '+r.equipo+(r.temporada?' '+r.temporada:'')+', de '+(r.regaloDe||''));
       var hk=S('svg',{viewBox:'0 0 22 30','class':'hook','aria-hidden':'true'});hk.appendChild(S('path',{d:'M11 28 V14 C11 9 18 9 18 4.5 C18 1.5 15 0.5 13 1.5'}));
-      add(b,hk,flipShirt(r));
+      add(b,hk,flipBack(r));
       b.addEventListener('mouseenter',function(){caption(r)});b.addEventListener('focus',function(){caption(r)});
       b.addEventListener('click',function(){if(moved)return;openSheet(r.id)});
       add(rail,b);
@@ -432,19 +453,24 @@ textarea.inp{min-height:80px;resize:vertical}
     all.forEach(function(r){if(r.regaloDe)players[norm(r.regaloDe)]=1;if(r.tipo==='Selección')sel++;else if(r.pais)ligas[norm(r.pais)]=1;if(missing(r).length)todo++});
     var V=[['camisetas',all.length,'Camisetas','en el museo'],['jugadores',Object.keys(players).length,'Jugadores','que regalaron'],['ligas',Object.keys(ligas).length,'Ligas','países de clubes'],['selecciones',sel,'Selecciones','camisetas de selección'],['completar',todo,'Por completar','les falta algún dato']];
     var shot=all.filter(function(r){return r.fotografiada||hasFoto(r)}).length,done=all.filter(hasFoto).length;
-    var fb=el('button','full');fb.type='button';fb.setAttribute('aria-pressed',String(st.vista==='completas'));
-    function prog(lbl,n,note,cls){var w=el('div','pg'+(cls?' '+cls:''));var h=el('div','pg-h');var big=el('span','pg-n',String(n));add(big,el('small',null,' / '+all.length));add(h,el('span','pg-l',lbl),big);
-      var bar=el('div','bar');var fi=el('i');fi.style.width=(all.length?n/all.length*100:0)+'%';add(bar,fi);add(w,h,bar,el('span','pg-s',note));return w}
-    add(fb,prog('Fotografiadas por vos',shot,(all.length-shot)?'Faltan '+(all.length-shot)+' por fotografiar':'¡Están todas!'),
-           prog('Terminadas por mí',done,(shot-done)>0?(shot-done)+' fotografiadas esperan su imagen':'Al día con tus fotos','mine'));
-    fb.addEventListener('click',function(){st.vista=st.vista==='completas'?'camisetas':'completas';renderVitrina()});
+    var fb=el('div','duo');
+    function ring(p,gid,c1,c2){var sv=S('svg',{viewBox:'0 0 100 100','class':'ring','aria-hidden':'true'});var df=S('defs',{});var lg=S('linearGradient',{id:gid,x1:'0',y1:'0',x2:'1',y2:'1'});lg.appendChild(S('stop',{offset:'0','stop-color':c1}));lg.appendChild(S('stop',{offset:'1','stop-color':c2}));df.appendChild(lg);sv.appendChild(df);
+      sv.appendChild(S('circle',{cx:'50',cy:'50',r:'42',fill:'none',stroke:'rgba(255,255,255,.08)','stroke-width':'9'}));
+      var L=2*Math.PI*42;sv.appendChild(S('circle',{cx:'50',cy:'50',r:'42',fill:'none',stroke:'url(#'+gid+')','stroke-width':'9','stroke-linecap':'round','stroke-dasharray':(L*p)+' '+L,transform:'rotate(-90 50 50)'}));
+      var t=S('text',{x:'50',y:'56','text-anchor':'middle','font-family':'Space Grotesk,sans-serif','font-weight':'700','font-size':'20',fill:'#fafafa'});t.textContent=Math.round(p*100)+'%';sv.appendChild(t);return sv}
+    function card(cls,vista,eyebrow,title,n,note,c1,c2,gid){var c=el('button','prog-card '+cls);c.type='button';c.setAttribute('aria-pressed',String(st.vista===vista));
+      var txt=el('div','pc-t');var num=el('div','pc-n');add(num,el('span','pc-big',String(n)),el('span','pc-of','/ '+all.length));
+      add(txt,el('span','pc-eye',eyebrow),el('span','pc-title',title),num,el('span','pc-note',note));
+      add(c,ring(all.length?n/all.length:0,gid,c1,c2),txt);c.addEventListener('click',function(){st.vista=st.vista===vista?'camisetas':vista;renderVitrina()});return c}
+    add(fb,card('tu','fotografiadas','Tu parte','Camisetas fotografiadas',shot,(all.length-shot)?'Faltan '+(all.length-shot)+' por fotografiar':'¡Fotografiaste todas!','#7fd8ff','#2f6bff','g-tu'),
+           card('mia','completas','Mi parte','Camisetas terminadas',done,(shot-done)>0?(shot-done)+' fotos esperan su imagen':'Al día con tus fotos','#c4b5fd','#5bc8ff','g-mia'));
     add(root,fb);
     var stats=el('div','stats');
     V.forEach(function(v){var b=el('button','stat');b.type='button';b.setAttribute('aria-pressed',String(st.vista===v[0]));add(b,el('div','lbl',v[2]),el('div','v',String(v[1])),el('div','n',v[3]));b.addEventListener('click',function(){st.vista=v[0];renderVitrina()});add(stats,b)});
     add(root,stats);
 
     var card=el('div','card flush');
-    var titles={camisetas:'Todas las camisetas',jugadores:'Por jugador',ligas:'Por liga',selecciones:'Camisetas de selección',completar:'Camisetas por completar',completas:'Camisetas con foto'};
+    var titles={camisetas:'Todas las camisetas',jugadores:'Por jugador',ligas:'Por liga',selecciones:'Camisetas de selección',completar:'Camisetas por completar',completas:'Camisetas terminadas',fotografiadas:'Camisetas fotografiadas'};
     var ch=el('div','card-h');var chl=el('div');add(chl,el('div','lbl','Vitrina'),el('h2','h2',titles[st.vista]));add(ch,chl);
     if(st.vista==='completar'&&todo){var go1=el('button','btn','Empezar a completar');go1.type='button';go1.addEventListener('click',function(){var f=all.filter(function(r){return missing(r).length})[0];if(f)openSheet(f.id,true)});add(ch,go1)}
     add(card,ch);
@@ -461,6 +487,7 @@ textarea.inp{min-height:80px;resize:vertical}
       if(st.vista==='selecciones')list=list.filter(function(r){return r.tipo==='Selección'});
       if(st.vista==='completar')list=list.filter(function(r){return missing(r).length});
       if(st.vista==='completas')list=list.filter(hasFoto);
+      if(st.vista==='fotografiadas')list=list.filter(function(r){return r.fotografiada||hasFoto(r)});
       if(!list.length){add(body,el('div','empty',st.vista==='completar'?'No falta nada: todas las camisetas tienen sus datos.':'Ninguna camiseta coincide con la búsqueda.'));return}
       var grid=el('div','grid');
       list.slice().reverse().forEach(function(r){
