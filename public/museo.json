@@ -397,7 +397,9 @@
   "notas": "",
   "creado": 19,
   "editado": 19,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p019-frente.jpg",
+  "fotoEspalda": "fotos/p019-espalda.jpg"
  },
  {
   "id": "p020",
@@ -868,7 +870,9 @@
   "notas": "Mundial sub-20.",
   "creado": 41,
   "editado": 41,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p041-frente.jpg",
+  "fotoEspalda": "fotos/p041-espalda.jpg"
  },
  {
   "id": "p042",
@@ -890,7 +894,9 @@
   "notas": "",
   "creado": 42,
   "editado": 42,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p042-frente.jpg",
+  "fotoEspalda": "fotos/p042-espalda.jpg"
  },
  {
   "id": "p043",
@@ -2208,20 +2214,22 @@
   "tieneParches": true,
   "parches": "Champions League y Respect",
   "nacionalidad": "Uruguay",
-  "notas": "Titular Nike rojiblanca con Azerbaijan \"Land of Fire\" y el logo de Bakú 2015, con los parches de la Champions League.",
+  "notas": "Titular Nike 2014-15 de manga larga, rojiblanca con cuello polo azul y el sponsor de Bakú 2015 (1.os Juegos Europeos). Parches de la Champions League y Respect. Firmada por Godín.",
   "editado": 0,
   "fotografiada": true,
   "id": "p094",
   "equipo": "Atlético de Madrid",
   "pais": "España",
-  "temporada": "2015-16",
+  "temporada": "2014-15",
   "dorsal": "2",
   "regaloDe": "Diego Godín",
   "color1": "#d62828",
   "color2": "#ffffff",
   "patron": "rayas",
   "escudo": "atletico-madrid",
-  "creado": 84.84
+  "creado": 84.84,
+  "fotoFrente": "fotos/p094-frente.jpg",
+  "fotoEspalda": "fotos/p094-espalda.jpg"
  },
  {
   "tipo": "Club",
