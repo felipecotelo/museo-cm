@@ -583,10 +583,12 @@
   "color2": "#111111",
   "patron": "bandaI",
   "escudo": "danubio",
-  "notas": "",
+  "notas": "Alternativa Luanvi 2018, gris oscura con la franja blanca. Dukita adelante; Asociación Española, Sinteplast y EGA Rutas del Plata en la espalda.",
   "creado": 28,
   "editado": 28,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p028-frente.jpg",
+  "fotoEspalda": "fotos/p028-espalda.jpg"
  },
  {
   "id": "p029",
