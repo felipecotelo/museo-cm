@@ -1005,10 +1005,12 @@
   "color2": "#ffffff",
   "patron": "rayas",
   "escudo": "wanderers",
-  "notas": "",
+  "notas": "Alternativa Umbro celeste con cuello negro, edición conmemorativa de la fundación del club (15 de agosto de 1902). Cymaco de sponsor.",
   "creado": 48,
   "editado": 48,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p048-frente.jpg",
+  "fotoEspalda": "fotos/p048-espalda.jpg"
  },
  {
   "id": "p049",
