@@ -1111,7 +1111,9 @@
   "notas": "Tercera adidas 2024-25: gris oscura con el monograma RMCF en relieve, cuello polo y el trébol de adidas Originals (el primer Madrid con ese logo desde los años 80). Valverde usa el 8 desde 2024-25. Se la regaló en 2025.",
   "creado": 84.05,
   "editado": 53,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p053-frente.jpg",
+  "fotoEspalda": "fotos/p053-espalda.jpg"
  },
  {
   "id": "p054",
