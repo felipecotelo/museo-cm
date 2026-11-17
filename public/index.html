@@ -315,7 +315,8 @@ textarea.inp{min-height:80px;resize:vertical}
     var d=r.diseno||{},base=safeHex(d.base,safeHex(r.color1,'#cccccc')),id='cd'+(++sid);
     var s=S('svg',{viewBox:'0 0 120 120','class':'shirt'+(back?' back':''),'aria-hidden':'true'});
     var defs=S('defs',{}),cp=S('clipPath',{id:id});cp.appendChild(S('path',{d:BODY}));defs.appendChild(cp);
-    if(d.textura){var pt=S('pattern',{id:id+'t',width:'8',height:'7',patternUnits:'userSpaceOnUse'});pt.appendChild(S('path',{d:'M0 7 L4 0 L8 7 Z',fill:d.texturaColor||'rgba(0,0,0,.13)'}));defs.appendChild(pt)}
+    if(d.textura==='lineas'){var pt=S('pattern',{id:id+'t',width:'2.2',height:'4',patternUnits:'userSpaceOnUse'});pt.appendChild(S('rect',{x:0,y:0,width:'.6',height:'4',fill:d.texturaColor||'rgba(255,255,255,.12)'}));defs.appendChild(pt)}
+    else if(d.textura){var pt=S('pattern',{id:id+'t',width:'8',height:'7',patternUnits:'userSpaceOnUse'});pt.appendChild(S('path',{d:'M0 7 L4 0 L8 7 Z',fill:d.texturaColor||'rgba(0,0,0,.13)'}));defs.appendChild(pt)}
     s.appendChild(defs);
     s.appendChild(S('path',{d:BODY,fill:base}));
     var g=S('g',{'clip-path':'url(#'+id+')'});
@@ -331,21 +332,31 @@ textarea.inp{min-height:80px;resize:vertical}
     g.appendChild(S('path',{d:back?'M91 47 L91 110 L84 110 L84 50 Z':'M29 47 L29 110 L36 110 L36 50 Z',fill:'rgba(0,0,0,.12)'}));
     s.appendChild(g);
     var cc=safeHex(d.cuelloColor,'#ffffff');
-    if(back){s.appendChild(S('path',{d:'M40 14 Q60 19 80 14 L77 12.5 Q60 16.5 43 12.5 Z',fill:cc}))}
+    if(back){s.appendChild(S('path',{d:'M40 14 Q60 19 80 14 L77 12.5 Q60 16.5 43 12.5 Z',fill:cc}));if(d.cuelloColor2)s.appendChild(S('path',{d:'M60 16.5 Q71 16 77 12.5 L80 14 Q71 18.4 60 19 Z',fill:safeHex(d.cuelloColor2,'#111111')}))}
     else if(d.cuello==='v'){s.appendChild(S('polygon',{points:'41,13 60,32 79,13 75,12 60,27 45,12',fill:cc}))}
     else if(d.cuello==='polo'){s.appendChild(S('polygon',{points:'42,13 60,31 78,13 75,12 60,27 45,12',fill:cc}));var fl='38,13 47,10.5 60,28 51,30';s.appendChild(S('polygon',{points:fl,fill:base,stroke:'rgba(0,0,0,.35)','stroke-width':'.6'}));s.appendChild(S('polygon',{points:mir(fl),fill:base,stroke:'rgba(0,0,0,.35)','stroke-width':'.6'}))}
-    else{s.appendChild(S('path',{d:'M40 14 Q60 28 80 14 L76 12 Q60 23 44 12 Z',fill:cc}))}
+    else{s.appendChild(S('path',{d:'M40 14 Q60 28 80 14 L76 12 Q60 23 44 12 Z',fill:cc}));if(d.cuelloColor2)s.appendChild(S('path',{d:'M40 14 Q50 22.5 60 23.4 L60 20.6 Q51 20 44 12 Z',fill:safeHex(d.cuelloColor2,'#111111')}))}
     s.appendChild(S('path',{d:BODY,fill:'none',stroke:'rgba(255,255,255,.16)','stroke-width':'1'}));
     function txt(t,x,y,fs,fill,edge,ew,weight){var e=S('text',{x:String(x),y:String(y),'text-anchor':'middle','font-family':'Space Grotesk,Inter,sans-serif','font-weight':String(weight||800),'font-size':String(fs),fill:fill});if(edge){e.setAttribute('stroke',edge);e.setAttribute('stroke-width',String(ew||1));e.setAttribute('paint-order','stroke');e.setAttribute('stroke-linejoin','round')}e.textContent=t;s.appendChild(e);return e}
     if(!back){
       var cs=crestSrc(r);if(cs){var im=S('image',{x:'66',y:'33',width:'14',height:'14',preserveAspectRatio:'xMidYMid meet'});im.setAttribute('href',cs);s.appendChild(im)}
-      if(d.marca)txt(d.marca,46,44,4.6,safeHex(d.marcaColor,'#ffffff'),d.sponsorBorde,.8,700);
+      if(d.marca){var mc=safeHex(d.marcaColor,'#ffffff'),mk=String(d.marca).toLowerCase();
+        if(mk==='nike'){s.appendChild(S('path',{d:'M38.5 43.2 C37.6 45.6 40.2 46.2 43 45 L53.5 40.2 L43.4 43.4 C40.9 44.2 39.4 44.2 38.5 43.2 Z',fill:mc}))}
+        else if(mk==='adidas'){[[40,45,2.4],[43.2,45,4.2],[46.4,45,6]].forEach(function(b){s.appendChild(S('polygon',{points:b[0]+','+b[1]+' '+(b[0]+2.2)+','+b[1]+' '+(b[0]+2.2+b[2]*.45)+','+(b[1]-b[2])+' '+(b[0]+b[2]*.45)+','+(b[1]-b[2]),fill:mc}))})}
+        else if(mk==='umbro'){s.appendChild(S('polygon',{points:'40.5,40 46,36.5 51.5,40 46,43.5',fill:'none',stroke:mc,'stroke-width':'1.1'}));s.appendChild(S('polygon',{points:'43.3,40 46,38.3 48.7,40 46,41.7',fill:mc}));txt('umbro',46,47,2.8,mc,null,0,700)}
+        else if(mk==='joma'){var j=S('text',{x:'46',y:'44','text-anchor':'middle','font-family':'Georgia,serif','font-style':'italic','font-weight':'700','font-size':'8',fill:mc});j.textContent='J';s.appendChild(j)}
+        else if(mk==='puma'){s.appendChild(S('path',{d:'M39.5 43.5 C42 41 44.5 40.8 47 41.2 C48.6 39.6 50.6 38.6 52.6 39 L51.8 39.8 C50.6 40 49.6 40.6 49 41.4 C50.4 42.2 51.6 43.4 52 45 L51 45 C50.4 43.8 49.2 42.8 47.6 42.4 C45 42.6 42.6 43.4 40.4 44.6 Z',fill:mc}))}
+        else txt(d.marca,46,44,4.6,mc,d.sponsorBorde,.8,700)}
       if(d.sponsorIcono==='corona'){s.appendChild(S('polygon',{points:'49,76 49,62 54,67 57,58 60,65 63,58 66,67 71,62 71,76',fill:safeHex(d.sponsorColor,'#ffffff')}))}
-      if(d.numeroFrente&&r.tieneNumero&&r.dorsal)txt(String(r.dorsal).slice(0,3),67,61,10,safeHex(d.numeroColor,'#111318'),null,0,700);
+      if(d.numeroFrente&&r.tieneNumero&&r.dorsal)txt(String(r.dorsal).slice(0,3),60,66,12,safeHex(d.numeroColor,'#111318'),null,0,700);
       if(d.sponsor)txt(d.sponsor,60,71,fitText(d.sponsor,48,12),safeHex(d.sponsorColor,'#ffffff'),d.sponsorBorde,1.4);
     }else{
       var ink=safeHex(d.numeroColor,lum(base)>.45?'#111318':'#ffffff'),edge=d.numeroBorde||null;
       if(d.parcheEspalda){var fi=S('image',{x:'55',y:'19',width:'10',height:'6.5',preserveAspectRatio:'none'});fi.setAttribute('href','banderas/'+d.parcheEspalda+'.svg');s.appendChild(fi)}
+      if(d.emblemaEspalda==='sol'){var ec=safeHex(d.numeroColor,'#111318'),gs=S('g',{});
+        for(var a=0;a<16;a++){var an=a*Math.PI/8,r1=a%2?2.2:2.8;gs.appendChild(S('line',{x1:60+Math.cos(an)*1.3,y1:25+Math.sin(an)*1.3,x2:60+Math.cos(an)*r1,y2:25+Math.sin(an)*r1,stroke:ec,'stroke-width':'.45'}))}
+        gs.appendChild(S('circle',{cx:'60',cy:'25',r:'1.2',fill:ec}));
+        [52,55,65,68].forEach(function(x){gs.appendChild(S('path',{d:'M'+x+' 24.2 l.35 .75 .8 .1 -.6 .55 .15 .8 -.7-.4 -.7 .4 .15-.8 -.6-.55 .8-.1 Z',fill:ec}))});s.appendChild(gs)}
       var top=d.espaldaArriba?1:0;
       if(top)txt(d.espaldaArriba,60,33,fitText(d.espaldaArriba,40,9),safeHex(d.sponsorColor,'#ffffff'),d.sponsorBorde,1.2);
       var nm=d.nombreEspalda?String(d.nombreEspalda).toUpperCase():backName(r.regaloDe);

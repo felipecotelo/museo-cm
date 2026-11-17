@@ -2003,7 +2003,7 @@
   "patron": "cuello",
   "escudo": "uruguay",
   "diseno": {
-   "base": "#86c5ea",
+   "base": "#8cc8ec",
    "cuello": "redondo",
    "cuelloColor": "#ffffff",
    "lados": "#111318",
@@ -2013,7 +2013,11 @@
    "numeroFrente": true,
    "nombreEspalda": "L. Suárez",
    "nombreColor": "#111318",
-   "numeroColor": "#111318"
+   "numeroColor": "#111318",
+   "cuelloColor2": "#111318",
+   "textura": "lineas",
+   "texturaColor": "rgba(255,255,255,.14)",
+   "emblemaEspalda": "sol"
   },
   "notas": "Titular Nike de Eliminatorias, con los parches de las Eliminatorias al Mundial 2026 y \"Football Unites the World\". Uruguay estrenó Nike en la Copa América 2024, y el único partido de Eliminatorias que Suárez jugó con esta camiseta fue su despedida: Uruguay 0-0 Paraguay, 6 de setiembre de 2024, en el Centenario.",
   "creado": 82.7,
