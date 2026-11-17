@@ -245,6 +245,83 @@ textarea.inp{min-height:80px;resize:vertical}
 }
 @media (max-width:480px){.stat:last-child{grid-column:1/-1}.hang{width:100px;margin-right:-56px}.hang .flip{width:100px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:14px}.tab svg{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.piece .info{padding:10px 11px 12px}.club b{font-size:13.5px}.designer{grid-template-columns:1fr}.designer .prev{width:140px}.prog{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== REDISEÑO: museo nocturno ===== */
+body{background:
+  radial-gradient(900px 520px at 85% -8%,rgba(167,139,250,.13),transparent 62%),
+  radial-gradient(1100px 620px at 8% -12%,rgba(91,200,255,.16),transparent 60%),
+  radial-gradient(800px 600px at 50% 110%,rgba(47,107,255,.08),transparent 60%),
+  var(--bg);background-attachment:fixed}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.035;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.app{position:relative;z-index:1}
+.mark{background:linear-gradient(140deg,#a6e2ff,#5bc8ff 45%,#2f6bff);box-shadow:0 0 0 1px rgba(255,255,255,.15) inset,0 8px 30px rgba(91,200,255,.45)}
+.brand{font-size:22px;background:linear-gradient(100deg,#fff 30%,#a6e2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tabs{border-bottom:0;padding:6px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06);backdrop-filter:blur(10px)}
+.tab[aria-selected="true"]{background:linear-gradient(135deg,#7fd8ff,#5bc8ff 50%,#3b8bff);box-shadow:0 6px 24px -6px rgba(91,200,255,.7)}
+.card{background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.012) 40%,rgba(0,0,0,.15)),var(--bg2);border-color:rgba(255,255,255,.07);box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 30px 60px -40px rgba(0,0,0,.8)}
+.h2{font-size:24px}
+.lbl{color:rgba(166,226,255,.6)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-radius:30px;border:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);min-height:440px;background:
+  radial-gradient(520px 380px at 78% 30%,rgba(91,200,255,.22),transparent 70%),
+  radial-gradient(420px 300px at 92% 90%,rgba(167,139,250,.18),transparent 70%),
+  linear-gradient(135deg,#0d1220,#080a10 60%)}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 90px);pointer-events:none}
+.hero-t{position:relative;padding:48px 44px;display:flex;flex-direction:column;justify-content:center;gap:18px;min-width:0}
+.hero-eye{display:inline-flex;align-items:center;gap:10px;font:600 11px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:#a6e2ff}
+.hero-eye i{width:28px;height:1px;background:linear-gradient(90deg,#5bc8ff,transparent)}
+.hero h1{margin:0;font:700 clamp(2.4rem,5.6vw,4.4rem)/.98 var(--disp);letter-spacing:-.045em;text-wrap:balance}
+.hero h1 span{background:linear-gradient(100deg,#ffffff,#a6e2ff 40%,#5bc8ff 70%,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:0;color:rgba(255,255,255,.65);font-size:15.5px;max-width:44ch;line-height:1.55}
+.hero-facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:6px}
+.hero-facts div{display:flex;flex-direction:column;gap:4px}
+.hero-facts b{font:700 34px/1 var(--disp);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.hero-facts span{font:600 10px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.hero-show{all:unset;cursor:pointer;position:relative;display:flex;align-items:flex-end;justify-content:center;padding:28px 28px 0;min-width:0}
+.hero-frame{position:relative;width:min(100%,340px);aspect-ratio:4/5;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.1),0 0 90px -20px rgba(91,200,255,.55);transform:perspective(1200px) rotateY(-6deg) rotateX(2deg);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.hero-show:hover .hero-frame{transform:perspective(1200px) rotateY(0) rotateX(0) translateY(-4px)}
+.hero-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+.hero-frame img.on{opacity:1}
+.hero-cap{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;background:linear-gradient(transparent,rgba(5,7,12,.92));display:flex;flex-direction:column;gap:4px}
+.hero-cap small{font:600 9.5px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#a6e2ff}
+.hero-cap b{font:600 17px/1.2 var(--disp)}
+.hero-cap span{font-size:12.5px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:6px}
+.hero-dots{position:absolute;right:22px;top:22px;display:flex;gap:6px;z-index:2}
+.hero-dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.25);transition:all .3s}
+.hero-dots i.on{width:18px;border-radius:3px;background:#5bc8ff}
+@media (max-width:820px){.hero{grid-template-columns:1fr;min-height:0}.hero-t{padding:32px 24px 8px}.hero-show{padding:20px 24px 28px}.hero-frame{transform:none}}
+
+/* estadísticas */
+.stat{position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01)),var(--bg2);border-color:rgba(255,255,255,.07);transition:transform .2s,border-color .2s,box-shadow .2s}
+.stat::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(91,200,255,.16),transparent 70%);transition:opacity .3s;opacity:.6}
+.stat:hover{transform:translateY(-3px);box-shadow:0 20px 40px -25px rgba(91,200,255,.6);border-color:rgba(166,226,255,.3)}
+.stat:hover::after{opacity:1}
+.stat .ico{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:rgba(91,200,255,.12);border:1px solid rgba(91,200,255,.25);margin-bottom:4px}
+.stat .ico svg{width:16px;height:16px;stroke:#a6e2ff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.stat .v{background:linear-gradient(120deg,#fff,#cfeeff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat[aria-pressed="true"]{border-color:rgba(91,200,255,.6);box-shadow:0 0 0 1px rgba(91,200,255,.35) inset,0 20px 40px -25px rgba(91,200,255,.7)}
+.stat[aria-pressed="true"] .v{background:linear-gradient(120deg,#a6e2ff,#5bc8ff);-webkit-background-clip:text;background-clip:text}
+
+/* vitrina tipo galería */
+.grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,15rem),1fr));gap:18px}
+.piece{border-radius:22px;border-color:rgba(255,255,255,.07);background:#0a0c12;position:relative;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
+.piece:hover{transform:translateY(-6px);border-color:rgba(166,226,255,.35);box-shadow:0 30px 60px -30px rgba(0,0,0,.9),0 0 50px -18px rgba(91,200,255,.55)}
+.piece:has(.flip.foto){display:block}
+.piece:has(.flip.foto) .stage{aspect-ratio:4/5}
+.piece:has(.flip.foto) .flip-in>img{transition:transform .6s}
+.piece:has(.flip.foto) .info{position:absolute;left:0;right:0;bottom:0;padding:56px 16px 16px;background:linear-gradient(transparent,rgba(5,7,12,.78) 38%,rgba(5,7,12,.96));pointer-events:none}
+.piece:has(.flip.foto) .club b{font-size:16.5px}
+.piece:has(.flip.foto) .s{color:rgba(255,255,255,.7)}
+.stage .no{background:rgba(5,7,12,.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.85)}
+.tick{background:linear-gradient(135deg,#a6e2ff,#3b8bff)}
+.piece.inc{opacity:.5}
+
+/* ficha */
+.ov{background:rgba(3,4,8,.86);backdrop-filter:blur(14px) saturate(1.2)}
+.sheet{width:min(100%,1040px);border-radius:28px;box-shadow:0 60px 120px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08),0 0 120px -50px rgba(91,200,255,.6)}
+.sheet .stage:has(.flip.foto){aspect-ratio:4/5}
+.sheet h3{font-size:32px}
 </style>
 </head>
 <body>
@@ -418,6 +495,31 @@ textarea.inp{min-height:80px;resize:vertical}
   function renderVitrina(){
     var root=document.getElementById('p-vitrina');root.textContent='';
     var all=numbered();
+    // hero
+    var fin=all.filter(hasFoto).slice().reverse();
+    var plz={},nat={};all.forEach(function(r){if(r.regaloDe)plz[norm(r.regaloDe)]=1;if(r.pais)nat[norm(r.pais)]=1});
+    var hero=el('section','hero');var ht=el('div','hero-t');
+    var eye=el('span','hero-eye');add(eye,el('i'),'Colección privada');
+    var h1=el('h1');add(h1,'Cada camiseta, ',el('span',null,'una historia.'));
+    var facts=el('div','hero-facts');[[all.length,'Camisetas'],[Object.keys(plz).length,'Jugadores'],[Object.keys(nat).length,'Países']].forEach(function(f){var d=el('div');add(d,el('b',null,String(f[0])),el('span',null,f[1]));add(facts,d)});
+    add(ht,eye,h1,el('p',null,'Regalos de jugadores que pasaron por la Selección y el fútbol uruguayo, guardados como en el vestuario.'),facts);
+    add(hero,ht);
+    if(fin.length){
+      var show=el('button','hero-show');show.type='button';var fr=el('div','hero-frame');var dots=el('div','hero-dots');
+      var imgs=fin.slice(0,6).map(function(r,i){var im=el('img'+(i?'':''),i?null:'on');im.src=r.fotoFrente;im.alt=r.equipo+' de '+(r.regaloDe||'');add(fr,im);add(dots,el('i',i?null:'on'));return im});
+      var cap=el('div','hero-cap');add(fr,cap);
+      fin.slice(0,6).forEach(function(r,k){imgs[k].dataset.id=r.id});
+      var paint=function(k){var r=fin[k];cap.textContent='';var who=el('span');add(who,el('span',null,r.regaloDe||''),flag(r.nacionalidad));add(cap,el('small',null,k?'En la vitrina':'Última incorporación'),el('b',null,r.equipo+(r.temporada?' '+r.temporada:'')),who)};
+      paint(0);add(show,fr,dots);add(hero,show);
+      show.addEventListener('click',function(){var a=fr.querySelector('img.on');openSheet(a?a.dataset.id:fin[0].id)});
+      if(window.__heroT)clearInterval(window.__heroT);
+      if(imgs.length>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches)window.__heroT=setInterval(function(){
+        var live=document.querySelector('.hero-frame');if(!live)return;var ims=live.querySelectorAll('img'),ds=live.parentNode.querySelectorAll('.hero-dots i');
+        var k=0;ims.forEach(function(m,x){if(m.classList.contains('on'))k=x});ims[k].classList.remove('on');ds[k]&&ds[k].classList.remove('on');k=(k+1)%ims.length;ims[k].classList.add('on');ds[k]&&ds[k].classList.add('on');
+        var r=byId(ims[k].dataset.id);var c=live.querySelector('.hero-cap');if(r&&c){c.textContent='';var who=el('span');add(who,el('span',null,r.regaloDe||''),flag(r.nacionalidad));add(c,el('small',null,'En la vitrina'),el('b',null,r.equipo+(r.temporada?' '+r.temporada:'')),who)}
+      },4500);
+    }
+    add(root,hero);
     // perchero
     var rc=el('div','card rack-card');
     var h=el('div','card-h');var hl=el('div');var h2=el('h2','h2');
@@ -466,7 +568,8 @@ textarea.inp{min-height:80px;resize:vertical}
            card('mia','completas','Mi parte','Camisetas terminadas',done,(shot-done)>0?(shot-done)+' fotos esperan su imagen':'Al día con tus fotos','#c4b5fd','#5bc8ff','g-mia'));
     add(root,fb);
     var stats=el('div','stats');
-    V.forEach(function(v){var b=el('button','stat');b.type='button';b.setAttribute('aria-pressed',String(st.vista===v[0]));add(b,el('div','lbl',v[2]),el('div','v',String(v[1])),el('div','n',v[3]));b.addEventListener('click',function(){st.vista=v[0];renderVitrina()});add(stats,b)});
+    var ICO={camisetas:'M8 3 4 5 2 9l3 2 1-1v11h12V10l1 1 3-2-2-4-4-2c-1 2-2.5 3-4 3S9 5 8 3z',jugadores:'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21c0-4 4-6 8-6s8 2 8 6',ligas:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18',selecciones:'M5 21V4M5 4h11l-2 4 2 4H5',completar:'M4 20h4L19 9l-4-4L4 16zM14 6l4 4'};
+    V.forEach(function(v){var b=el('button','stat');b.type='button';b.setAttribute('aria-pressed',String(st.vista===v[0]));var ic=el('span','ico');var isv=S('svg',{viewBox:'0 0 24 24'});isv.appendChild(S('path',{d:ICO[v[0]]}));ic.appendChild(isv);add(b,ic,el('div','lbl',v[2]),el('div','v',String(v[1])),el('div','n',v[3]));b.addEventListener('click',function(){st.vista=v[0];renderVitrina()});add(stats,b)});
     add(root,stats);
 
     var card=el('div','card flush');
