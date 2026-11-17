@@ -1521,7 +1521,9 @@
   "notas": "",
   "creado": 71,
   "editado": 71,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p071-frente.jpg",
+  "fotoEspalda": "fotos/p071-espalda.jpg"
  },
  {
   "id": "p072",
