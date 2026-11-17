@@ -1110,7 +1110,8 @@
   "escudo": "real-madrid",
   "notas": "Tercera adidas 2024-25: gris oscura con el monograma RMCF en relieve, cuello polo y el trébol de adidas Originals (el primer Madrid con ese logo desde los años 80). Valverde usa el 8 desde 2024-25. Se la regaló en 2025.",
   "creado": 84.05,
-  "editado": 53
+  "editado": 53,
+  "fotografiada": true
  },
  {
   "id": "p054",
@@ -1341,7 +1342,8 @@
   "escudo": "uruguay",
   "notas": "Debut en Mundiales.",
   "creado": 64,
-  "editado": 64
+  "editado": 64,
+  "fotografiada": true
  },
  {
   "id": "p065",
@@ -1443,7 +1445,8 @@
    "fuente": "slab"
   },
   "fotoFrente": "fotos/p068-frente.jpg",
-  "fotoEspalda": "fotos/p068-espalda.jpg"
+  "fotoEspalda": "fotos/p068-espalda.jpg",
+  "fotografiada": true
  },
  {
   "id": "p069",
@@ -1695,7 +1698,8 @@
   "escudo": "wolves",
   "notas": "Titular Castore 2023-24 con AstroPay de sponsor.",
   "creado": 80,
-  "editado": 80
+  "editado": 80,
+  "fotografiada": true
  },
  {
   "id": "p081",
@@ -1736,7 +1740,8 @@
    ],
    "fuente": "saira",
    "emblemaEspalda": "97"
-  }
+  },
+  "fotografiada": true
  },
  {
   "id": "p082",
@@ -1788,7 +1793,8 @@
    ],
    "fuente": "chakra",
    "emblemaEspalda": "97"
-  }
+  },
+  "fotografiada": true
  },
  {
   "id": "p083",
@@ -1824,7 +1830,10 @@
    "nombreColor": "#ffffff",
    "numeroColor": "#ffffff",
    "fuente": "oswald"
-  }
+  },
+  "fotoFrente": "fotos/p083-frente.jpg",
+  "fotoEspalda": "fotos/p083-espalda.jpg",
+  "fotografiada": true
  },
  {
   "id": "p084",
@@ -1864,7 +1873,8 @@
    "fuente": "oswald"
   },
   "fotoFrente": "fotos/p084-frente.jpg",
-  "fotoEspalda": "fotos/p084-espalda.jpg"
+  "fotoEspalda": "fotos/p084-espalda.jpg",
+  "fotografiada": true
  },
  {
   "id": "p085",
@@ -1885,7 +1895,8 @@
   "escudo": "uruguay",
   "notas": "Mundial 2026, fase de grupos: Uruguay 0-1 España, 26 de junio de 2026 en Guadalajara. Canobbio fue expulsado en el final del partido. Alternativa Nike azul marino con estampado azul eléctrico.",
   "creado": 85,
-  "editado": 85
+  "editado": 85,
+  "fotografiada": true
  },
  {
   "id": "p086",
@@ -1935,7 +1946,8 @@
   "creado": 81.5,
   "editado": 86,
   "fotoFrente": "fotos/p086-frente.jpg",
-  "fotoEspalda": "fotos/p086-espalda.jpg"
+  "fotoEspalda": "fotos/p086-espalda.jpg",
+  "fotografiada": true
  },
  {
   "id": "p087",
@@ -1977,7 +1989,8 @@
   "creado": 84.6,
   "editado": 87,
   "fotoFrente": "fotos/p087-frente.jpg",
-  "fotoEspalda": "fotos/p087-espalda.jpg"
+  "fotoEspalda": "fotos/p087-espalda.jpg",
+  "fotografiada": true
  },
  {
   "id": "p088",
@@ -2016,7 +2029,8 @@
    "fuente": "righteous"
   },
   "fotoFrente": "fotos/p088-frente.jpg",
-  "fotoEspalda": "fotos/p088-espalda.jpg"
+  "fotoEspalda": "fotos/p088-espalda.jpg",
+  "fotografiada": true
  },
  {
   "id": "p089",
@@ -2056,7 +2070,8 @@
   "creado": 82.7,
   "editado": 89,
   "fotoFrente": "fotos/p089-frente.jpg",
-  "fotoEspalda": "fotos/p089-espalda.jpg"
+  "fotoEspalda": "fotos/p089-espalda.jpg",
+  "fotografiada": true
  },
  {
   "tipo": "Club",
@@ -2077,7 +2092,8 @@
   "color2": "#0f6b3a",
   "patron": "rayas",
   "escudo": "fluminense",
-  "creado": 84.7
+  "creado": 84.7,
+  "fotografiada": true
  },
  {
   "tipo": "Club",
@@ -2098,7 +2114,8 @@
   "color2": "#ffffff",
   "patron": "cuello",
   "escudo": "botafogo",
-  "creado": 84.75
+  "creado": 84.75,
+  "fotografiada": true
  },
  {
   "tipo": "Club",
@@ -2119,6 +2136,7 @@
   "color2": "#ffffff",
   "patron": "bandaI",
   "escudo": "danubio",
-  "creado": 84.8
+  "creado": 84.8,
+  "fotografiada": true
  }
 ]
