@@ -1707,7 +1707,9 @@
   "notas": "Titular Castore 2023-24 con AstroPay de sponsor.",
   "creado": 80,
   "editado": 80,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p080-frente.jpg",
+  "fotoEspalda": "fotos/p080-espalda.jpg"
  },
  {
   "id": "p081",
