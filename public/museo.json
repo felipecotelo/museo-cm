@@ -1869,5 +1869,26 @@
   "notas": "Visitante Joma granate y blanca de la temporada 2026-27, con Tecnocasa Group de sponsor y la bandera de España en la espalda. Satriano usa el 10 en el Getafe.",
   "creado": 84.6,
   "editado": 87
+ },
+ {
+  "id": "p088",
+  "equipo": "Inter Miami",
+  "tipo": "Club",
+  "pais": "Estados Unidos",
+  "temporada": "2024",
+  "version": "",
+  "tieneNumero": null,
+  "dorsal": "",
+  "tieneParches": null,
+  "parches": "",
+  "regaloDe": "Luis Suárez",
+  "nacionalidad": "Uruguay",
+  "color1": "#f5b6cd",
+  "color2": "#111111",
+  "patron": "cuello",
+  "escudo": "inter-miami",
+  "notas": "Se la regaló en la Fecha FIFA de setiembre de 2024, la de su despedida de la Selección (Uruguay 0-0 Paraguay, 6 de setiembre de 2024).",
+  "creado": 82.5,
+  "editado": 88
  }
 ]
