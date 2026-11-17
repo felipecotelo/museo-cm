@@ -2153,6 +2153,8 @@
   "patron": "bandaI",
   "escudo": "danubio",
   "creado": 84.8,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p092-frente.jpg",
+  "fotoEspalda": "fotos/p092-espalda.jpg"
  }
 ]
