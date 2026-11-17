@@ -1898,7 +1898,7 @@
   "tieneNumero": true,
   "dorsal": "14",
   "tieneParches": true,
-  "parches": "Mundial 2026",
+  "parches": "Parche del partido: Uruguay vs España, Guadalajara 26.6.26",
   "regaloDe": "Agustín Canobbio",
   "nacionalidad": "Uruguay",
   "color1": "#1b2340",
@@ -1908,7 +1908,9 @@
   "notas": "Mundial 2026, fase de grupos: Uruguay 0-1 España, 26 de junio de 2026 en Guadalajara. Canobbio fue expulsado en el final del partido. Alternativa Nike azul marino con estampado azul eléctrico.",
   "creado": 85,
   "editado": 85,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p085-frente.jpg",
+  "fotoEspalda": "fotos/p085-espalda.jpg"
  },
  {
   "id": "p086",
