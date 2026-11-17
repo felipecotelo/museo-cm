@@ -1796,7 +1796,9 @@
    "fuente": "chakra",
    "emblemaEspalda": "97"
   },
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p082-frente.jpg",
+  "fotoEspalda": "fotos/p082-espalda.jpg"
  },
  {
   "id": "p083",
