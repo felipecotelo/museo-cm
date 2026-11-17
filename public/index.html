@@ -96,6 +96,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 .full .t b{font:600 16px var(--disp)}
 .full .t span{color:var(--mut);font-size:12px}
 .full .bar{height:10px}
+.tick{width:26px;height:26px;border-radius:50%;background:var(--acc);display:grid;place-items:center;box-shadow:0 0 14px rgba(91,200,255,.45)}
+.tick svg{width:15px;height:15px;fill:none;stroke:var(--acc-ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 .piece.inc{opacity:.42;filter:saturate(.6)}
 .piece.inc:hover,.piece.inc:focus-visible{opacity:1;filter:none}
 .stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
@@ -437,7 +439,7 @@ textarea.inp{min-height:80px;resize:vertical}
       list.slice().reverse().forEach(function(r){
         var p=el('button','piece'+(hasFoto(r)?'':' inc'));p.type='button';p.setAttribute('aria-label','Ver ficha N.º '+pad(r._n)+': '+r.equipo);
         var sg=el('div','stage');add(sg,visual(r),el('span','no','N.º '+pad(r._n)));
-        var tg=el('div','tags');var m=missing(r);if(m.length){var fp=pill('Falta '+m.length,'todo');fp.title='Falta: '+m.join(', ');add(tg,fp)}if(hasFoto(r))add(tg,pill('Con foto','acc'));add(sg,tg);
+        var tg=el('div','tags');var m=missing(r);if(m.length){var fp=pill('Falta '+m.length,'todo');fp.title='Falta: '+m.join(', ');add(tg,fp)}if(hasFoto(r)){var tk=el('span','tick');tk.title='Con foto';tk.setAttribute('role','img');tk.setAttribute('aria-label','Con foto');var ts=S('svg',{viewBox:'0 0 24 24','aria-hidden':'true'});ts.appendChild(S('path',{d:'M5 12.5l4.5 4.5L19 7.5'}));tk.appendChild(ts);add(tg,tk)}add(sg,tg);
         var inf=el('div','info');add(inf,clubLine(r),el('div','s',detail(r)||'Sin año ni versión'),playerLine(r));
         add(p,sg,inf);p.addEventListener('click',function(){openSheet(r.id,st.vista==='completar')});add(grid,p);
       });
