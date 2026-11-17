@@ -572,9 +572,9 @@
   "tipo": "Club",
   "pais": "Uruguay",
   "temporada": "2018",
-  "version": "",
-  "tieneNumero": null,
-  "dorsal": "",
+  "version": "Alternativa",
+  "tieneNumero": true,
+  "dorsal": "7",
   "tieneParches": null,
   "parches": "",
   "regaloDe": "David Terans",
@@ -585,7 +585,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 28,
-  "editado": 28
+  "editado": 28,
+  "fotografiada": true
  },
  {
   "id": "p029",
@@ -782,9 +783,9 @@
   "tipo": "Club",
   "pais": "Argentina",
   "temporada": "",
-  "version": "",
-  "tieneNumero": null,
-  "dorsal": "",
+  "version": "Titular",
+  "tieneNumero": true,
+  "dorsal": "18",
   "tieneParches": null,
   "parches": "",
   "regaloDe": "Camilo Mayada",
@@ -795,7 +796,8 @@
   "escudo": "river-plate",
   "notas": "",
   "creado": 38,
-  "editado": 38
+  "editado": 38,
+  "fotografiada": true
  },
  {
   "id": "p039",
@@ -992,9 +994,9 @@
   "tipo": "Club",
   "pais": "Uruguay",
   "temporada": "",
-  "version": "",
-  "tieneNumero": null,
-  "dorsal": "",
+  "version": "Alternativa",
+  "tieneNumero": true,
+  "dorsal": "10",
   "tieneParches": null,
   "parches": "",
   "regaloDe": "Ignacio González",
@@ -1005,7 +1007,8 @@
   "escudo": "wanderers",
   "notas": "",
   "creado": 48,
-  "editado": 48
+  "editado": 48,
+  "fotografiada": true
  },
  {
   "id": "p049",
@@ -1500,9 +1503,9 @@
   "tipo": "Club",
   "pais": "Brasil",
   "temporada": "2022",
-  "version": "",
-  "tieneNumero": null,
-  "dorsal": "",
+  "version": "Alternativa",
+  "tieneNumero": true,
+  "dorsal": "9",
   "tieneParches": null,
   "parches": "",
   "regaloDe": "Agustín Canobbio",
@@ -1513,7 +1516,8 @@
   "escudo": "athletico-paranaense",
   "notas": "",
   "creado": 71,
-  "editado": 71
+  "editado": 71,
+  "fotografiada": true
  },
  {
   "id": "p072",
@@ -2101,7 +2105,9 @@
   "patron": "rayas",
   "escudo": "fluminense",
   "creado": 84.7,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p090-frente.jpg",
+  "fotoEspalda": "fotos/p090-espalda.jpg"
  },
  {
   "tipo": "Club",
