@@ -2195,7 +2195,9 @@
   "color2": "#ffffff",
   "patron": "cuello",
   "escudo": "uruguay",
-  "creado": 84.82
+  "creado": 84.82,
+  "fotoFrente": "fotos/p093-frente.jpg",
+  "fotoEspalda": "fotos/p093-espalda.jpg"
  },
  {
   "tipo": "Club",
