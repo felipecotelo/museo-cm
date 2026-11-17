@@ -7,6 +7,9 @@ for x in d:
   f='fotos/%s-frente.jpg'%x['id']; b='fotos/%s-espalda.jpg'%x['id']
   if os.path.exists(f): x['fotoFrente']=f
   if os.path.exists(b): x['fotoEspalda']=b
+  for l,k in (('frente','recorteFrente'),('espalda','recorteEspalda')):
+    r='recortes/%s-%s.webp'%(x['id'],l)
+    if os.path.exists(r): x[k]=r
 json.dump(d,open('museo.json','w'),ensure_ascii=False,indent=1)
 PY
 cd .. && git add -A public tools && git commit -qm "$1

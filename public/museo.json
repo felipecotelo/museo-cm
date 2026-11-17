@@ -418,7 +418,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p019-frente.jpg",
   "fotoEspalda": "fotos/p019-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/lucas-olaza/profil/spieler/216240"
+  "tm": "https://www.transfermarkt.es/lucas-olaza/profil/spieler/216240",
+  "recorteFrente": "recortes/p019-frente.webp",
+  "recorteEspalda": "recortes/p019-espalda.webp"
  },
  {
   "id": "p020",
@@ -619,7 +621,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p028-frente.jpg",
   "fotoEspalda": "fotos/p028-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/david-terans/profil/spieler/261309"
+  "tm": "https://www.transfermarkt.es/david-terans/profil/spieler/261309",
+  "recorteFrente": "recortes/p028-frente.webp",
+  "recorteEspalda": "recortes/p028-espalda.webp"
  },
  {
   "id": "p029",
@@ -644,7 +648,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p029-frente.jpg",
   "fotoEspalda": "fotos/p029-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/david-terans/profil/spieler/261309"
+  "tm": "https://www.transfermarkt.es/david-terans/profil/spieler/261309",
+  "recorteFrente": "recortes/p029-frente.webp",
+  "recorteEspalda": "recortes/p029-espalda.webp"
  },
  {
   "id": "p030",
@@ -669,7 +675,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p030-frente.jpg",
   "fotoEspalda": "fotos/p030-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/david-terans/profil/spieler/261309"
+  "tm": "https://www.transfermarkt.es/david-terans/profil/spieler/261309",
+  "recorteFrente": "recortes/p030-frente.webp",
+  "recorteEspalda": "recortes/p030-espalda.webp"
  },
  {
   "id": "p031",
@@ -848,7 +856,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p038-frente.jpg",
   "fotoEspalda": "fotos/p038-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/camilo-mayada/profil/spieler/130197"
+  "tm": "https://www.transfermarkt.es/camilo-mayada/profil/spieler/130197",
+  "recorteFrente": "recortes/p038-frente.webp",
+  "recorteEspalda": "recortes/p038-espalda.webp"
  },
  {
   "id": "p039",
@@ -917,7 +927,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p041-frente.jpg",
   "fotoEspalda": "fotos/p041-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/thomas-chacon/profil/spieler/465676"
+  "tm": "https://www.transfermarkt.es/thomas-chacon/profil/spieler/465676",
+  "recorteFrente": "recortes/p041-frente.webp",
+  "recorteEspalda": "recortes/p041-espalda.webp"
  },
  {
   "id": "p042",
@@ -942,7 +954,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p042-frente.jpg",
   "fotoEspalda": "fotos/p042-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/thomas-chacon/profil/spieler/465676"
+  "tm": "https://www.transfermarkt.es/thomas-chacon/profil/spieler/465676",
+  "recorteFrente": "recortes/p042-frente.webp",
+  "recorteEspalda": "recortes/p042-espalda.webp"
  },
  {
   "id": "p043",
@@ -1077,7 +1091,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p048-frente.jpg",
   "fotoEspalda": "fotos/p048-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/ignacio-gonzalez/profil/spieler/71161"
+  "tm": "https://www.transfermarkt.es/ignacio-gonzalez/profil/spieler/71161",
+  "recorteFrente": "recortes/p048-frente.webp",
+  "recorteEspalda": "recortes/p048-espalda.webp"
  },
  {
   "id": "p049",
@@ -1190,7 +1206,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p053-frente.jpg",
   "fotoEspalda": "fotos/p053-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/federico-valverde/profil/spieler/369081"
+  "tm": "https://www.transfermarkt.es/federico-valverde/profil/spieler/369081",
+  "recorteFrente": "recortes/p053-frente.webp",
+  "recorteEspalda": "recortes/p053-espalda.webp"
  },
  {
   "id": "p054",
@@ -1369,7 +1387,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p061-frente.jpg",
   "fotoEspalda": "fotos/p061-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/randall-rodriguez/profil/spieler/657751"
+  "tm": "https://www.transfermarkt.es/randall-rodriguez/profil/spieler/657751",
+  "recorteFrente": "recortes/p061-frente.webp",
+  "recorteEspalda": "recortes/p061-espalda.webp"
  },
  {
   "id": "p062",
@@ -1438,7 +1458,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p064-frente.jpg",
   "fotoEspalda": "fotos/p064-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/federico-valverde/profil/spieler/369081"
+  "tm": "https://www.transfermarkt.es/federico-valverde/profil/spieler/369081",
+  "recorteFrente": "recortes/p064-frente.webp",
+  "recorteEspalda": "recortes/p064-espalda.webp"
  },
  {
   "id": "p065",
@@ -1545,7 +1567,9 @@
   "fotoFrente": "fotos/p068-frente.jpg",
   "fotoEspalda": "fotos/p068-espalda.jpg",
   "fotografiada": true,
-  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352"
+  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352",
+  "recorteFrente": "recortes/p068-frente.webp",
+  "recorteEspalda": "recortes/p068-espalda.webp"
  },
  {
   "id": "p069",
@@ -1592,7 +1616,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p070-frente.jpg",
   "fotoEspalda": "fotos/p070-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/fabricio-diaz/profil/spieler/741567"
+  "tm": "https://www.transfermarkt.es/fabricio-diaz/profil/spieler/741567",
+  "recorteFrente": "recortes/p070-frente.webp",
+  "recorteEspalda": "recortes/p070-espalda.webp"
  },
  {
   "id": "p071",
@@ -1617,7 +1643,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p071-frente.jpg",
   "fotoEspalda": "fotos/p071-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/agustin-canobbio/profil/spieler/457533"
+  "tm": "https://www.transfermarkt.es/agustin-canobbio/profil/spieler/457533",
+  "recorteFrente": "recortes/p071-frente.webp",
+  "recorteEspalda": "recortes/p071-espalda.webp"
  },
  {
   "id": "p072",
@@ -1730,7 +1758,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p076-frente.jpg",
   "fotoEspalda": "fotos/p076-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/nicolas-siri/profil/spieler/815381"
+  "tm": "https://www.transfermarkt.es/nicolas-siri/profil/spieler/815381",
+  "recorteFrente": "recortes/p076-frente.webp",
+  "recorteEspalda": "recortes/p076-espalda.webp"
  },
  {
   "id": "p077",
@@ -1755,7 +1785,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p077-frente.jpg",
   "fotoEspalda": "fotos/p077-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/fabricio-diaz/profil/spieler/741567"
+  "tm": "https://www.transfermarkt.es/fabricio-diaz/profil/spieler/741567",
+  "recorteFrente": "recortes/p077-frente.webp",
+  "recorteEspalda": "recortes/p077-espalda.webp"
  },
  {
   "id": "p078",
@@ -1824,7 +1856,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p080-frente.jpg",
   "fotoEspalda": "fotos/p080-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/santiago-bueno/profil/spieler/438001"
+  "tm": "https://www.transfermarkt.es/santiago-bueno/profil/spieler/438001",
+  "recorteFrente": "recortes/p080-frente.webp",
+  "recorteEspalda": "recortes/p080-espalda.webp"
  },
  {
   "id": "p081",
@@ -1869,7 +1903,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p081-frente.jpg",
   "fotoEspalda": "fotos/p081-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/darwin-nunez/profil/spieler/546543"
+  "tm": "https://www.transfermarkt.es/darwin-nunez/profil/spieler/546543",
+  "recorteFrente": "recortes/p081-frente.webp",
+  "recorteEspalda": "recortes/p081-espalda.webp"
  },
  {
   "id": "p082",
@@ -1925,7 +1961,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p082-frente.jpg",
   "fotoEspalda": "fotos/p082-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/darwin-nunez/profil/spieler/546543"
+  "tm": "https://www.transfermarkt.es/darwin-nunez/profil/spieler/546543",
+  "recorteFrente": "recortes/p082-frente.webp",
+  "recorteEspalda": "recortes/p082-espalda.webp"
  },
  {
   "id": "p083",
@@ -1965,7 +2003,9 @@
   "fotoFrente": "fotos/p083-frente.jpg",
   "fotoEspalda": "fotos/p083-espalda.jpg",
   "fotografiada": true,
-  "tm": "https://www.transfermarkt.es/joaquin-piquerez/profil/spieler/496268"
+  "tm": "https://www.transfermarkt.es/joaquin-piquerez/profil/spieler/496268",
+  "recorteFrente": "recortes/p083-frente.webp",
+  "recorteEspalda": "recortes/p083-espalda.webp"
  },
  {
   "id": "p084",
@@ -2007,7 +2047,9 @@
   "fotoFrente": "fotos/p084-frente.jpg",
   "fotoEspalda": "fotos/p084-espalda.jpg",
   "fotografiada": true,
-  "tm": "https://www.transfermarkt.es/facundo-torres/profil/spieler/465822"
+  "tm": "https://www.transfermarkt.es/facundo-torres/profil/spieler/465822",
+  "recorteFrente": "recortes/p084-frente.webp",
+  "recorteEspalda": "recortes/p084-espalda.webp"
  },
  {
   "id": "p085",
@@ -2032,7 +2074,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p085-frente.jpg",
   "fotoEspalda": "fotos/p085-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/agustin-canobbio/profil/spieler/457533"
+  "tm": "https://www.transfermarkt.es/agustin-canobbio/profil/spieler/457533",
+  "recorteFrente": "recortes/p085-frente.webp",
+  "recorteEspalda": "recortes/p085-espalda.webp"
  },
  {
   "id": "p086",
@@ -2084,7 +2128,9 @@
   "fotoFrente": "fotos/p086-frente.jpg",
   "fotoEspalda": "fotos/p086-espalda.jpg",
   "fotografiada": true,
-  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352"
+  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352",
+  "recorteFrente": "recortes/p086-frente.webp",
+  "recorteEspalda": "recortes/p086-espalda.webp"
  },
  {
   "id": "p087",
@@ -2128,7 +2174,9 @@
   "fotoFrente": "fotos/p087-frente.jpg",
   "fotoEspalda": "fotos/p087-espalda.jpg",
   "fotografiada": true,
-  "tm": "https://www.transfermarkt.es/martin-satriano/profil/spieler/640109"
+  "tm": "https://www.transfermarkt.es/martin-satriano/profil/spieler/640109",
+  "recorteFrente": "recortes/p087-frente.webp",
+  "recorteEspalda": "recortes/p087-espalda.webp"
  },
  {
   "id": "p088",
@@ -2169,7 +2217,9 @@
   "fotoFrente": "fotos/p088-frente.jpg",
   "fotoEspalda": "fotos/p088-espalda.jpg",
   "fotografiada": true,
-  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352"
+  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352",
+  "recorteFrente": "recortes/p088-frente.webp",
+  "recorteEspalda": "recortes/p088-espalda.webp"
  },
  {
   "id": "p089",
@@ -2211,7 +2261,9 @@
   "fotoFrente": "fotos/p089-frente.jpg",
   "fotoEspalda": "fotos/p089-espalda.jpg",
   "fotografiada": true,
-  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352"
+  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352",
+  "recorteFrente": "recortes/p089-frente.webp",
+  "recorteEspalda": "recortes/p089-espalda.webp"
  },
  {
   "tipo": "Club",
@@ -2236,7 +2288,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p090-frente.jpg",
   "fotoEspalda": "fotos/p090-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/joaquin-lavega/profil/spieler/895926"
+  "tm": "https://www.transfermarkt.es/joaquin-lavega/profil/spieler/895926",
+  "recorteFrente": "recortes/p090-frente.webp",
+  "recorteEspalda": "recortes/p090-espalda.webp"
  },
  {
   "tipo": "Club",
@@ -2261,7 +2315,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p091-frente.jpg",
   "fotoEspalda": "fotos/p091-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/mateo-ponte/profil/spieler/856047"
+  "tm": "https://www.transfermarkt.es/mateo-ponte/profil/spieler/856047",
+  "recorteFrente": "recortes/p091-frente.webp",
+  "recorteEspalda": "recortes/p091-espalda.webp"
  },
  {
   "tipo": "Club",
@@ -2286,7 +2342,9 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p092-frente.jpg",
   "fotoEspalda": "fotos/p092-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/joaquin-fernandez/profil/spieler/898380"
+  "tm": "https://www.transfermarkt.es/joaquin-fernandez/profil/spieler/898380",
+  "recorteFrente": "recortes/p092-frente.webp",
+  "recorteEspalda": "recortes/p092-espalda.webp"
  },
  {
   "tipo": "Selección",
@@ -2311,7 +2369,9 @@
   "creado": 84.82,
   "fotoFrente": "fotos/p093-frente.jpg",
   "fotoEspalda": "fotos/p093-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/mateo-ponte/profil/spieler/856047"
+  "tm": "https://www.transfermarkt.es/mateo-ponte/profil/spieler/856047",
+  "recorteFrente": "recortes/p093-frente.webp",
+  "recorteEspalda": "recortes/p093-espalda.webp"
  },
  {
   "tipo": "Club",
@@ -2336,7 +2396,9 @@
   "creado": 82.8,
   "fotoFrente": "fotos/p094-frente.jpg",
   "fotoEspalda": "fotos/p094-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/diego-godin/profil/spieler/54928"
+  "tm": "https://www.transfermarkt.es/diego-godin/profil/spieler/54928",
+  "recorteFrente": "recortes/p094-frente.webp",
+  "recorteEspalda": "recortes/p094-espalda.webp"
  },
  {
   "tipo": "Club",
@@ -2361,7 +2423,9 @@
   "creado": 86,
   "fotoFrente": "fotos/p095-frente.jpg",
   "fotoEspalda": "fotos/p095-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/juan-rodriguez/profil/spieler/1228231"
+  "tm": "https://www.transfermarkt.es/juan-rodriguez/profil/spieler/1228231",
+  "recorteFrente": "recortes/p095-frente.webp",
+  "recorteEspalda": "recortes/p095-espalda.webp"
  },
  {
   "tipo": "Club",
@@ -2386,6 +2450,8 @@
   "fotografiada": true,
   "fotoFrente": "fotos/p096-frente.jpg",
   "fotoEspalda": "fotos/p096-espalda.jpg",
-  "tm": "https://www.transfermarkt.es/mateo-peralta/profil/spieler/997829"
+  "tm": "https://www.transfermarkt.es/mateo-peralta/profil/spieler/997829",
+  "recorteFrente": "recortes/p096-frente.webp",
+  "recorteEspalda": "recortes/p096-espalda.webp"
  }
 ]
