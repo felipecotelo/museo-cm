@@ -1520,7 +1520,9 @@
   "notas": "Titular negriazul con Puritas, Aída, antel y Del Cebador.",
   "creado": 70,
   "editado": 70,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p070-frente.jpg",
+  "fotoEspalda": "fotos/p070-espalda.jpg"
  },
  {
   "id": "p071",
@@ -1650,7 +1652,9 @@
   "notas": "Sudamericano Sub-20 Colombia 2023: Uruguay subcampeón.",
   "creado": 76,
   "editado": 76,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p076-frente.jpg",
+  "fotoEspalda": "fotos/p076-espalda.jpg"
  },
  {
   "id": "p077",
@@ -1672,7 +1676,9 @@
   "notas": "Mundial Sub-20 Argentina 2023: Uruguay campeón del mundo.",
   "creado": 77,
   "editado": 77,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p077-frente.jpg",
+  "fotoEspalda": "fotos/p077-espalda.jpg"
  },
  {
   "id": "p078",
@@ -2282,6 +2288,8 @@
   "patron": "banda",
   "escudo": "danubio",
   "creado": 88,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p096-frente.jpg",
+  "fotoEspalda": "fotos/p096-espalda.jpg"
  }
 ]
