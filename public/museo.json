@@ -2101,7 +2101,7 @@
   "tipo": "Club",
   "version": "Titular",
   "tieneNumero": true,
-  "tieneParches": null,
+  "tieneParches": false,
   "parches": "",
   "nacionalidad": "Uruguay",
   "notas": "Titular Umbro tricolor con Superbet de sponsor. Lavega llegó al Fluminense desde River Plate (Uruguay) en diciembre de 2024 y usa el 19.",
