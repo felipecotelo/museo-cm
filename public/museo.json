@@ -2011,7 +2011,8 @@
    "puñosLinea": "#f4a6c6",
    "fuente": "righteous"
   },
-  "fotoFrente": "fotos/p088-frente.jpg"
+  "fotoFrente": "fotos/p088-frente.jpg",
+  "fotoEspalda": "fotos/p088-espalda.jpg"
  },
  {
   "id": "p089",
