@@ -75,6 +75,12 @@ button,input,select,textarea{font:inherit;color:inherit}
 .flip-in{position:relative;transition:transform .55s cubic-bezier(.3,.7,.3,1);transform-style:preserve-3d}
 .flip-in>svg{display:block;width:100%;height:auto;backface-visibility:hidden;-webkit-backface-visibility:hidden}
 .flip-in>svg.back{position:absolute;inset:0;transform:rotateY(180deg)}
+.flip.foto{width:100%!important;height:100%;filter:none!important}
+.flip.foto .flip-in{height:100%}
+.flip-in>img{display:block;width:100%;height:100%;object-fit:cover;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip-in>img.back{position:absolute;inset:0;transform:rotateY(180deg)}
+.stage:has(.flip.foto){aspect-ratio:4/5}
+.sheet .stage:has(.flip.foto){aspect-ratio:4/5;min-height:0}
 .hang:hover .flip-in,.hang:focus-visible .flip-in,.piece:hover .flip-in,.piece:focus-visible .flip-in,.flip.on .flip-in{transform:rotateY(180deg)}
 @media (hover:none){.piece:hover .flip-in,.hang:hover .flip-in{transform:none}}
 .hook{width:24px;height:32px;margin-top:-14px;margin-bottom:-9px;z-index:1}
@@ -115,7 +121,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,12.5rem),1fr));gap:14px;padding:0 24px 24px}
 .piece{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;border-radius:20px;border:1px solid var(--line);background:var(--bg);overflow:hidden;transition:border-color .15s,transform .15s}
 .piece:hover{border-color:var(--acc-line);transform:translateY(-2px)}
-.stage{position:relative;aspect-ratio:1/1;max-width:100%;display:grid;place-items:center;background:radial-gradient(70% 60% at 50% 40%,#1b1f29,#0b0c11)}
+.stage{position:relative;aspect-ratio:4/5;max-width:100%;display:grid;place-items:center;background:radial-gradient(70% 60% at 50% 40%,#1b1f29,#0b0c11)}
 .stage img.photo{width:100%;height:100%;object-fit:cover}
 .stage .flip{width:66%;filter:drop-shadow(0 10px 18px rgba(0,0,0,.55))}
 .stage .no{position:absolute;left:12px;top:12px;font:600 10px/1 var(--body);letter-spacing:.14em;color:var(--mut);background:rgba(7,8,11,.75);padding:6px 8px;border-radius:8px;font-variant-numeric:tabular-nums}
@@ -254,59 +260,30 @@ textarea.inp{min-height:80px;resize:vertical}
   function crestImg(r,cls){var s=crestSrc(r);if(!s)return null;var i=el('img',cls||'crest');i.src=s;i.alt='';i.loading='lazy';return i}
   function photoSrc(r){if(r.fotoId&&/^[A-Za-z0-9_-]+$/.test(r.fotoId))return '/_blob/'+r.fotoId;if(r.fotoUrl&&/^(https:|\/)/.test(r.fotoUrl))return r.fotoUrl;return ''}
   function missing(r){var m=[];if(!r.temporada)m.push('año');if(!r.version)m.push('versión');if(r.tieneNumero!==true&&r.tieneNumero!==false)m.push('número');else if(r.tieneNumero&&!r.dorsal)m.push('número');if(r.tieneParches!==true&&r.tieneParches!==false)m.push('parches');return m}
-  function hasFoto(r){return !!r.diseno}
+  function hasFoto(r){return !!r.fotoFrente}
   function detail(r){var a=[];if(r.temporada)a.push(r.temporada);if(r.version)a.push(r.version);if(r.tieneNumero&&r.dorsal)a.push('#'+r.dorsal);if(r.tieneParches)a.push('Con parches');return a.join(' · ')}
 
   /* ---- camiseta dibujada ---- */
   var sid=0,NS='http://www.w3.org/2000/svg';
   var BODY='M41 13 C34.5 15 28 17.2 22.5 19.6 C15.8 25 10 31 5.4 37.6 L17.6 53.2 L28.6 46.6 C29 64 28.8 88 28.2 109.6 C49.4 111.8 70.6 111.8 91.8 109.6 C91.2 88 91 64 91.4 46.6 L102.4 53.2 L114.6 37.6 C110 31 104.2 25 97.5 19.6 C92 17.2 85.5 15 79 13 Q60 27 41 13 Z';
   function S(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e}
+  function autoD(r){var c1=safeHex(r.color1,'#e5e5e5'),c2=safeHex(r.color2,'#1a1a1a'),p=r.patron||'lisa',d={base:c1,cuello:'redondo',cuelloColor:c2,puños:c2,puñosAncho:2.4};
+    if(p==='rayas')d.rayas={color:c2,ancho:8,paso:16};
+    else if(p==='aros')d.aros={color:c2,alto:9,paso:18};
+    else if(p==='mitad')d.mitad=c2;
+    else if(p==='banda')d.banda={color:c2,dir:'baja'};
+    else if(p==='bandaI')d.banda={color:c2,dir:'sube'};
+    if(p!=='lisa'&&p!=='cuello'){d.cuelloColor=c2;d.puños=c2}
+    d.numeroColor=lum(c1)>.45?'#111318':'#ffffff';if(p!=='lisa'&&p!=='cuello')d.numeroBorde=c1;
+    return d}
+  function withD(r){return r.diseno?r:Object.assign({},r,{diseno:autoD(r)})}
   function shirt(r,opt){
-    if(r.diseno)return shirtD(r,false);
-    opt=opt||{};var c1=safeHex(r.color1,'#e5e5e5'),c2=safeHex(r.color2,'#1a1a1a'),p=r.patron||'lisa',id='cl'+(++sid);
-    var s=S('svg',{viewBox:'0 0 120 120','class':'shirt','aria-hidden':'true'});
-    var defs=S('defs',{}),cp=S('clipPath',{id:id});cp.appendChild(S('path',{d:BODY}));defs.appendChild(cp);s.appendChild(defs);
-    s.appendChild(S('path',{d:BODY,fill:c1}));
-    var g=S('g',{'clip-path':'url(#'+id+')'});
-    if(p==='rayas'){for(var x=33;x<92;x+=16)g.appendChild(S('rect',{x:x,y:0,width:8,height:120,fill:c2}))}
-    else if(p==='aros'){for(var y=34;y<112;y+=18)g.appendChild(S('rect',{x:0,y:y,width:120,height:9,fill:c2}))}
-    else if(p==='mitad'){g.appendChild(S('rect',{x:60,y:0,width:60,height:120,fill:c2}))}
-    else if(p==='banda'){g.appendChild(S('polygon',{points:'20,40 40,20 110,95 90,115',fill:c2}))}
-    else if(p==='bandaI'){g.appendChild(S('polygon',{points:'100,40 80,20 10,95 30,115',fill:c2}))}
-    else if(p==='cuello'){g.appendChild(S('polygon',{points:'5,37 18,54 22,51 9,34',fill:c2}));g.appendChild(S('polygon',{points:'115,37 102,54 98,51 111,34',fill:c2}))}
-    g.appendChild(S('path',{d:'M29 47 L29 110 L36 110 L36 50 Z',fill:'rgba(0,0,0,.12)'}));
-    s.appendChild(g);
-    s.appendChild(S('path',{d:'M40 14 Q60 28 80 14 L76 12 Q60 23 44 12 Z',fill:c2}));
-    s.appendChild(S('path',{d:BODY,fill:'none',stroke:'rgba(255,255,255,.16)','stroke-width':'1'}));
-    var cs=crestSrc(r);
-    if(cs){var im=S('image',{x:'64',y:'34',width:'15',height:'15',preserveAspectRatio:'xMidYMid meet'});im.setAttribute('href',cs);s.appendChild(im)}
-    if(!opt.noNum&&r.tieneNumero&&r.dorsal){var plain=(p==='lisa'||p==='cuello');var t=S('text',{x:'60',y:'88','text-anchor':'middle','font-family':'Space Grotesk,Inter,sans-serif','font-weight':'700','font-size':'26',fill:plain?c2:c1,stroke:plain?'none':c2,'stroke-width':'1.2','paint-order':'stroke'});t.textContent=String(r.dorsal).slice(0,3);s.appendChild(t)}
-    return s;
+    return shirtD(withD(r),false);
   }
   function lum(h){h=safeHex(h,'#888888');var c=[1,3,5].map(function(i){var v=parseInt(h.substr(i,2),16)/255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*c[0]+.7152*c[1]+.0722*c[2]}
   function backName(n){var w=String(n||'').replace(/[‘’'"]/g,'').trim().split(/\s+/);if(!w[0])return '';var out=[w.pop()];var P=['de','la','del','da','dos','van','von'];while(w.length>1&&P.indexOf(norm(w[w.length-1]))>=0)out.unshift(w.pop());return out.join(' ').toUpperCase()}
   function shirtBack(r){
-    if(r.diseno)return shirtD(r,true);
-    var c1=safeHex(r.color1,'#e5e5e5'),c2=safeHex(r.color2,'#1a1a1a'),p=r.patron||'lisa',id='cb'+(++sid);
-    var s=S('svg',{viewBox:'0 0 120 120','class':'shirt back','aria-hidden':'true'});
-    var defs=S('defs',{}),cp=S('clipPath',{id:id});cp.appendChild(S('path',{d:BODY}));defs.appendChild(cp);s.appendChild(defs);
-    s.appendChild(S('path',{d:BODY,fill:c1}));
-    var g=S('g',{'clip-path':'url(#'+id+')'});
-    if(p==='rayas'){for(var x=33;x<92;x+=16)g.appendChild(S('rect',{x:x,y:0,width:8,height:120,fill:c2}))}
-    else if(p==='aros'){for(var y=34;y<112;y+=18)g.appendChild(S('rect',{x:0,y:y,width:120,height:9,fill:c2}))}
-    else if(p==='mitad'){g.appendChild(S('rect',{x:0,y:0,width:60,height:120,fill:c2}))}
-    else if(p==='banda'){g.appendChild(S('polygon',{points:'100,40 80,20 10,95 30,115',fill:c2}))}
-    else if(p==='bandaI'){g.appendChild(S('polygon',{points:'20,40 40,20 110,95 90,115',fill:c2}))}
-    else if(p==='cuello'){g.appendChild(S('polygon',{points:'5,37 18,54 22,51 9,34',fill:c2}));g.appendChild(S('polygon',{points:'115,37 102,54 98,51 111,34',fill:c2}))}
-    g.appendChild(S('path',{d:'M91 47 L91 110 L84 110 L84 50 Z',fill:'rgba(0,0,0,.12)'}));
-    s.appendChild(g);
-    s.appendChild(S('path',{d:'M40 14 Q60 19 80 14 L77 12.5 Q60 16.5 43 12.5 Z',fill:c2}));
-    s.appendChild(S('path',{d:BODY,fill:'none',stroke:'rgba(255,255,255,.16)','stroke-width':'1'}));
-    var ink=lum(c1)>.45?'#111318':'#ffffff',edge=lum(c1)>.45?'#ffffff':'#111318',busy=(p!=='lisa'&&p!=='cuello');
-    var nm=backName(r.regaloDe);
-    if(nm){var fs=nm.length>12?7:nm.length>9?8.5:10;var t=S('text',{x:'60',y:'38','text-anchor':'middle','font-family':'Space Grotesk,Inter,sans-serif','font-weight':'700','font-size':String(fs),'letter-spacing':'.6',fill:ink});if(busy){t.setAttribute('stroke',edge);t.setAttribute('stroke-width','1.6');t.setAttribute('paint-order','stroke')}t.textContent=nm;s.appendChild(t)}
-    if(r.tieneNumero&&r.dorsal){var n=S('text',{x:'60',y:'86','text-anchor':'middle','font-family':'Space Grotesk,Inter,sans-serif','font-weight':'700','font-size':'40',fill:ink});if(busy){n.setAttribute('stroke',edge);n.setAttribute('stroke-width','2.4');n.setAttribute('paint-order','stroke')}n.textContent=String(r.dorsal).slice(0,3);s.appendChild(n)}
-    return s;
+    return shirtD(withD(r),true);
   }
   /* ---- camiseta real: receta de diseño (r.diseno) ---- */
   function mir(pts){return pts.split(' ').map(function(p){var a=p.split(',');return (120-parseFloat(a[0]))+','+a[1]}).join(' ')}
@@ -330,6 +307,9 @@ textarea.inp{min-height:80px;resize:vertical}
     if(d.rayas){var R=d.rayas,w=R.ancho||10,p=R.paso||20,bw=R.bordeAncho||0;var K=Math.ceil(70/p);for(var k=-K;k<=K;k++){var cx=60+k*p;
       if(bw&&R.borde){g.appendChild(S('rect',{x:cx-w/2-bw,y:0,width:w+bw*2,height:120,fill:R.borde}))}
       g.appendChild(S('rect',{x:cx-w/2,y:0,width:w,height:120,fill:R.color,opacity:R.opacidad||1}))}}
+    if(d.aros){var A=d.aros;for(var y=34;y<114;y+=(A.paso||18))g.appendChild(S('rect',{x:0,y:y,width:120,height:A.alto||9,fill:A.color}))}
+    if(d.mitad)g.appendChild(S('rect',{x:back?0:60,y:0,width:60,height:120,fill:d.mitad}));
+    if(d.banda){var baja=(d.banda.dir==='baja')!==!!back;g.appendChild(S('polygon',{points:baja?'18,36 40,14 112,96 90,118':'102,36 80,14 8,96 30,118',fill:d.banda.color}))}
     if(d.mangas)both('polygon',{fill:d.mangas},'23,19 4,37 18,54 29.2,47 30,24');
     if(d.lados){both('polygon',{fill:d.lados},'28.6,47 33.2,50 33.2,112 27.5,112');if(d.ladosBorde)both('polygon',{fill:d.ladosBorde},'33.2,50 34,50.4 34,112 33.2,112')}
     if(d.hombros){both('polygon',{fill:d.hombros},'41,13 22,20 5,37 9.5,42.5 25,27 44,18');if(d.hombrosBorde)both('polygon',{fill:d.hombrosBorde},'44,18 25,27 9.5,42.5 11,44.5 26.5,29.5 45.5,20.5')}
@@ -385,7 +365,9 @@ textarea.inp{min-height:80px;resize:vertical}
     return s;
   }
   function flipShirt(r){var f=el('div','flip');var i=el('div','flip-in');add(i,shirt(r,{noNum:true}),shirtBack(r));add(f,i);return f}
-  function visual(r,opt){var src=photoSrc(r);if(src){var im=el('img','photo');im.src=src;im.alt='Foto de la camiseta de '+(r.equipo||'');im.loading='lazy';return im}return flipShirt(r)}
+  function fotoFlip(r){var f=el('div','flip foto');var i=el('div','flip-in');var a=el('img');a.src=r.fotoFrente;a.alt=r.equipo+' de '+(r.regaloDe||'')+', frente';a.loading='lazy';add(i,a);
+    if(r.fotoEspalda){var b=el('img','back');b.src=r.fotoEspalda;b.alt=r.equipo+' de '+(r.regaloDe||'')+', espalda';b.loading='lazy';add(i,b)}add(f,i);return f}
+  function visual(r,opt){if(r.fotoFrente&&!(opt&&opt.dibujo))return fotoFlip(r);var src=photoSrc(r);if(src){var im=el('img','photo');im.src=src;im.alt='Foto de la camiseta de '+(r.equipo||'');im.loading='lazy';return im}return flipShirt(r)}
 
   /* ---- datos ---- */
   function numbered(){var a=DATA.slice().sort(function(x,y){return (x.creado||0)-(y.creado||0)});a.forEach(function(r,i){r._n=i+1});return a}
