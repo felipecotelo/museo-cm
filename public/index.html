@@ -251,7 +251,8 @@ textarea.inp{min-height:80px;resize:vertical}
   function crestSrc(r){var s=r.escudo;if(s&&ESC.indexOf(s)>=0)return 'escudos/'+s+'.png';return ''}
   function crestImg(r,cls){var s=crestSrc(r);if(!s)return null;var i=el('img',cls||'crest');i.src=s;i.alt='';i.loading='lazy';return i}
   function photoSrc(r){if(r.fotoId&&/^[A-Za-z0-9_-]+$/.test(r.fotoId))return '/_blob/'+r.fotoId;if(r.fotoUrl&&/^(https:|\/)/.test(r.fotoUrl))return r.fotoUrl;return ''}
-  function missing(r){var m=[];if(!r.temporada)m.push('año');if(!r.version)m.push('versión');if(r.tieneNumero!==true&&r.tieneNumero!==false)m.push('número');else if(r.tieneNumero&&!r.dorsal)m.push('número');if(r.tieneParches!==true&&r.tieneParches!==false)m.push('parches');if(!r.diseno)m.push('foto');return m}
+  function missing(r){var m=[];if(!r.temporada)m.push('año');if(!r.version)m.push('versión');if(r.tieneNumero!==true&&r.tieneNumero!==false)m.push('número');else if(r.tieneNumero&&!r.dorsal)m.push('número');if(r.tieneParches!==true&&r.tieneParches!==false)m.push('parches');return m}
+  function hasFoto(r){return !!r.diseno}
   function detail(r){var a=[];if(r.temporada)a.push(r.temporada);if(r.version)a.push(r.version);if(r.tieneNumero&&r.dorsal)a.push('#'+r.dorsal);if(r.tieneParches)a.push('Con parches');return a.join(' · ')}
 
   /* ---- camiseta dibujada ---- */
@@ -401,11 +402,11 @@ textarea.inp{min-height:80px;resize:vertical}
     // estadísticas-filtro
     var players={},ligas={},sel=0,todo=0;
     all.forEach(function(r){if(r.regaloDe)players[norm(r.regaloDe)]=1;if(r.tipo==='Selección')sel++;else if(r.pais)ligas[norm(r.pais)]=1;if(missing(r).length)todo++});
-    var V=[['camisetas',all.length,'Camisetas','en el museo'],['jugadores',Object.keys(players).length,'Jugadores','que regalaron'],['ligas',Object.keys(ligas).length,'Ligas','países de clubes'],['selecciones',sel,'Selecciones','camisetas de selección'],['completar',todo,'Por completar','falta foto o algún dato']];
-    var done=all.filter(function(r){return !missing(r).length}).length,pct=all.length?Math.round(done/all.length*100):0;
+    var V=[['camisetas',all.length,'Camisetas','en el museo'],['jugadores',Object.keys(players).length,'Jugadores','que regalaron'],['ligas',Object.keys(ligas).length,'Ligas','países de clubes'],['selecciones',sel,'Selecciones','camisetas de selección'],['completar',todo,'Por completar','les falta algún dato']];
+    var done=all.filter(hasFoto).length,pct=all.length?Math.round(done/all.length*100):0;
     var fb=el('button','full');fb.type='button';fb.setAttribute('aria-pressed',String(st.vista==='completas'));
     var big=el('div','big',String(done));add(big,el('small',null,'/ '+all.length));
-    var ft=el('div','t');add(ft,el('b',null,'Camisetas al 100%'),el('span',null,pct+'% · con fotos y todos los datos'));
+    var ft=el('div','t');add(ft,el('b',null,'Camisetas con foto'),el('span',null,(all.length-done)===0?'¡Están todas!':'Faltan '+(all.length-done)+' por fotografiar · '+pct+'%'));
     var fbar=el('div','bar');var fi=el('i');fi.style.width=pct+'%';add(fbar,fi);
     add(fb,big,ft,fbar);fb.addEventListener('click',function(){st.vista=st.vista==='completas'?'camisetas':'completas';renderVitrina()});
     add(root,fb);
@@ -414,7 +415,7 @@ textarea.inp{min-height:80px;resize:vertical}
     add(root,stats);
 
     var card=el('div','card flush');
-    var titles={camisetas:'Todas las camisetas',jugadores:'Por jugador',ligas:'Por liga',selecciones:'Camisetas de selección',completar:'Camisetas por completar',completas:'Camisetas al 100%'};
+    var titles={camisetas:'Todas las camisetas',jugadores:'Por jugador',ligas:'Por liga',selecciones:'Camisetas de selección',completar:'Camisetas por completar',completas:'Camisetas con foto'};
     var ch=el('div','card-h');var chl=el('div');add(chl,el('div','lbl','Vitrina'),el('h2','h2',titles[st.vista]));add(ch,chl);
     if(st.vista==='completar'&&todo){var go1=el('button','btn','Empezar a completar');go1.type='button';go1.addEventListener('click',function(){var f=all.filter(function(r){return missing(r).length})[0];if(f)openSheet(f.id,true)});add(ch,go1)}
     add(card,ch);
@@ -430,13 +431,13 @@ textarea.inp{min-height:80px;resize:vertical}
       if(st.vista==='ligas'){groups(list.filter(function(r){return r.tipo!=='Selección'}),function(r){return r.pais||'Sin país'},function(k){var t=el('span','t');add(t,flag(k),el('span',null,k));return t},function(r){return r.equipo+(r.temporada?' '+r.temporada:'')+' · '+(r.regaloDe||'')});return}
       if(st.vista==='selecciones')list=list.filter(function(r){return r.tipo==='Selección'});
       if(st.vista==='completar')list=list.filter(function(r){return missing(r).length});
-      if(st.vista==='completas')list=list.filter(function(r){return !missing(r).length});
+      if(st.vista==='completas')list=list.filter(hasFoto);
       if(!list.length){add(body,el('div','empty',st.vista==='completar'?'No falta nada: todas las camisetas tienen sus datos.':'Ninguna camiseta coincide con la búsqueda.'));return}
       var grid=el('div','grid');
       list.slice().reverse().forEach(function(r){
-        var p=el('button','piece'+(st.vista!=='completar'&&missing(r).length?' inc':''));p.type='button';p.setAttribute('aria-label','Ver ficha N.º '+pad(r._n)+': '+r.equipo);
+        var p=el('button','piece'+(hasFoto(r)?'':' inc'));p.type='button';p.setAttribute('aria-label','Ver ficha N.º '+pad(r._n)+': '+r.equipo);
         var sg=el('div','stage');add(sg,visual(r),el('span','no','N.º '+pad(r._n)));
-        var tg=el('div','tags');var m=missing(r);if(m.length){var fp=pill('Falta '+m.length,'todo');fp.title='Falta: '+m.join(', ');add(tg,fp)}else add(tg,pill('100%','acc'));add(sg,tg);
+        var tg=el('div','tags');var m=missing(r);if(m.length){var fp=pill('Falta '+m.length,'todo');fp.title='Falta: '+m.join(', ');add(tg,fp)}if(hasFoto(r))add(tg,pill('Con foto','acc'));add(sg,tg);
         var inf=el('div','info');add(inf,clubLine(r),el('div','s',detail(r)||'Sin año ni versión'),playerLine(r));
         add(p,sg,inf);p.addEventListener('click',function(){openSheet(r.id,st.vista==='completar')});add(grid,p);
       });
