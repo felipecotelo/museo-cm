@@ -213,7 +213,7 @@ textarea.inp{min-height:80px;resize:vertical}
 <body>
 <div class="app">
   <header class="top">
-    <div class="mark" aria-hidden="true">CM</div>
+    <div class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="26" height="26"><path d="M23 13 L14 17 L6 26 L12.5 34 L18 30.5 L18 52 L46 52 L46 30.5 L51.5 34 L58 26 L50 17 L41 13 Q32 21 23 13 Z" fill="currentColor"/></svg></div>
     <div class="brand">Museo del CM</div>
   </header>
   <nav class="tabs" role="tablist" aria-label="Secciones">
@@ -315,14 +315,15 @@ textarea.inp{min-height:80px;resize:vertical}
     var d=r.diseno||{},base=safeHex(d.base,safeHex(r.color1,'#cccccc')),id='cd'+(++sid);
     var s=S('svg',{viewBox:'0 0 120 120','class':'shirt'+(back?' back':''),'aria-hidden':'true'});
     var defs=S('defs',{}),cp=S('clipPath',{id:id});cp.appendChild(S('path',{d:BODY}));defs.appendChild(cp);
-    if(d.textura){var pt=S('pattern',{id:id+'t',width:'8',height:'7',patternUnits:'userSpaceOnUse'});pt.appendChild(S('path',{d:'M0 7 L4 0 L8 7 Z',fill:'rgba(0,0,0,.13)'}));defs.appendChild(pt)}
+    if(d.textura){var pt=S('pattern',{id:id+'t',width:'8',height:'7',patternUnits:'userSpaceOnUse'});pt.appendChild(S('path',{d:'M0 7 L4 0 L8 7 Z',fill:d.texturaColor||'rgba(0,0,0,.13)'}));defs.appendChild(pt)}
     s.appendChild(defs);
     s.appendChild(S('path',{d:BODY,fill:base}));
     var g=S('g',{'clip-path':'url(#'+id+')'});
     if(d.textura)g.appendChild(S('rect',{x:0,y:0,width:120,height:120,fill:'url(#'+id+'t)'}));
-    if(d.rayas){var R=d.rayas,w=R.ancho||10,p=R.paso||20,bw=R.bordeAncho||0;for(var k=-4;k<=4;k++){var cx=60+k*p;
+    if(d.rayas){var R=d.rayas,w=R.ancho||10,p=R.paso||20,bw=R.bordeAncho||0;var K=Math.ceil(70/p);for(var k=-K;k<=K;k++){var cx=60+k*p;
       if(bw&&R.borde){g.appendChild(S('rect',{x:cx-w/2-bw,y:0,width:w+bw*2,height:120,fill:R.borde}))}
       g.appendChild(S('rect',{x:cx-w/2,y:0,width:w,height:120,fill:R.color}))}}
+    if(d.mangas){var mp='22,20 5,37 18,54 29,47 29,25';g.appendChild(S('polygon',{points:mp,fill:d.mangas}));g.appendChild(S('polygon',{points:mir(mp),fill:d.mangas}))}
     if(d.lados){g.appendChild(S('rect',{x:29,y:50,width:4.5,height:60,fill:d.lados}));g.appendChild(S('rect',{x:86.5,y:50,width:4.5,height:60,fill:d.lados}))}
     if(d.hombros){var hp='41,13 22,20 5,37 9.5,42.5 25,27 44,18';g.appendChild(S('polygon',{points:hp,fill:d.hombros}));g.appendChild(S('polygon',{points:mir(hp),fill:d.hombros}));
       if(d.hombrosBorde){var hb='44,18 25,27 9.5,42.5 11,44.5 26.5,29.5 45.5,20.5';g.appendChild(S('polygon',{points:hb,fill:d.hombrosBorde}));g.appendChild(S('polygon',{points:mir(hb),fill:d.hombrosBorde}))}}
@@ -339,15 +340,19 @@ textarea.inp{min-height:80px;resize:vertical}
     if(!back){
       var cs=crestSrc(r);if(cs){var im=S('image',{x:'66',y:'33',width:'14',height:'14',preserveAspectRatio:'xMidYMid meet'});im.setAttribute('href',cs);s.appendChild(im)}
       if(d.marca)txt(d.marca,46,44,4.6,safeHex(d.marcaColor,'#ffffff'),d.sponsorBorde,.8,700);
+      if(d.sponsorIcono==='corona'){s.appendChild(S('polygon',{points:'49,76 49,62 54,67 57,58 60,65 63,58 66,67 71,62 71,76',fill:safeHex(d.sponsorColor,'#ffffff')}))}
+      if(d.numeroFrente&&r.tieneNumero&&r.dorsal)txt(String(r.dorsal).slice(0,3),67,61,10,safeHex(d.numeroColor,'#111318'),null,0,700);
       if(d.sponsor)txt(d.sponsor,60,71,fitText(d.sponsor,48,12),safeHex(d.sponsorColor,'#ffffff'),d.sponsorBorde,1.4);
     }else{
       var ink=safeHex(d.numeroColor,lum(base)>.45?'#111318':'#ffffff'),edge=d.numeroBorde||null;
       if(d.parcheEspalda){var fi=S('image',{x:'55',y:'19',width:'10',height:'6.5',preserveAspectRatio:'none'});fi.setAttribute('href','banderas/'+d.parcheEspalda+'.svg');s.appendChild(fi)}
       var top=d.espaldaArriba?1:0;
       if(top)txt(d.espaldaArriba,60,33,fitText(d.espaldaArriba,40,9),safeHex(d.sponsorColor,'#ffffff'),d.sponsorBorde,1.2);
-      var nm=backName(r.regaloDe);if(nm)txt(nm,60,top?51:38,fitText(nm,44,top?7.5:9.5),safeHex(d.nombreColor,ink),d.nombreBorde||edge,1.2,700);
-      if(r.tieneNumero&&r.dorsal)txt(String(r.dorsal).slice(0,3),60,top?89:87,top?34:40,ink,edge,2.2,700);
-      if(d.espaldaAbajo)txt(d.espaldaAbajo,60,104,fitText(d.espaldaAbajo,30,7),safeHex(d.sponsorColor,'#ffffff'),d.sponsorBorde,1);
+      var nm=d.nombreEspalda?String(d.nombreEspalda).toUpperCase():backName(r.regaloDe);
+      if(nm&&d.nombreAbajo)txt(nm,60,109,fitText(nm,30,6),safeHex(d.nombreColor,ink),d.nombreBorde||null,1,700);
+      else if(nm)txt(nm,60,top?51:38,fitText(nm,44,top?7.5:9.5),safeHex(d.nombreColor,ink),d.nombreBorde||edge,1.2,700);
+      if(r.tieneNumero&&r.dorsal)txt(String(r.dorsal).slice(0,3),60,top?(d.nombreAbajo?80:89):87,top?34:40,ink,edge,2.2,700);
+      if(d.espaldaAbajo)txt(d.espaldaAbajo,60,d.nombreAbajo?100:104,fitText(d.espaldaAbajo,30,7),safeHex(d.sponsorColor,'#ffffff'),d.sponsorBorde,1);
     }
     return s;
   }
