@@ -226,6 +226,9 @@ textarea.inp{min-height:80px;resize:vertical}
 .sheet h3 .crest{width:36px;height:36px}
 .who{display:flex;align-items:center;gap:8px;font-size:15px}
 .who .lbl{margin-right:4px}
+.who .tm{margin-left:auto;display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;border:1px solid rgba(91,200,255,.35);background:rgba(91,200,255,.08);color:#a6e2ff;font:600 11px/1 var(--body);letter-spacing:.06em;text-decoration:none;transition:background .2s,border-color .2s}
+.who .tm:hover{background:rgba(91,200,255,.18);border-color:#5bc8ff}
+.who .tm span{font-size:12px}
 .fill{display:flex;flex-direction:column;gap:14px;padding:18px;border-radius:18px;border:1px solid var(--acc-line);background:var(--acc-soft)}
 .fill-h{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .fill .row2{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
@@ -702,6 +705,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
     var h3=el('h3');add(h3,crestImg(r),el('span',null,r.equipo));
     var tags=el('div');tags.style.display='flex';tags.style.gap='6px';tags.style.flexWrap='wrap';add(tags,pill(r.tipo==='Selección'?'Selección':'Club',r.tipo==='Selección'?'acc':''),r.pais?pill(r.pais):null);
     var who=el('div','who');add(who,el('span','lbl','Regalo de'),el('b',null,r.regaloDe||'—'),flag(r.nacionalidad));
+    var tmu=r.tm||(DATA.filter(function(x){return x.tm&&x.regaloDe===r.regaloDe})[0]||{}).tm;if(tmu){var tl=el('a','tm');tl.href=tmu;tl.target='_blank';tl.rel='noopener';tl.title='Ver a '+r.regaloDe+' en Transfermarkt';add(tl,'Transfermarkt',el('span',null,'↗'));add(who,tl)}
     add(b,tags,h3,who);
     // completar
     var fillBox=el('div','fill');var fh=el('div','fill-h');var msg=el('span','msg');add(fh,el('span','lbl','Completar'),msg);add(fillBox,fh);

@@ -18,7 +18,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 1,
-  "editado": 1
+  "editado": 1,
+  "tm": "https://www.transfermarkt.es/matias-perez/profil/spieler/72586"
  },
  {
   "id": "p002",
@@ -39,7 +40,8 @@
   "escudo": "sporting-braga",
   "notas": "",
   "creado": 2,
-  "editado": 2
+  "editado": 2,
+  "tm": "https://www.transfermarkt.es/emiliano-velazquez/profil/spieler/189458"
  },
  {
   "id": "p003",
@@ -60,7 +62,8 @@
   "escudo": "rayo-vallecano",
   "notas": "Temporada en Liga123 (Segunda División).",
   "creado": 3,
-  "editado": 3
+  "editado": 3,
+  "tm": "https://www.transfermarkt.es/emiliano-velazquez/profil/spieler/189458"
  },
  {
   "id": "p004",
@@ -81,7 +84,8 @@
   "escudo": "rayo-vallecano",
   "notas": "Temporada en LaLiga.",
   "creado": 4,
-  "editado": 4
+  "editado": 4,
+  "tm": "https://www.transfermarkt.es/emiliano-velazquez/profil/spieler/189458"
  },
  {
   "id": "p005",
@@ -102,7 +106,8 @@
   "escudo": "rayo-vallecano",
   "notas": "",
   "creado": 5,
-  "editado": 5
+  "editado": 5,
+  "tm": "https://www.transfermarkt.es/emiliano-velazquez/profil/spieler/189458"
  },
  {
   "id": "p006",
@@ -123,7 +128,8 @@
   "escudo": "boavista",
   "notas": "",
   "creado": 6,
-  "editado": 6
+  "editado": 6,
+  "tm": "https://www.transfermarkt.es/matias-velazquez/profil/spieler/263578"
  },
  {
   "id": "p007",
@@ -144,7 +150,8 @@
   "escudo": "cerrito",
   "notas": "",
   "creado": 7,
-  "editado": 7
+  "editado": 7,
+  "tm": "https://www.transfermarkt.es/matias-velazquez/profil/spieler/263578"
  },
  {
   "id": "p008",
@@ -165,7 +172,8 @@
   "escudo": "progreso",
   "notas": "",
   "creado": 8,
-  "editado": 8
+  "editado": 8,
+  "tm": "https://www.transfermarkt.es/carlos-canobbio/profil/spieler/205719"
  },
  {
   "id": "p009",
@@ -186,7 +194,8 @@
   "escudo": "rampla-juniors",
   "notas": "",
   "creado": 9,
-  "editado": 9
+  "editado": 9,
+  "tm": "https://www.transfermarkt.es/santiago-gonzalez/profil/spieler/203450"
  },
  {
   "id": "p010",
@@ -207,7 +216,8 @@
   "escudo": "osmanlspor",
   "notas": "",
   "creado": 10,
-  "editado": 10
+  "editado": 10,
+  "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739"
  },
  {
   "id": "p011",
@@ -228,7 +238,8 @@
   "escudo": "plaza-colonia",
   "notas": "",
   "creado": 11,
-  "editado": 11
+  "editado": 11,
+  "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739"
  },
  {
   "id": "p012",
@@ -249,7 +260,8 @@
   "escudo": "racing",
   "notas": "",
   "creado": 12,
-  "editado": 12
+  "editado": 12,
+  "tm": "https://www.transfermarkt.es/liber-quinones/profil/spieler/91791"
  },
  {
   "id": "p013",
@@ -270,7 +282,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 13,
-  "editado": 13
+  "editado": 13,
+  "tm": "https://www.transfermarkt.es/jose-luis-rodriguez/profil/spieler/430339"
  },
  {
   "id": "p014",
@@ -291,7 +304,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 14,
-  "editado": 14
+  "editado": 14,
+  "tm": "https://www.transfermarkt.es/carlos-grossmuller/profil/spieler/50791"
  },
  {
   "id": "p015",
@@ -312,7 +326,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 15,
-  "editado": 15
+  "editado": 15,
+  "tm": "https://www.transfermarkt.es/michael-etulain/profil/spieler/56902"
  },
  {
   "id": "p016",
@@ -333,7 +348,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 16,
-  "editado": 16
+  "editado": 16,
+  "tm": "https://www.transfermarkt.es/emiliano-ghan/profil/spieler/335531"
  },
  {
   "id": "p017",
@@ -354,7 +370,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 17,
-  "editado": 17
+  "editado": 17,
+  "tm": "https://www.transfermarkt.es/richard-nunez/profil/spieler/2877"
  },
  {
   "id": "p018",
@@ -375,7 +392,8 @@
   "escudo": "talleres",
   "notas": "",
   "creado": 18,
-  "editado": 18
+  "editado": 18,
+  "tm": "https://www.transfermarkt.es/junior-arias/profil/spieler/268652"
  },
  {
   "id": "p019",
@@ -399,7 +417,8 @@
   "editado": 19,
   "fotografiada": true,
   "fotoFrente": "fotos/p019-frente.jpg",
-  "fotoEspalda": "fotos/p019-espalda.jpg"
+  "fotoEspalda": "fotos/p019-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/lucas-olaza/profil/spieler/216240"
  },
  {
   "id": "p020",
@@ -420,7 +439,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 20,
-  "editado": 20
+  "editado": 20,
+  "tm": "https://www.transfermarkt.es/agustin-navarro/profil/spieler/464916"
  },
  {
   "id": "p021",
@@ -441,7 +461,8 @@
   "escudo": "juventud-de-las-piedras",
   "notas": "",
   "creado": 21,
-  "editado": 21
+  "editado": 21,
+  "tm": "https://www.transfermarkt.es/agustin-navarro/profil/spieler/464916"
  },
  {
   "id": "p022",
@@ -462,7 +483,8 @@
   "escudo": "san-marcos-de-arica",
   "notas": "",
   "creado": 22,
-  "editado": 22
+  "editado": 22,
+  "tm": "https://www.transfermarkt.es/agustin-navarro/profil/spieler/464916"
  },
  {
   "id": "p023",
@@ -483,7 +505,8 @@
   "escudo": "sud-america",
   "notas": "",
   "creado": 23,
-  "editado": 23
+  "editado": 23,
+  "tm": "https://www.transfermarkt.es/agustin-navarro/profil/spieler/464916"
  },
  {
   "id": "p024",
@@ -504,7 +527,8 @@
   "escudo": "newell-s",
   "notas": "",
   "creado": 24,
-  "editado": 24
+  "editado": 24,
+  "tm": "https://www.transfermarkt.es/fabricio-formiliano/profil/spieler/197231"
  },
  {
   "id": "p025",
@@ -525,7 +549,8 @@
   "escudo": "penarol",
   "notas": "",
   "creado": 25,
-  "editado": 25
+  "editado": 25,
+  "tm": "https://www.transfermarkt.es/fabricio-formiliano/profil/spieler/197231"
  },
  {
   "id": "p026",
@@ -546,7 +571,8 @@
   "escudo": "danubio",
   "notas": "Segunda camiseta de Emi Ghan de Danubio 2019.",
   "creado": 26,
-  "editado": 26
+  "editado": 26,
+  "tm": "https://www.transfermarkt.es/emiliano-ghan/profil/spieler/335531"
  },
  {
   "id": "p027",
@@ -567,7 +593,8 @@
   "escudo": "penarol",
   "notas": "",
   "creado": 27,
-  "editado": 27
+  "editado": 27,
+  "tm": "https://www.transfermarkt.es/matias-mier/profil/spieler/76716"
  },
  {
   "id": "p028",
@@ -591,7 +618,8 @@
   "editado": 28,
   "fotografiada": true,
   "fotoFrente": "fotos/p028-frente.jpg",
-  "fotoEspalda": "fotos/p028-espalda.jpg"
+  "fotoEspalda": "fotos/p028-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/david-terans/profil/spieler/261309"
  },
  {
   "id": "p029",
@@ -615,7 +643,8 @@
   "editado": 29,
   "fotografiada": true,
   "fotoFrente": "fotos/p029-frente.jpg",
-  "fotoEspalda": "fotos/p029-espalda.jpg"
+  "fotoEspalda": "fotos/p029-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/david-terans/profil/spieler/261309"
  },
  {
   "id": "p030",
@@ -639,7 +668,8 @@
   "editado": 30,
   "fotografiada": true,
   "fotoFrente": "fotos/p030-frente.jpg",
-  "fotoEspalda": "fotos/p030-espalda.jpg"
+  "fotoEspalda": "fotos/p030-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/david-terans/profil/spieler/261309"
  },
  {
   "id": "p031",
@@ -660,7 +690,8 @@
   "escudo": "danubio",
   "notas": "Copa Sudamericana.",
   "creado": 31,
-  "editado": 31
+  "editado": 31,
+  "tm": "https://www.transfermarkt.es/leandro-sosa/profil/spieler/199856"
  },
  {
   "id": "p032",
@@ -681,7 +712,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 32,
-  "editado": 32
+  "editado": 32,
+  "tm": "https://www.transfermarkt.es/leandro-sosa/profil/spieler/199856"
  },
  {
   "id": "p033",
@@ -702,7 +734,8 @@
   "escudo": "xanthi",
   "notas": "",
   "creado": 33,
-  "editado": 33
+  "editado": 33,
+  "tm": "https://www.transfermarkt.es/leandro-sosa/profil/spieler/199856"
  },
  {
   "id": "p034",
@@ -723,7 +756,8 @@
   "escudo": "extremadura",
   "notas": "",
   "creado": 34,
-  "editado": 34
+  "editado": 34,
+  "tm": "https://www.transfermarkt.es/giovanni-zarfino/profil/spieler/208022"
  },
  {
   "id": "p035",
@@ -744,7 +778,8 @@
   "escudo": "extremadura",
   "notas": "",
   "creado": 35,
-  "editado": 35
+  "editado": 35,
+  "tm": "https://www.transfermarkt.es/giovanni-zarfino/profil/spieler/208022"
  },
  {
   "id": "p036",
@@ -765,7 +800,8 @@
   "escudo": "tenerife",
   "notas": "",
   "creado": 36,
-  "editado": 36
+  "editado": 36,
+  "tm": "https://www.transfermarkt.es/giovanni-zarfino/profil/spieler/208022"
  },
  {
   "id": "p037",
@@ -786,7 +822,8 @@
   "escudo": "malaga",
   "notas": "",
   "creado": 37,
-  "editado": 37
+  "editado": 37,
+  "tm": "https://www.transfermarkt.es/federico-ricca/profil/spieler/285322"
  },
  {
   "id": "p038",
@@ -810,7 +847,8 @@
   "editado": 38,
   "fotografiada": true,
   "fotoFrente": "fotos/p038-frente.jpg",
-  "fotoEspalda": "fotos/p038-espalda.jpg"
+  "fotoEspalda": "fotos/p038-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/camilo-mayada/profil/spieler/130197"
  },
  {
   "id": "p039",
@@ -831,7 +869,8 @@
   "escudo": "olimpo-de-bahia-blanca",
   "notas": "",
   "creado": 39,
-  "editado": 39
+  "editado": 39,
+  "tm": "https://www.transfermarkt.es/gonzalo-porras/profil/spieler/76730"
  },
  {
   "id": "p040",
@@ -852,7 +891,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 40,
-  "editado": 40
+  "editado": 40,
+  "tm": "https://www.transfermarkt.es/bruno-fornaroli/profil/spieler/72651"
  },
  {
   "id": "p041",
@@ -876,7 +916,8 @@
   "editado": 41,
   "fotografiada": true,
   "fotoFrente": "fotos/p041-frente.jpg",
-  "fotoEspalda": "fotos/p041-espalda.jpg"
+  "fotoEspalda": "fotos/p041-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/thomas-chacon/profil/spieler/465676"
  },
  {
   "id": "p042",
@@ -900,7 +941,8 @@
   "editado": 42,
   "fotografiada": true,
   "fotoFrente": "fotos/p042-frente.jpg",
-  "fotoEspalda": "fotos/p042-espalda.jpg"
+  "fotoEspalda": "fotos/p042-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/thomas-chacon/profil/spieler/465676"
  },
  {
   "id": "p043",
@@ -921,7 +963,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 43,
-  "editado": 43
+  "editado": 43,
+  "tm": "https://www.transfermarkt.es/pablo-siles/profil/spieler/511289"
  },
  {
   "id": "p044",
@@ -942,7 +985,8 @@
   "escudo": "danubio",
   "notas": "Edición Bulgaria.",
   "creado": 44,
-  "editado": 44
+  "editado": 44,
+  "tm": "https://www.transfermarkt.es/pablo-siles/profil/spieler/511289"
  },
  {
   "id": "p045",
@@ -963,7 +1007,8 @@
   "escudo": "liga-de-quito",
   "notas": "",
   "creado": 45,
-  "editado": 45
+  "editado": 45,
+  "tm": "https://www.transfermarkt.es/rodrigo-aguirre/profil/spieler/189410"
  },
  {
   "id": "p046",
@@ -984,7 +1029,8 @@
   "escudo": "villa-teresa",
   "notas": "",
   "creado": 46,
-  "editado": 46
+  "editado": 46,
+  "tm": "https://www.transfermarkt.es/marcelo-tabarez/profil/spieler/264582"
  },
  {
   "id": "p047",
@@ -1005,7 +1051,8 @@
   "escudo": "valladolid",
   "notas": "",
   "creado": 47,
-  "editado": 47
+  "editado": 47,
+  "tm": "https://www.transfermarkt.es/fabian-canobbio/profil/spieler/15455"
  },
  {
   "id": "p048",
@@ -1029,7 +1076,8 @@
   "editado": 48,
   "fotografiada": true,
   "fotoFrente": "fotos/p048-frente.jpg",
-  "fotoEspalda": "fotos/p048-espalda.jpg"
+  "fotoEspalda": "fotos/p048-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/ignacio-gonzalez/profil/spieler/71161"
  },
  {
   "id": "p049",
@@ -1050,7 +1098,8 @@
   "escudo": "espanyol",
   "notas": "",
   "creado": 49,
-  "editado": 49
+  "editado": 49,
+  "tm": "https://www.transfermarkt.es/leandro-cabrera/profil/spieler/102423"
  },
  {
   "id": "p050",
@@ -1071,7 +1120,8 @@
   "escudo": "getafe",
   "notas": "",
   "creado": 50,
-  "editado": 50
+  "editado": 50,
+  "tm": "https://www.transfermarkt.es/mathias-olivera/profil/spieler/376514"
  },
  {
   "id": "p051",
@@ -1092,7 +1142,8 @@
   "escudo": "inter",
   "notas": "",
   "creado": 51,
-  "editado": 51
+  "editado": 51,
+  "tm": "https://www.transfermarkt.es/matias-vecino/profil/spieler/143812"
  },
  {
   "id": "p052",
@@ -1113,7 +1164,8 @@
   "escudo": "getafe",
   "notas": "",
   "creado": 52,
-  "editado": 52
+  "editado": 52,
+  "tm": "https://www.transfermarkt.es/damian-suarez/profil/spieler/76746"
  },
  {
   "id": "p053",
@@ -1137,7 +1189,8 @@
   "editado": 53,
   "fotografiada": true,
   "fotoFrente": "fotos/p053-frente.jpg",
-  "fotoEspalda": "fotos/p053-espalda.jpg"
+  "fotoEspalda": "fotos/p053-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/federico-valverde/profil/spieler/369081"
  },
  {
   "id": "p054",
@@ -1158,7 +1211,8 @@
   "escudo": "galatasaray",
   "notas": "",
   "creado": 54,
-  "editado": 54
+  "editado": 54,
+  "tm": "https://www.transfermarkt.es/lucas-torreira/profil/spieler/318077"
  },
  {
   "id": "p055",
@@ -1179,7 +1233,8 @@
   "escudo": "sporting-lisboa",
   "notas": "",
   "creado": 55,
-  "editado": 55
+  "editado": 55,
+  "tm": "https://www.transfermarkt.es/manuel-ugarte/profil/spieler/476701"
  },
  {
   "id": "p056",
@@ -1200,7 +1255,8 @@
   "escudo": "flamengo",
   "notas": "",
   "creado": 56,
-  "editado": 56
+  "editado": 56,
+  "tm": "https://www.transfermarkt.es/guillermo-varela/profil/spieler/188862"
  },
  {
   "id": "p057",
@@ -1221,7 +1277,8 @@
   "escudo": "uruguay",
   "notas": "",
   "creado": 57,
-  "editado": 57
+  "editado": 57,
+  "tm": "https://www.transfermarkt.es/martin-caceres/profil/spieler/54935"
  },
  {
   "id": "p058",
@@ -1242,7 +1299,8 @@
   "escudo": "uruguay",
   "notas": "",
   "creado": 58,
-  "editado": 58
+  "editado": 58,
+  "tm": "https://www.transfermarkt.es/ronald-araujo/profil/spieler/480267"
  },
  {
   "id": "p059",
@@ -1263,7 +1321,8 @@
   "escudo": "santos",
   "notas": "",
   "creado": 59,
-  "editado": 59
+  "editado": 59,
+  "tm": "https://www.transfermarkt.es/emiliano-velazquez/profil/spieler/189458"
  },
  {
   "id": "p060",
@@ -1284,7 +1343,8 @@
   "escudo": "juarez",
   "notas": "",
   "creado": 60,
-  "editado": 60
+  "editado": 60,
+  "tm": "https://www.transfermarkt.es/emiliano-velazquez/profil/spieler/189458"
  },
  {
   "id": "p061",
@@ -1308,7 +1368,8 @@
   "editado": 61,
   "fotografiada": true,
   "fotoFrente": "fotos/p061-frente.jpg",
-  "fotoEspalda": "fotos/p061-espalda.jpg"
+  "fotoEspalda": "fotos/p061-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/randall-rodriguez/profil/spieler/657751"
  },
  {
   "id": "p062",
@@ -1329,7 +1390,8 @@
   "escudo": "uruguay",
   "notas": "",
   "creado": 62,
-  "editado": 62
+  "editado": 62,
+  "tm": "https://www.transfermarkt.es/jose-maria-gimenez/profil/spieler/250845"
  },
  {
   "id": "p063",
@@ -1350,7 +1412,8 @@
   "escudo": "plaza-colonia",
   "notas": "",
   "creado": 63,
-  "editado": 63
+  "editado": 63,
+  "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739"
  },
  {
   "id": "p064",
@@ -1374,7 +1437,8 @@
   "editado": 64,
   "fotografiada": true,
   "fotoFrente": "fotos/p064-frente.jpg",
-  "fotoEspalda": "fotos/p064-espalda.jpg"
+  "fotoEspalda": "fotos/p064-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/federico-valverde/profil/spieler/369081"
  },
  {
   "id": "p065",
@@ -1395,7 +1459,8 @@
   "escudo": "uruguay",
   "notas": "",
   "creado": 65,
-  "editado": 65
+  "editado": 65,
+  "tm": "https://www.transfermarkt.es/sebastian-coates/profil/spieler/102427"
  },
  {
   "id": "p066",
@@ -1416,7 +1481,8 @@
   "escudo": "danubio",
   "notas": "",
   "creado": 66,
-  "editado": 66
+  "editado": 66,
+  "tm": "https://www.transfermarkt.es/mateo-ponte/profil/spieler/856047"
  },
  {
   "id": "p067",
@@ -1437,7 +1503,8 @@
   "escudo": "nacional",
   "notas": "",
   "creado": 67,
-  "editado": 67
+  "editado": 67,
+  "tm": "https://www.transfermarkt.es/jose-luis-rodriguez/profil/spieler/430339"
  },
  {
   "id": "p068",
@@ -1477,7 +1544,8 @@
   },
   "fotoFrente": "fotos/p068-frente.jpg",
   "fotoEspalda": "fotos/p068-espalda.jpg",
-  "fotografiada": true
+  "fotografiada": true,
+  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352"
  },
  {
   "id": "p069",
@@ -1498,7 +1566,8 @@
   "escudo": "cerrito",
   "notas": "",
   "creado": 69,
-  "editado": 69
+  "editado": 69,
+  "tm": "https://www.transfermarkt.es/matias-velazquez/profil/spieler/263578"
  },
  {
   "id": "p070",
@@ -1522,7 +1591,8 @@
   "editado": 70,
   "fotografiada": true,
   "fotoFrente": "fotos/p070-frente.jpg",
-  "fotoEspalda": "fotos/p070-espalda.jpg"
+  "fotoEspalda": "fotos/p070-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/fabricio-diaz/profil/spieler/741567"
  },
  {
   "id": "p071",
@@ -1546,7 +1616,8 @@
   "editado": 71,
   "fotografiada": true,
   "fotoFrente": "fotos/p071-frente.jpg",
-  "fotoEspalda": "fotos/p071-espalda.jpg"
+  "fotoEspalda": "fotos/p071-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/agustin-canobbio/profil/spieler/457533"
  },
  {
   "id": "p072",
@@ -1567,7 +1638,8 @@
   "escudo": "vasco-da-gama",
   "notas": "",
   "creado": 72,
-  "editado": 72
+  "editado": 72,
+  "tm": "https://www.transfermarkt.es/jose-luis-rodriguez/profil/spieler/430339"
  },
  {
   "id": "p073",
@@ -1588,7 +1660,8 @@
   "escudo": "flamengo",
   "notas": "",
   "creado": 73,
-  "editado": 73
+  "editado": 73,
+  "tm": "https://www.transfermarkt.es/guillermo-varela/profil/spieler/188862"
  },
  {
   "id": "p074",
@@ -1609,7 +1682,8 @@
   "escudo": "kitchee",
   "notas": "",
   "creado": 74,
-  "editado": 74
+  "editado": 74,
+  "tm": "https://www.transfermarkt.es/diego-forlan/profil/spieler/3408"
  },
  {
   "id": "p075",
@@ -1630,7 +1704,8 @@
   "escudo": "penarol",
   "notas": "",
   "creado": 75,
-  "editado": 75
+  "editado": 75,
+  "tm": "https://www.transfermarkt.es/santiago-homenchenko/profil/spieler/895679"
  },
  {
   "id": "p076",
@@ -1654,7 +1729,8 @@
   "editado": 76,
   "fotografiada": true,
   "fotoFrente": "fotos/p076-frente.jpg",
-  "fotoEspalda": "fotos/p076-espalda.jpg"
+  "fotoEspalda": "fotos/p076-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/nicolas-siri/profil/spieler/815381"
  },
  {
   "id": "p077",
@@ -1678,7 +1754,8 @@
   "editado": 77,
   "fotografiada": true,
   "fotoFrente": "fotos/p077-frente.jpg",
-  "fotoEspalda": "fotos/p077-espalda.jpg"
+  "fotoEspalda": "fotos/p077-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/fabricio-diaz/profil/spieler/741567"
  },
  {
   "id": "p078",
@@ -1699,7 +1776,8 @@
   "escudo": "junior",
   "notas": "",
   "creado": 78,
-  "editado": 78
+  "editado": 78,
+  "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739"
  },
  {
   "id": "p079",
@@ -1720,7 +1798,8 @@
   "escudo": "river-plate",
   "notas": "",
   "creado": 79,
-  "editado": 79
+  "editado": 79,
+  "tm": "https://www.transfermarkt.es/nicolas-de-la-cruz/profil/spieler/397458"
  },
  {
   "id": "p080",
@@ -1744,7 +1823,8 @@
   "editado": 80,
   "fotografiada": true,
   "fotoFrente": "fotos/p080-frente.jpg",
-  "fotoEspalda": "fotos/p080-espalda.jpg"
+  "fotoEspalda": "fotos/p080-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/santiago-bueno/profil/spieler/438001"
  },
  {
   "id": "p081",
@@ -1788,7 +1868,8 @@
   },
   "fotografiada": true,
   "fotoFrente": "fotos/p081-frente.jpg",
-  "fotoEspalda": "fotos/p081-espalda.jpg"
+  "fotoEspalda": "fotos/p081-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/darwin-nunez/profil/spieler/546543"
  },
  {
   "id": "p082",
@@ -1843,7 +1924,8 @@
   },
   "fotografiada": true,
   "fotoFrente": "fotos/p082-frente.jpg",
-  "fotoEspalda": "fotos/p082-espalda.jpg"
+  "fotoEspalda": "fotos/p082-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/darwin-nunez/profil/spieler/546543"
  },
  {
   "id": "p083",
@@ -1882,7 +1964,8 @@
   },
   "fotoFrente": "fotos/p083-frente.jpg",
   "fotoEspalda": "fotos/p083-espalda.jpg",
-  "fotografiada": true
+  "fotografiada": true,
+  "tm": "https://www.transfermarkt.es/joaquin-piquerez/profil/spieler/496268"
  },
  {
   "id": "p084",
@@ -1923,7 +2006,8 @@
   },
   "fotoFrente": "fotos/p084-frente.jpg",
   "fotoEspalda": "fotos/p084-espalda.jpg",
-  "fotografiada": true
+  "fotografiada": true,
+  "tm": "https://www.transfermarkt.es/facundo-torres/profil/spieler/465822"
  },
  {
   "id": "p085",
@@ -1947,7 +2031,8 @@
   "editado": 85,
   "fotografiada": true,
   "fotoFrente": "fotos/p085-frente.jpg",
-  "fotoEspalda": "fotos/p085-espalda.jpg"
+  "fotoEspalda": "fotos/p085-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/agustin-canobbio/profil/spieler/457533"
  },
  {
   "id": "p086",
@@ -1998,7 +2083,8 @@
   "editado": 86,
   "fotoFrente": "fotos/p086-frente.jpg",
   "fotoEspalda": "fotos/p086-espalda.jpg",
-  "fotografiada": true
+  "fotografiada": true,
+  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352"
  },
  {
   "id": "p087",
@@ -2041,7 +2127,8 @@
   "editado": 87,
   "fotoFrente": "fotos/p087-frente.jpg",
   "fotoEspalda": "fotos/p087-espalda.jpg",
-  "fotografiada": true
+  "fotografiada": true,
+  "tm": "https://www.transfermarkt.es/martin-satriano/profil/spieler/640109"
  },
  {
   "id": "p088",
@@ -2081,7 +2168,8 @@
   },
   "fotoFrente": "fotos/p088-frente.jpg",
   "fotoEspalda": "fotos/p088-espalda.jpg",
-  "fotografiada": true
+  "fotografiada": true,
+  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352"
  },
  {
   "id": "p089",
@@ -2122,7 +2210,8 @@
   "editado": 89,
   "fotoFrente": "fotos/p089-frente.jpg",
   "fotoEspalda": "fotos/p089-espalda.jpg",
-  "fotografiada": true
+  "fotografiada": true,
+  "tm": "https://www.transfermarkt.es/luis-suarez/profil/spieler/44352"
  },
  {
   "tipo": "Club",
@@ -2146,7 +2235,8 @@
   "creado": 84.7,
   "fotografiada": true,
   "fotoFrente": "fotos/p090-frente.jpg",
-  "fotoEspalda": "fotos/p090-espalda.jpg"
+  "fotoEspalda": "fotos/p090-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/joaquin-lavega/profil/spieler/895926"
  },
  {
   "tipo": "Club",
@@ -2170,7 +2260,8 @@
   "creado": 84.75,
   "fotografiada": true,
   "fotoFrente": "fotos/p091-frente.jpg",
-  "fotoEspalda": "fotos/p091-espalda.jpg"
+  "fotoEspalda": "fotos/p091-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/mateo-ponte/profil/spieler/856047"
  },
  {
   "tipo": "Club",
@@ -2194,7 +2285,8 @@
   "creado": 84.8,
   "fotografiada": true,
   "fotoFrente": "fotos/p092-frente.jpg",
-  "fotoEspalda": "fotos/p092-espalda.jpg"
+  "fotoEspalda": "fotos/p092-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/joaquin-fernandez/profil/spieler/898380"
  },
  {
   "tipo": "Selección",
@@ -2218,7 +2310,8 @@
   "escudo": "uruguay",
   "creado": 84.82,
   "fotoFrente": "fotos/p093-frente.jpg",
-  "fotoEspalda": "fotos/p093-espalda.jpg"
+  "fotoEspalda": "fotos/p093-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/mateo-ponte/profil/spieler/856047"
  },
  {
   "tipo": "Club",
@@ -2242,7 +2335,8 @@
   "escudo": "atletico-madrid",
   "creado": 82.8,
   "fotoFrente": "fotos/p094-frente.jpg",
-  "fotoEspalda": "fotos/p094-espalda.jpg"
+  "fotoEspalda": "fotos/p094-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/diego-godin/profil/spieler/54928"
  },
  {
   "tipo": "Club",
@@ -2266,7 +2360,8 @@
   "escudo": "penarol",
   "creado": 86,
   "fotoFrente": "fotos/p095-frente.jpg",
-  "fotoEspalda": "fotos/p095-espalda.jpg"
+  "fotoEspalda": "fotos/p095-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/juan-rodriguez/profil/spieler/1228231"
  },
  {
   "tipo": "Club",
@@ -2275,7 +2370,7 @@
   "tieneParches": false,
   "parches": "",
   "nacionalidad": "Uruguay",
-  "notas": "Tercera camiseta azul de Tiffosi con banda negra, antel en las mangas, Olmos y Asociación Española en la espalda. Regalo de fines de 2025 o principios de 2026.",
+  "notas": "Tercera camiseta 2025 de Tiffosi, azul con banda negra, antel en las mangas, Olmos, Asociación Española y EGA Rutas del Plata en la espalda. Peralta usaba el 16 esa temporada; ahora usa el 10. Regalo de fines de 2025 o principios de 2026.",
   "editado": 0,
   "id": "p096",
   "equipo": "Danubio",
@@ -2290,6 +2385,7 @@
   "creado": 88,
   "fotografiada": true,
   "fotoFrente": "fotos/p096-frente.jpg",
-  "fotoEspalda": "fotos/p096-espalda.jpg"
+  "fotoEspalda": "fotos/p096-espalda.jpg",
+  "tm": "https://www.transfermarkt.es/mateo-peralta/profil/spieler/997829"
  }
 ]
