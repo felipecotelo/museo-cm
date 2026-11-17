@@ -322,6 +322,26 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
 .sheet{width:min(100%,1040px);border-radius:28px;box-shadow:0 60px 120px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08),0 0 120px -50px rgba(91,200,255,.6)}
 .sheet .stage:has(.flip.foto){aspect-ratio:4/5}
 .sheet h3{font-size:32px}
+
+/* color por tarjeta */
+.stats .stat{--c:#5bc8ff;--c2:#2f6bff}
+.stats .stat:nth-child(2){--c:#a78bfa;--c2:#6d28d9}
+.stats .stat:nth-child(3){--c:#fbbf24;--c2:#f59e0b}
+.stats .stat:nth-child(4){--c:#fb923c;--c2:#ea580c}
+.stats .stat:nth-child(5){--c:#818cf8;--c2:#4f46e5}
+.stats .stat{background:linear-gradient(150deg,color-mix(in srgb,var(--c) 20%,transparent),color-mix(in srgb,var(--c2) 6%,transparent) 55%,transparent),var(--bg2);border-color:color-mix(in srgb,var(--c) 22%,transparent)}
+.stats .stat::after{background:radial-gradient(circle,color-mix(in srgb,var(--c) 35%,transparent),transparent 70%);opacity:.8}
+.stats .stat .ico{background:color-mix(in srgb,var(--c) 18%,transparent);border-color:color-mix(in srgb,var(--c) 45%,transparent)}
+.stats .stat .ico svg{stroke:var(--c)}
+.stats .stat .lbl{color:color-mix(in srgb,var(--c) 75%,white)}
+.stats .stat .v{background:linear-gradient(120deg,#fff,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats .stat:hover{border-color:color-mix(in srgb,var(--c) 60%,transparent);box-shadow:0 22px 44px -24px var(--c)}
+.stats .stat[aria-pressed="true"]{border-color:var(--c);box-shadow:0 0 0 1px color-mix(in srgb,var(--c) 50%,transparent) inset,0 22px 44px -22px var(--c)}
+.stats .stat[aria-pressed="true"] .v{background:linear-gradient(120deg,var(--c),var(--c2));-webkit-background-clip:text;background-clip:text}
+.prog-card.tu{background:linear-gradient(130deg,#1d4ed8 0%,#2f6bff 18%,rgba(91,200,255,.35) 48%,var(--bg2) 88%);border-color:rgba(127,216,255,.35)}
+.prog-card.mia{background:linear-gradient(130deg,#6d28d9 0%,#8b5cf6 18%,rgba(196,181,253,.3) 48%,var(--bg2) 88%);border-color:rgba(196,181,253,.35)}
+.prog-card .pc-eye{color:rgba(255,255,255,.75)}
+.prog-card .pc-note{color:rgba(255,255,255,.75)}
 </style>
 </head>
 <body>
@@ -564,8 +584,8 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
       var txt=el('div','pc-t');var num=el('div','pc-n');add(num,el('span','pc-big',String(n)),el('span','pc-of','/ '+all.length));
       add(txt,el('span','pc-eye',eyebrow),el('span','pc-title',title),num,el('span','pc-note',note));
       add(c,ring(all.length?n/all.length:0,gid,c1,c2),txt);c.addEventListener('click',function(){st.vista=st.vista===vista?'camisetas':vista;renderVitrina()});return c}
-    add(fb,card('tu','fotografiadas','Tu parte','Camisetas fotografiadas',shot,(all.length-shot)?'Faltan '+(all.length-shot)+' por fotografiar':'¡Fotografiaste todas!','#7fd8ff','#2f6bff','g-tu'),
-           card('mia','completas','Mi parte','Camisetas terminadas',done,(shot-done)>0?(shot-done)+' fotos esperan su imagen':'Al día con tus fotos','#c4b5fd','#5bc8ff','g-mia'));
+    add(fb,card('tu','fotografiadas','Tu parte','Camisetas fotografiadas',shot,(all.length-shot)?'Faltan '+(all.length-shot)+' por fotografiar':'¡Fotografiaste todas!','#e0f6ff','#7fd8ff','g-tu'),
+           card('mia','completas','Mi parte','Camisetas terminadas',done,(shot-done)>0?(shot-done)+' fotos esperan su imagen':'Al día con tus fotos','#e9d5ff','#a78bfa','g-mia'));
     add(root,fb);
     var stats=el('div','stats');
     var ICO={camisetas:'M8 3 4 5 2 9l3 2 1-1v11h12V10l1 1 3-2-2-4-4-2c-1 2-2.5 3-4 3S9 5 8 3z',jugadores:'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21c0-4 4-6 8-6s8 2 8 6',ligas:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18',selecciones:'M5 21V4M5 4h11l-2 4 2 4H5',completar:'M4 20h4L19 9l-4-4L4 16zM14 6l4 4'};
