@@ -1343,7 +1343,9 @@
   "notas": "Debut en Mundiales.",
   "creado": 64,
   "editado": 64,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p064-frente.jpg",
+  "fotoEspalda": "fotos/p064-espalda.jpg"
  },
  {
   "id": "p065",
