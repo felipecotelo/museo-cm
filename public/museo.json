@@ -784,7 +784,7 @@
   "equipo": "River Plate",
   "tipo": "Club",
   "pais": "Argentina",
-  "temporada": "",
+  "temporada": "2017-18",
   "version": "Titular",
   "tieneNumero": true,
   "dorsal": "18",
@@ -796,10 +796,12 @@
   "color2": "#d62828",
   "patron": "banda",
   "escudo": "river-plate",
-  "notas": "",
+  "notas": "Titular adidas de la era BBVA Francés, con Huawei en las mangas.",
   "creado": 38,
   "editado": 38,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p038-frente.jpg",
+  "fotoEspalda": "fotos/p038-espalda.jpg"
  },
  {
   "id": "p039",
