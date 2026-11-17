@@ -496,7 +496,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
     var root=document.getElementById('p-vitrina');root.textContent='';
     var all=numbered();
     // hero
-    var fin=all.filter(hasFoto).slice().reverse();
+    var fin=all.filter(function(r){return hasFoto(r)&&!missing(r).length}).slice().reverse();if(!fin.length)fin=all.filter(hasFoto).slice().reverse();
     var plz={},nat={};all.forEach(function(r){if(r.regaloDe)plz[norm(r.regaloDe)]=1;if(r.pais)nat[norm(r.pais)]=1});
     var hero=el('section','hero');var ht=el('div','hero-t');
     var eye=el('span','hero-eye');add(eye,el('i'),'Colección privada');
@@ -506,9 +506,9 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
     add(hero,ht);
     if(fin.length){
       var show=el('button','hero-show');show.type='button';var fr=el('div','hero-frame');var dots=el('div','hero-dots');
-      var imgs=fin.slice(0,6).map(function(r,i){var im=el('img'+(i?'':''),i?null:'on');im.src=r.fotoFrente;im.alt=r.equipo+' de '+(r.regaloDe||'');add(fr,im);add(dots,el('i',i?null:'on'));return im});
+      var imgs=fin.map(function(r,i){var im=el('img'+(i?'':''),i?null:'on');im.src=r.fotoFrente;im.alt=r.equipo+' de '+(r.regaloDe||'');add(fr,im);add(dots,el('i',i?null:'on'));return im});
       var cap=el('div','hero-cap');add(fr,cap);
-      fin.slice(0,6).forEach(function(r,k){imgs[k].dataset.id=r.id});
+      fin.forEach(function(r,k){imgs[k].dataset.id=r.id});
       var paint=function(k){var r=fin[k];cap.textContent='';var who=el('span');add(who,el('span',null,r.regaloDe||''),flag(r.nacionalidad));add(cap,el('small',null,k?'En la vitrina':'Última incorporación'),el('b',null,r.equipo+(r.temporada?' '+r.temporada:'')),who)};
       paint(0);add(show,fr,dots);add(hero,show);
       show.addEventListener('click',function(){var a=fr.querySelector('img.on');openSheet(a?a.dataset.id:fin[0].id)});
