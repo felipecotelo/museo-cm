@@ -1286,17 +1286,19 @@
   "tieneNumero": true,
   "dorsal": "12",
   "tieneParches": true,
-  "parches": "Escudo con anillos olímpicos (Preolímpico Sub-23)",
+  "parches": "Escudo del Comité Olímpico Uruguayo (bandera y anillos)",
   "regaloDe": "Randall Rodríguez",
   "nacionalidad": "Uruguay",
   "color1": "#5bc8ff",
   "color2": "#111111",
   "patron": "cuello",
   "escudo": "uruguay",
-  "notas": "Camiseta de arquero Puma, amarilla, del Preolímpico Sub-23 de Venezuela 2024 con Bielsa, donde Randall usó el 12.",
+  "notas": "Camiseta de arquero Puma, amarilla y naranja, de la selección olímpica (escudo del Comité Olímpico Uruguayo en vez del de la AUF). Randall usó el 12 en el Preolímpico Sub-23 2024 con Bielsa.",
   "creado": 61,
   "editado": 61,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p061-frente.jpg",
+  "fotoEspalda": "fotos/p061-espalda.jpg"
  },
  {
   "id": "p062",
