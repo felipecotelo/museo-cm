@@ -2114,9 +2114,9 @@
   "version": "",
   "tieneNumero": true,
   "tieneParches": true,
-  "parches": "Parche dorado en el pecho",
+  "parches": "Campeón Brasileirão 2024",
   "nacionalidad": "Uruguay",
-  "notas": "Negra Reebok con cuello blanco, vbet de sponsor y Centauro en las mangas. Ponte usa el 4 en el Botafogo. Falta confirmar si es la tercera o la cuarta camiseta.",
+  "notas": "Negra Reebok 2025 con el parche dorado de campeón del Brasileirão 2024, vbet de sponsor y Centrum en las mangas. Ponte usa el 4 en el Botafogo.",
   "editado": 0,
   "id": "p091",
   "equipo": "Botafogo",
@@ -2129,7 +2129,9 @@
   "patron": "cuello",
   "escudo": "botafogo",
   "creado": 84.75,
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p091-frente.jpg",
+  "fotoEspalda": "fotos/p091-espalda.jpg"
  },
  {
   "tipo": "Club",
