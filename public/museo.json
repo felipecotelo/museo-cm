@@ -1439,7 +1439,8 @@
    "numeroColor": "#d62828",
    "nombreColor": "#1f3a6b",
    "espaldaAbajo": "ASSIST CARD",
-   "nombreAbajo": true
+   "nombreAbajo": true,
+   "fuente": "slab"
   }
  },
  {
@@ -1721,12 +1722,18 @@
    "puños": "#ffffff",
    "marca": "nike",
    "marcaColor": "#ffffff",
-   "sponsor": "Standard Chartered",
    "sponsorColor": "#ffffff",
    "nombreEspalda": "Darwin",
    "nombreColor": "#ffffff",
    "numeroColor": "#ffffff",
-   "numeroBorde": "#7a0f18"
+   "numeroBorde": "#7a0f18",
+   "escudoColor": "#ffffff",
+   "sponsorLineas": [
+    "standard",
+    "chartered"
+   ],
+   "fuente": "saira",
+   "emblemaEspalda": "97"
   }
  },
  {
@@ -1753,21 +1760,32 @@
    "base": "#c8102e",
    "rayas": {
     "color": "#f2b632",
-    "ancho": 0.7,
-    "paso": 7
+    "ancho": 0.35,
+    "paso": 6,
+    "opacidad": 0.75
    },
    "cuello": "polo",
    "cuelloColor": "#ffffff",
-   "lados": "#f2c200",
    "marca": "nike",
    "marcaColor": "#f2c200",
-   "sponsor": "Standard Chartered",
    "sponsorColor": "#ffffff",
    "nombreEspalda": "Darwin",
    "nombreColor": "#ffffff",
    "nombreBorde": "#f2b632",
    "numeroColor": "#ffffff",
-   "numeroBorde": "#f2b632"
+   "numeroBorde": "#f2b632",
+   "poloColor": "#ffffff",
+   "poloRayas": [
+    "#c8102e",
+    "#f2b632"
+   ],
+   "escudoColor": "#f2c200",
+   "sponsorLineas": [
+    "standard",
+    "chartered"
+   ],
+   "fuente": "chakra",
+   "emblemaEspalda": "97"
   }
  },
  {
@@ -1802,7 +1820,8 @@
    "sponsor": "sportingbet",
    "sponsorColor": "#ffffff",
    "nombreColor": "#ffffff",
-   "numeroColor": "#ffffff"
+   "numeroColor": "#ffffff",
+   "fuente": "oswald"
   }
  },
  {
@@ -1839,7 +1858,8 @@
    "espaldaArriba": "Fictor",
    "nombreEspalda": "F. Torres",
    "nombreColor": "#0f7a3c",
-   "numeroColor": "#0f7a3c"
+   "numeroColor": "#0f7a3c",
+   "fuente": "oswald"
   }
  },
  {
@@ -1904,7 +1924,8 @@
    "numeroColor": "#ffffff",
    "numeroBorde": "#141820",
    "espaldaArriba": "Banrisul",
-   "espaldaAbajo": "Unimed"
+   "espaldaAbajo": "Unimed",
+   "fuente": "oswald"
   },
   "notas": "Titular Umbro presentada en abril de 2022, con el parche \"250\" en la parte de abajo por los 250 años de Porto Alegre. Suárez la usó en el arranque de 2023, antes de que salieran los modelos nuevos. Sponsors: Banrisul, mrjack.bet y Unimed; el 9 lleva Marquespan. Se la regaló en la Fecha FIFA de noviembre de 2023 (Argentina y Bolivia), cuando Bielsa lo convocó por primera vez.",
   "creado": 81.5,
@@ -1943,7 +1964,8 @@
    "numeroColor": "#ffffff",
    "numeroBorde": "#4a0c13",
    "espaldaAbajo": "Lowi",
-   "parcheEspalda": "es"
+   "parcheEspalda": "es",
+   "fuente": "barlow"
   },
   "notas": "Visitante Joma granate y blanca de la temporada 2026-27, con Tecnocasa Group de sponsor y la bandera de España en la espalda. Satriano usa el 10 en el Getafe.",
   "creado": 84.6,
@@ -1971,10 +1993,6 @@
   "editado": 88,
   "diseno": {
    "base": "#111214",
-   "hombros": "#f4a6c6",
-   "hombrosBorde": "#111214",
-   "lados": "#f4a6c6",
-   "puños": "#f4a6c6",
    "cuello": "v",
    "cuelloColor": "#f4a6c6",
    "marca": "adidas",
@@ -1982,7 +2000,12 @@
    "sponsorIcono": "corona",
    "sponsorColor": "#f4a6c6",
    "nombreColor": "#f4a6c6",
-   "numeroColor": "#f4a6c6"
+   "numeroColor": "#f4a6c6",
+   "tiras": "#f4a6c6",
+   "vivo": "#f4a6c6",
+   "vivoBajo": "#f4a6c6",
+   "puñosLinea": "#f4a6c6",
+   "fuente": "righteous"
   }
  },
  {
@@ -2003,7 +2026,7 @@
   "patron": "cuello",
   "escudo": "uruguay",
   "diseno": {
-   "base": "#8cc8ec",
+   "base": "#86bfe9",
    "cuello": "redondo",
    "cuelloColor": "#ffffff",
    "lados": "#111318",
@@ -2014,10 +2037,10 @@
    "nombreEspalda": "L. Suárez",
    "nombreColor": "#111318",
    "numeroColor": "#111318",
-   "cuelloColor2": "#111318",
-   "textura": "lineas",
-   "texturaColor": "rgba(255,255,255,.14)",
-   "emblemaEspalda": "sol"
+   "emblemaEspalda": "sol",
+   "cuelloInterior": "#111318",
+   "ladosBorde": "#ffffff",
+   "fuente": "teko"
   },
   "notas": "Titular Nike de Eliminatorias, con los parches de las Eliminatorias al Mundial 2026 y \"Football Unites the World\". Uruguay estrenó Nike en la Copa América 2024, y el único partido de Eliminatorias que Suárez jugó con esta camiseta fue su despedida: Uruguay 0-0 Paraguay, 6 de setiembre de 2024, en el Centenario.",
   "creado": 82.7,
