@@ -86,6 +86,15 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hook{width:24px;height:32px;margin-top:-14px;margin-bottom:-9px;z-index:1}
 .hook path{fill:none;stroke:#c9ced6;stroke-width:2.2;stroke-linecap:round}
 .hang .flip{width:128px;filter:drop-shadow(-6px 4px 6px rgba(0,0,0,.55))}
+.hang{width:122px;margin-right:12px}
+.tile{position:relative;width:122px;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:radial-gradient(120% 80% at 50% 0%,#5a3b25 0%,#3a2516 45%,#1c120b 100%);box-shadow:0 14px 22px -10px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.07);transition:box-shadow .2s}
+.tile::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 1px 0 rgba(255,255,255,.08);pointer-events:none}
+.hang:hover .tile,.hang:focus-visible .tile,.hang.on .tile{box-shadow:0 18px 28px -10px rgba(0,0,0,.85),0 0 0 1px rgba(91,200,255,.55),0 0 26px -6px rgba(91,200,255,.5)}
+.tile.dr{display:flex;align-items:center;justify-content:center}
+.tile.dr .flip{width:80%;filter:drop-shadow(-4px 6px 6px rgba(0,0,0,.6))}
+.tile.ph .flip{width:100%;height:100%}
+.hang:focus-visible .flip{outline:none}
+.hang:focus-visible .tile{outline:2px solid var(--ice);outline-offset:2px}
 .rack-cap{display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 24px 16px;border-top:1px solid var(--line);flex-wrap:wrap}
 .rack-cap .no{font:600 11px var(--body);letter-spacing:.14em;color:var(--acc);font-variant-numeric:tabular-nums}
 .rack-cap b{font:600 15px var(--disp);display:inline-flex;align-items:center;gap:6px}
@@ -246,7 +255,7 @@ textarea.inp{min-height:80px;resize:vertical}
   form.f{grid-template-columns:1fr}.designer{grid-template-columns:110px minmax(0,1fr)}
   .sheet{grid-template-columns:1fr}.sheet .stage{aspect-ratio:4/3}.sheet .body{padding:20px}
 }
-@media (max-width:480px){.stat:last-child{grid-column:1/-1}.hang{width:100px;margin-right:-56px}.hang .flip{width:100px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:14px}.tab svg{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.piece .info{padding:10px 11px 12px}.club b{font-size:13.5px}.designer{grid-template-columns:1fr}.designer .prev{width:140px}.prog{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.stat:last-child{grid-column:1/-1}.hang{width:100px;margin-right:10px}.tile{width:100px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:14px}.tab svg{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.piece .info{padding:10px 11px 12px}.club b{font-size:13.5px}.designer{grid-template-columns:1fr}.designer .prev{width:140px}.prog{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
 /* ===== REDISEÑO: museo nocturno ===== */
@@ -310,8 +319,9 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
 .grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,15rem),1fr));gap:18px}
 .piece{border-radius:22px;border-color:rgba(255,255,255,.07);background:#0a0c12;position:relative;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
 .piece:hover{transform:translateY(-6px);border-color:rgba(166,226,255,.35);box-shadow:0 30px 60px -30px rgba(0,0,0,.9),0 0 50px -18px rgba(91,200,255,.55)}
-.piece:has(.flip.foto){display:block}
-.piece:has(.flip.foto) .stage{aspect-ratio:4/5}
+.piece:has(.flip.foto){display:flex;flex-direction:column}
+.piece:has(.flip.foto) .stage{aspect-ratio:4/5;flex:1 0 auto}
+.stage .flip.foto{position:absolute;inset:0;width:100%;height:100%}
 .piece:has(.flip.foto) .flip-in>img{transition:transform .6s}
 .piece:has(.flip.foto) .info{position:absolute;left:0;right:0;bottom:0;padding:56px 16px 16px;background:linear-gradient(transparent,rgba(5,7,12,.78) 38%,rgba(5,7,12,.96));pointer-events:none}
 .piece:has(.flip.foto) .club b{font-size:16.5px}
@@ -387,7 +397,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
   function pad(n){return String(n).padStart(3,'0')}
   function safeHex(c,d){return /^#[0-9a-fA-F]{6}$/.test(c||'')?c:d}
   function flag(p){var k=norm(p);var c=SUB[k]||(ISO[k]||'').toLowerCase();if(!c)return null;var i=el('img','flag');i.src='banderas/'+c+'.svg';i.alt=p;i.title=p;i.loading='lazy';return i}
-  function crestSrc(r){var s=r.escudo;if(s&&ESC.indexOf(s)>=0)return 'escudos/'+s+'.png';return ''}
+  function crestSrc(r){var s=r.escudo;if(s&&ESC.indexOf(s)>=0)return 'escudos/'+s+'.png?v=3';return ''}
   function crestImg(r,cls){var s=crestSrc(r);if(!s)return null;var i=el('img',cls||'crest');i.src=s;i.alt='';i.loading='lazy';return i}
   function photoSrc(r){if(r.fotoId&&/^[A-Za-z0-9_-]+$/.test(r.fotoId))return '/_blob/'+r.fotoId;if(r.fotoUrl&&/^(https:|\/)/.test(r.fotoUrl))return r.fotoUrl;return ''}
   function missing(r){var m=[];if(!r.temporada)m.push('año');if(!r.version)m.push('versión');if(r.tieneNumero!==true&&r.tieneNumero!==false)m.push('número');else if(r.tieneNumero&&!r.dorsal)m.push('número');if(r.tieneParches!==true&&r.tieneParches!==false)m.push('parches');return m}
@@ -495,6 +505,8 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
     }
     return s;
   }
+  function rackFoto(r){var f=el('div','flip foto');var i=el('div','flip-in');var a=el('img');a.src=r.fotoEspalda||r.fotoFrente;a.alt='';a.loading='lazy';a.decoding='async';add(i,a);
+    if(r.fotoEspalda){var b=el('img','back');b.src=r.fotoFrente;b.alt='';b.loading='lazy';b.decoding='async';add(i,b)}add(f,i);return f}
   function flipBack(r){var f=el('div','flip');var i=el('div','flip-in');var bk=shirtBack(r);bk.classList.remove('back');var fr=shirt(r,{noNum:true});fr.classList.add('back');add(i,bk,fr);add(f,i);return f}
   function flipShirt(r){var f=el('div','flip');var i=el('div','flip-in');add(i,shirt(r,{noNum:true}),shirtBack(r));add(f,i);return f}
   function fotoFlip(r){var f=el('div','flip foto');var i=el('div','flip-in');var a=el('img');a.src=r.fotoFrente;a.alt=r.equipo+' de '+(r.regaloDe||'')+', frente';a.loading='lazy';add(i,a);
@@ -560,7 +572,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
     sorted(all,st.orden).forEach(function(r){
       var b=el('button','hang');b.type='button';b.setAttribute('aria-label','N.º '+pad(r._n)+': '+r.equipo+(r.temporada?' '+r.temporada:'')+', de '+(r.regaloDe||''));
       var hk=S('svg',{viewBox:'0 0 22 30','class':'hook','aria-hidden':'true'});hk.appendChild(S('path',{d:'M11 28 V14 C11 9 18 9 18 4.5 C18 1.5 15 0.5 13 1.5'}));
-      add(b,hk,flipBack(r));
+      var tile=el('div','tile'+(hasFoto(r)?' ph':' dr'));add(tile,hasFoto(r)?rackFoto(r):flipBack(r));add(b,hk,tile);
       b.addEventListener('mouseenter',function(){caption(r)});b.addEventListener('focus',function(){caption(r)});
       b.addEventListener('click',function(){if(moved)return;openSheet(r.id)});
       add(rail,b);
