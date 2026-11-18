@@ -870,6 +870,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
   }
   fetch('museo.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){BASE=Array.isArray(j)?j:[]}).catch(function(){BASE=[]}).then(function(){st.loaded=true;refresh();if(st.tab==='nueva')renderNueva()});
 })();
+document.addEventListener('error',function(e){var t=e.target;if(!t||t.tagName!=='IMG'||t.dataset.retry>=3)return;var n=+(t.dataset.retry||0)+1;t.dataset.retry=n;var src=t.getAttribute('src');if(!src)return;setTimeout(function(){t.src=src.split('#')[0].replace(/([?&])r=\d+/,'')+(src.indexOf('?')>=0?'&':'?')+'r='+n},1500*n)},true);
 </script>
 </body>
 </html>
