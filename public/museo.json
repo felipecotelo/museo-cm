@@ -286,7 +286,9 @@
   "tm": "https://www.transfermarkt.es/jose-luis-rodriguez/profil/spieler/430339",
   "fotografiada": true,
   "fotoFrente": "fotos/p013-frente.jpg",
-  "recorteFrente": "recortes/p013-frente.webp"
+  "recorteFrente": "recortes/p013-frente.webp",
+  "fotoEspalda": "fotos/p013-espalda.jpg",
+  "recorteEspalda": "recortes/p013-espalda.webp"
  },
  {
   "id": "p014",
@@ -908,7 +910,9 @@
   "tm": "https://www.transfermarkt.es/bruno-fornaroli/profil/spieler/72651",
   "fotografiada": true,
   "fotoEspalda": "fotos/p040-espalda.jpg",
-  "recorteEspalda": "recortes/p040-espalda.webp"
+  "recorteEspalda": "recortes/p040-espalda.webp",
+  "fotoFrente": "fotos/p040-frente.jpg",
+  "recorteFrente": "recortes/p040-frente.webp"
  },
  {
   "id": "p041",
@@ -985,7 +989,11 @@
   "creado": 43,
   "editado": 43,
   "tm": "https://www.transfermarkt.es/pablo-siles/profil/spieler/511289",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p043-frente.jpg",
+  "fotoEspalda": "fotos/p043-espalda.jpg",
+  "recorteFrente": "recortes/p043-frente.webp",
+  "recorteEspalda": "recortes/p043-espalda.webp"
  },
  {
   "id": "p044",
@@ -1008,7 +1016,11 @@
   "creado": 44,
   "editado": 44,
   "tm": "https://www.transfermarkt.es/pablo-siles/profil/spieler/511289",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p044-frente.jpg",
+  "fotoEspalda": "fotos/p044-espalda.jpg",
+  "recorteFrente": "recortes/p044-frente.webp",
+  "recorteEspalda": "recortes/p044-espalda.webp"
  },
  {
   "id": "p045",
@@ -1676,7 +1688,11 @@
   "creado": 72,
   "editado": 72,
   "tm": "https://www.transfermarkt.es/jose-luis-rodriguez/profil/spieler/430339",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p072-frente.jpg",
+  "fotoEspalda": "fotos/p072-espalda.jpg",
+  "recorteFrente": "recortes/p072-frente.webp",
+  "recorteEspalda": "recortes/p072-espalda.webp"
  },
  {
   "id": "p073",

@@ -7,4 +7,4 @@ p044 espalda 4f0666424c3a00fe
 p043 frente 7ec8683273b94b47
 p043 espalda 6eba1ec412772b50
 p040 frente c0c08015f078e0f8
-p040 espalda d0983a45ebed6c26
+p040 espalda HECHO

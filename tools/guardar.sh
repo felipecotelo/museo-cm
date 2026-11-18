@@ -1,8 +1,9 @@
 #!/bin/bash
 # Mueve la última imagen bajada de Gemini al museo: guardar.sh <id> <frente|espalda>
 # Espera hasta 40 s a que termine la descarga.
+# Solo toma descargas de los últimos 2 minutos, la más nueva.
 for i in $(seq 1 40); do
-  f=$(ls -t ~/Downloads/Gemini_Generated_Image_*.* ~/Downloads/watermarked_img_*.* 2>/dev/null | grep -v '\.crdownload$' | head -1)
+  f=$(find ~/Downloads -maxdepth 1 \( -name 'Gemini_Generated_Image_*' -o -name 'watermarked_img_*' \) ! -name '*.crdownload' -mmin -2 -print0 2>/dev/null | xargs -0 ls -t 2>/dev/null | head -1)
   [ -n "$f" ] && break; sleep 1
 done
 [ -z "$f" ] && { echo "no hay imagen"; exit 1; }
