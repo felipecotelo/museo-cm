@@ -4,5 +4,5 @@ Detalles para rehacer algún día (19/11/2026)
 - p069 Cerrito 2022 frente: texto chico del sponsor salió mal ("RENT-A-PAR")
 - p008 Progreso espalda: dice "RUTA DEL PLATA" sin la S
 - Ghan (p016/p026): número por confirmar cuando saque la foto
-- p099 Deportivo Maldonado 2018 #30: jugador por confirmar (Felipe lo chequea)
-- p099/p100/p101: orden de llegada provisorio (creado 87.1-87.3, antes de Peralta)
+- p099 Deportivo Maldonado 2018 #30: llegó en 2018, jugador por confirmar (Felipe lo chequea)
+- p100/p101 (Rey, Cavani): orden de llegada provisorio, antes de Peralta
