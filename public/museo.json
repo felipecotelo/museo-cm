@@ -209,7 +209,11 @@
   "creado": 8,
   "editado": 8,
   "tm": "https://www.transfermarkt.es/carlos-canobbio/profil/spieler/205719",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p008-frente.jpg",
+  "fotoEspalda": "fotos/p008-espalda.jpg",
+  "recorteFrente": "recortes/p008-frente.webp",
+  "recorteEspalda": "recortes/p008-espalda.webp"
  },
  {
   "id": "p009",
@@ -553,7 +557,11 @@
   "creado": 22,
   "editado": 22,
   "tm": "https://www.transfermarkt.es/agustin-navarro/profil/spieler/464916",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p022-frente.jpg",
+  "fotoEspalda": "fotos/p022-espalda.jpg",
+  "recorteFrente": "recortes/p022-frente.webp",
+  "recorteEspalda": "recortes/p022-espalda.webp"
  },
  {
   "id": "p023",
@@ -1595,7 +1603,11 @@
   "creado": 65,
   "editado": 65,
   "tm": "https://www.transfermarkt.es/sebastian-coates/profil/spieler/102427",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p065-frente.jpg",
+  "fotoEspalda": "fotos/p065-espalda.jpg",
+  "recorteFrente": "recortes/p065-frente.webp",
+  "recorteEspalda": "recortes/p065-espalda.webp"
  },
  {
   "id": "p066",
@@ -1712,7 +1724,9 @@
   "tm": "https://www.transfermarkt.es/matias-velazquez/profil/spieler/263578",
   "fotografiada": true,
   "fotoFrente": "fotos/p069-frente.jpg",
-  "recorteFrente": "recortes/p069-frente.webp"
+  "recorteFrente": "recortes/p069-frente.webp",
+  "fotoEspalda": "fotos/p069-espalda.jpg",
+  "recorteEspalda": "recortes/p069-espalda.webp"
  },
  {
   "id": "p070",
@@ -2625,7 +2639,7 @@
   "color1": "#111111",
   "color2": "#2bb34a",
   "patron": "banda",
-  "escudo": "",
+  "escudo": "tigres",
   "creado": 88.7,
   "fotografiada": true,
   "tm": "https://www.transfermarkt.es/rodrigo-aguirre/profil/spieler/189410",

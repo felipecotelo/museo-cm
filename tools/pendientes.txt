@@ -1,10 +1,6 @@
-Imágenes pendientes (19/11/2026) — Gemini frenó por cantidad
-- p008 Progreso (Carlos Canobbio): frente y espalda
-- p065 Uruguay 2022 (Coates): frente y espalda
-- p022 San Marcos de Arica (Navarro): frente y espalda
-- p069 Cerrito 2022 (Matías Velázquez): espalda
-Rehacer:
+Detalles para rehacer algún día (19/11/2026)
 - p007 Cerrito 2020 frente: sponsor dice "SOL", debe decir "GOL Rent-a-Car"
 - p012 Racing 2019 espalda: dice "AGUAS DEL PLATA", debe decir "RUTAS DEL PLATA"
-Otros:
-- p098 Tigres (Aguirre): falta el escudo de Tigres en la ficha
+- p069 Cerrito 2022 frente: texto chico del sponsor salió mal ("RENT-A-PAR")
+- p008 Progreso espalda: dice "RUTA DEL PLATA" sin la S
+- Ghan (p016/p026): número por confirmar cuando saque la foto
