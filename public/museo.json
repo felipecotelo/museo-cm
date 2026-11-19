@@ -2697,7 +2697,7 @@
  },
  {
   "id": "p100",
-  "equipo": "Selección Uruguaya Sub-20",
+  "equipo": "Selección Uruguaya",
   "tipo": "Selección",
   "pais": "Uruguay",
   "temporada": "2019",
@@ -2712,7 +2712,7 @@
   "color2": "#7cb9e8",
   "patron": "cuello",
   "escudo": "uruguay",
-  "notas": "Blanca Puma con hombros celestes y la bandera olímpica uruguaya en el pecho; R. REY 5 atrás. De un torneo amistoso de la sub-20.",
+  "notas": "Blanca Puma con hombros celestes y la bandera olímpica uruguaya en el pecho; R. REY 5 atrás. Sub-20: torneo amistoso.",
   "creado": 87.2,
   "editado": 87.2,
   "tm": "https://www.transfermarkt.es/rodrigo-rey/profil/spieler/820900",
