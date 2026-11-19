@@ -294,11 +294,15 @@
   "color2": "#ffffff",
   "patron": "rayas",
   "escudo": "racing",
-  "notas": "Titular mgr blanca con cuello verde, Microtin y Cortiluz adelante; Punta Ballena, Casa de Galicia y 11 verde atrás.",
+  "notas": "Titular mgr blanca con cuello verde, Micofin y Cortiluz adelante; Punta Ballena, 11 verde, Casa de Galicia, EGA Rutas del Plata y Esencial atrás.",
   "creado": 12,
   "editado": 12,
   "tm": "https://www.transfermarkt.es/liber-quinones/profil/spieler/91791",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p012-frente.jpg",
+  "fotoEspalda": "fotos/p012-espalda.jpg",
+  "recorteFrente": "recortes/p012-frente.webp",
+  "recorteEspalda": "recortes/p012-espalda.webp"
  },
  {
   "id": "p013",
@@ -2610,12 +2614,12 @@
   "tieneParches": true,
   "parches": "Liga MX",
   "nacionalidad": "Uruguay",
-  "notas": "Tercera adidas negra con detalles verdes, Cemex adelante; Tecate, Afirme y R. AGUIRRE 17 atrás.",
+  "notas": "Tercera adidas negra con detalles verdes, Cemex adelante; Tecate, Afirme y R. AGUIRRE 17 atrás. Aguirre firmó con Tigres en febrero de 2026; regalo de marzo de 2026.",
   "editado": 0,
   "id": "p098",
   "equipo": "Tigres UANL",
   "pais": "México",
-  "temporada": "",
+  "temporada": "2025-26",
   "dorsal": "17",
   "regaloDe": "Rodrigo Aguirre",
   "color1": "#111111",
@@ -2624,6 +2628,10 @@
   "escudo": "",
   "creado": 88.7,
   "fotografiada": true,
-  "tm": "https://www.transfermarkt.es/rodrigo-aguirre/profil/spieler/189410"
+  "tm": "https://www.transfermarkt.es/rodrigo-aguirre/profil/spieler/189410",
+  "fotoFrente": "fotos/p098-frente.jpg",
+  "fotoEspalda": "fotos/p098-espalda.jpg",
+  "recorteFrente": "recortes/p098-frente.webp",
+  "recorteEspalda": "recortes/p098-espalda.webp"
  }
 ]
