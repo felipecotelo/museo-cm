@@ -1489,28 +1489,6 @@
   "recorteEspalda": "recortes/p057-espalda.webp"
  },
  {
-  "id": "p058",
-  "equipo": "Selección Uruguaya",
-  "tipo": "Selección",
-  "pais": "Uruguay",
-  "temporada": "2022",
-  "version": "",
-  "tieneNumero": null,
-  "dorsal": "",
-  "tieneParches": null,
-  "parches": "",
-  "regaloDe": "Ronald Araujo",
-  "nacionalidad": "Uruguay",
-  "color1": "#5bc8ff",
-  "color2": "#111111",
-  "patron": "cuello",
-  "escudo": "uruguay",
-  "notas": "",
-  "creado": 58,
-  "editado": 58,
-  "tm": "https://www.transfermarkt.es/ronald-araujo/profil/spieler/480267"
- },
- {
   "id": "p059",
   "equipo": "Santos",
   "tipo": "Club",
