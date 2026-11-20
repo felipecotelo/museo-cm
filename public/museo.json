@@ -236,7 +236,11 @@
   "creado": 9,
   "editado": 9,
   "tm": "https://www.transfermarkt.es/santiago-gonzalez/profil/spieler/203450",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p009-frente.jpg",
+  "fotoEspalda": "fotos/p009-espalda.jpg",
+  "recorteFrente": "recortes/p009-frente.webp",
+  "recorteEspalda": "recortes/p009-espalda.webp"
  },
  {
   "id": "p010",
@@ -681,7 +685,11 @@
   "creado": 27,
   "editado": 27,
   "tm": "https://www.transfermarkt.es/matias-mier/profil/spieler/76716",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p027-frente.jpg",
+  "fotoEspalda": "fotos/p027-espalda.jpg",
+  "recorteFrente": "recortes/p027-frente.webp",
+  "recorteEspalda": "recortes/p027-espalda.webp"
  },
  {
   "id": "p028",
@@ -888,7 +896,11 @@
   "creado": 35,
   "editado": 35,
   "tm": "https://www.transfermarkt.es/giovanni-zarfino/profil/spieler/208022",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p035-frente.jpg",
+  "fotoEspalda": "fotos/p035-espalda.jpg",
+  "recorteFrente": "recortes/p035-frente.webp",
+  "recorteEspalda": "recortes/p035-espalda.webp"
  },
  {
   "id": "p036",
@@ -911,7 +923,11 @@
   "creado": 36,
   "editado": 36,
   "tm": "https://www.transfermarkt.es/giovanni-zarfino/profil/spieler/208022",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p036-frente.jpg",
+  "fotoEspalda": "fotos/p036-espalda.jpg",
+  "recorteFrente": "recortes/p036-frente.webp",
+  "recorteEspalda": "recortes/p036-espalda.webp"
  },
  {
   "id": "p037",
@@ -987,7 +1003,11 @@
   "creado": 39,
   "editado": 39,
   "tm": "https://www.transfermarkt.es/gonzalo-porras/profil/spieler/76730",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p039-frente.jpg",
+  "fotoEspalda": "fotos/p039-espalda.jpg",
+  "recorteFrente": "recortes/p039-frente.webp",
+  "recorteEspalda": "recortes/p039-espalda.webp"
  },
  {
   "id": "p040",
@@ -1193,7 +1213,11 @@
   "creado": 47,
   "editado": 47,
   "tm": "https://www.transfermarkt.es/fabian-canobbio/profil/spieler/15455",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p047-frente.jpg",
+  "fotoEspalda": "fotos/p047-espalda.jpg",
+  "recorteFrente": "recortes/p047-frente.webp",
+  "recorteEspalda": "recortes/p047-espalda.webp"
  },
  {
   "id": "p048",
