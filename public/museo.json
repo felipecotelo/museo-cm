@@ -1619,28 +1619,6 @@
   "recorteEspalda": "recortes/p062-espalda.webp"
  },
  {
-  "id": "p063",
-  "equipo": "Plaza Colonia",
-  "tipo": "Club",
-  "pais": "Uruguay",
-  "temporada": "2022",
-  "version": "",
-  "tieneNumero": null,
-  "dorsal": "",
-  "tieneParches": null,
-  "parches": "",
-  "regaloDe": "Santiago Mele",
-  "nacionalidad": "Uruguay",
-  "color1": "#1f8a3b",
-  "color2": "#ffffff",
-  "patron": "cuello",
-  "escudo": "plaza-colonia",
-  "notas": "",
-  "creado": 63,
-  "editado": 63,
-  "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739"
- },
- {
   "id": "p064",
   "equipo": "Selección Uruguaya",
   "tipo": "Selección",
