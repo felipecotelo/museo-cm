@@ -662,7 +662,7 @@
   "color2": "#111111",
   "patron": "rayas",
   "escudo": "penarol",
-  "notas": "Titular Puma aurinegra con antel adelante; 1891 arriba del 10 atrás. Mier usó la 10 en el primer semestre de 2017.",
+  "notas": "Titular Puma aurinegra con antel adelante; 1891 arriba del 10 atrás. Mier usó la 10 en el primer semestre de 2017. BGH en el puño de las mangas.",
   "creado": 27,
   "editado": 27,
   "tm": "https://www.transfermarkt.es/matias-mier/profil/spieler/76716",
@@ -1254,11 +1254,15 @@
   "color2": "#ffffff",
   "patron": "cuello",
   "escudo": "espanyol",
-  "notas": "Alternativa Kelme azul marino con detalles blancos; Rivermutua adelante; CABRERA 4 atrás.",
+  "notas": "Alternativa Kelme azul marino con detalles blancos; Riviera Maya adelante; CABRERA 4 y DIGI atrás.",
   "creado": 49,
   "editado": 49,
   "tm": "https://www.transfermarkt.es/leandro-cabrera/profil/spieler/102423",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p049-frente.jpg",
+  "fotoEspalda": "fotos/p049-espalda.jpg",
+  "recorteFrente": "recortes/p049-frente.webp",
+  "recorteEspalda": "recortes/p049-espalda.webp"
  },
  {
   "id": "p050",
@@ -1281,7 +1285,11 @@
   "creado": 50,
   "editado": 50,
   "tm": "https://www.transfermarkt.es/mathias-olivera/profil/spieler/376514",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p050-frente.jpg",
+  "fotoEspalda": "fotos/p050-espalda.jpg",
+  "recorteFrente": "recortes/p050-frente.webp",
+  "recorteEspalda": "recortes/p050-espalda.webp"
  },
  {
   "id": "p051",
@@ -1304,7 +1312,11 @@
   "creado": 51,
   "editado": 51,
   "tm": "https://www.transfermarkt.es/matias-vecino/profil/spieler/143812",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p051-frente.jpg",
+  "fotoEspalda": "fotos/p051-espalda.jpg",
+  "recorteFrente": "recortes/p051-frente.webp",
+  "recorteEspalda": "recortes/p051-espalda.webp"
  },
  {
   "id": "p052",
@@ -1327,7 +1339,11 @@
   "creado": 52,
   "editado": 52,
   "tm": "https://www.transfermarkt.es/damian-suarez/profil/spieler/76746",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p052-frente.jpg",
+  "fotoEspalda": "fotos/p052-espalda.jpg",
+  "recorteFrente": "recortes/p052-frente.webp",
+  "recorteEspalda": "recortes/p052-espalda.webp"
  },
  {
   "id": "p053",
@@ -1377,7 +1393,11 @@
   "creado": 54,
   "editado": 54,
   "tm": "https://www.transfermarkt.es/lucas-torreira/profil/spieler/318077",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p054-frente.jpg",
+  "fotoEspalda": "fotos/p054-espalda.jpg",
+  "recorteFrente": "recortes/p054-frente.webp",
+  "recorteEspalda": "recortes/p054-espalda.webp"
  },
  {
   "id": "p055",
@@ -1400,7 +1420,11 @@
   "creado": 55,
   "editado": 55,
   "tm": "https://www.transfermarkt.es/manuel-ugarte/profil/spieler/476701",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p055-frente.jpg",
+  "fotoEspalda": "fotos/p055-espalda.jpg",
+  "recorteFrente": "recortes/p055-frente.webp",
+  "recorteEspalda": "recortes/p055-espalda.webp"
  },
  {
   "id": "p056",
@@ -1423,7 +1447,11 @@
   "creado": 56,
   "editado": 56,
   "tm": "https://www.transfermarkt.es/guillermo-varela/profil/spieler/188862",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p056-frente.jpg",
+  "fotoEspalda": "fotos/p056-espalda.jpg",
+  "recorteFrente": "recortes/p056-frente.webp",
+  "recorteEspalda": "recortes/p056-espalda.webp"
  },
  {
   "id": "p057",
@@ -1661,7 +1689,11 @@
   "creado": 67,
   "editado": 67,
   "tm": "https://www.transfermarkt.es/jose-luis-rodriguez/profil/spieler/430339",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p067-frente.jpg",
+  "fotoEspalda": "fotos/p067-espalda.jpg",
+  "recorteFrente": "recortes/p067-frente.webp",
+  "recorteEspalda": "recortes/p067-espalda.webp"
  },
  {
   "id": "p068",
@@ -1970,7 +2002,11 @@
   "creado": 79,
   "editado": 79,
   "tm": "https://www.transfermarkt.es/nicolas-de-la-cruz/profil/spieler/397458",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p079-frente.jpg",
+  "fotoEspalda": "fotos/p079-espalda.jpg",
+  "recorteFrente": "recortes/p079-frente.webp",
+  "recorteEspalda": "recortes/p079-espalda.webp"
  },
  {
   "id": "p080",
@@ -2911,7 +2947,11 @@
   "creado": 58,
   "editado": 58,
   "tm": "https://www.transfermarkt.es/ronald-araujo/profil/spieler/480267",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p058-frente.jpg",
+  "fotoEspalda": "fotos/p058-espalda.jpg",
+  "recorteFrente": "recortes/p058-frente.webp",
+  "recorteEspalda": "recortes/p058-espalda.webp"
  },
  {
   "id": "p108",
@@ -2934,6 +2974,10 @@
   "creado": 86.5,
   "editado": 86.5,
   "tm": "https://www.transfermarkt.es/manuel-ugarte/profil/spieler/476701",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p108-frente.jpg",
+  "fotoEspalda": "fotos/p108-espalda.jpg",
+  "recorteFrente": "recortes/p108-frente.webp",
+  "recorteEspalda": "recortes/p108-espalda.webp"
  }
 ]
