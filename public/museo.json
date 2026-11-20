@@ -262,7 +262,8 @@
   "notas": "",
   "creado": 10,
   "editado": 10,
-  "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739"
+  "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739",
+  "fotografiada": true
  },
  {
   "id": "p011",
@@ -463,7 +464,8 @@
   "notas": "",
   "creado": 18,
   "editado": 18,
-  "tm": "https://www.transfermarkt.es/junior-arias/profil/spieler/268652"
+  "tm": "https://www.transfermarkt.es/junior-arias/profil/spieler/268652",
+  "fotografiada": true
  },
  {
   "id": "p019",
@@ -618,7 +620,8 @@
   "notas": "",
   "creado": 24,
   "editado": 24,
-  "tm": "https://www.transfermarkt.es/fabricio-formiliano/profil/spieler/197231"
+  "tm": "https://www.transfermarkt.es/fabricio-formiliano/profil/spieler/197231",
+  "fotografiada": true
  },
  {
   "id": "p025",
@@ -873,7 +876,8 @@
   "notas": "",
   "creado": 34,
   "editado": 34,
-  "tm": "https://www.transfermarkt.es/giovanni-zarfino/profil/spieler/208022"
+  "tm": "https://www.transfermarkt.es/giovanni-zarfino/profil/spieler/208022",
+  "fotografiada": true
  },
  {
   "id": "p035",
@@ -1901,7 +1905,8 @@
   "notas": "",
   "creado": 74,
   "editado": 74,
-  "tm": "https://www.transfermarkt.es/diego-forlan/profil/spieler/3408"
+  "tm": "https://www.transfermarkt.es/diego-forlan/profil/spieler/3408",
+  "fotografiada": true
  },
  {
   "id": "p075",
@@ -1999,7 +2004,8 @@
   "notas": "",
   "creado": 78,
   "editado": 78,
-  "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739"
+  "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739",
+  "fotografiada": true
  },
  {
   "id": "p079",
