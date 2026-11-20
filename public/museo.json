@@ -263,7 +263,11 @@
   "creado": 10,
   "editado": 10,
   "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p010-frente.jpg",
+  "fotoEspalda": "fotos/p010-espalda.jpg",
+  "recorteFrente": "recortes/p010-frente.webp",
+  "recorteEspalda": "recortes/p010-espalda.webp"
  },
  {
   "id": "p011",
@@ -286,7 +290,11 @@
   "creado": 11,
   "editado": 11,
   "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p011-frente.jpg",
+  "fotoEspalda": "fotos/p011-espalda.jpg",
+  "recorteFrente": "recortes/p011-frente.webp",
+  "recorteEspalda": "recortes/p011-espalda.webp"
  },
  {
   "id": "p012",
@@ -466,7 +474,11 @@
   "creado": 18,
   "editado": 18,
   "tm": "https://www.transfermarkt.es/junior-arias/profil/spieler/268652",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p018-frente.jpg",
+  "fotoEspalda": "fotos/p018-espalda.jpg",
+  "recorteFrente": "recortes/p018-frente.webp",
+  "recorteEspalda": "recortes/p018-espalda.webp"
  },
  {
   "id": "p019",
@@ -622,7 +634,11 @@
   "creado": 24,
   "editado": 24,
   "tm": "https://www.transfermarkt.es/fabricio-formiliano/profil/spieler/197231",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p024-frente.jpg",
+  "fotoEspalda": "fotos/p024-espalda.jpg",
+  "recorteFrente": "recortes/p024-frente.webp",
+  "recorteEspalda": "recortes/p024-espalda.webp"
  },
  {
   "id": "p025",
@@ -645,7 +661,11 @@
   "creado": 25,
   "editado": 25,
   "tm": "https://www.transfermarkt.es/fabricio-formiliano/profil/spieler/197231",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p025-frente.jpg",
+  "fotoEspalda": "fotos/p025-espalda.jpg",
+  "recorteFrente": "recortes/p025-frente.webp",
+  "recorteEspalda": "recortes/p025-espalda.webp"
  },
  {
   "id": "p026",
@@ -879,7 +899,11 @@
   "creado": 34,
   "editado": 34,
   "tm": "https://www.transfermarkt.es/giovanni-zarfino/profil/spieler/208022",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p034-frente.jpg",
+  "fotoEspalda": "fotos/p034-espalda.jpg",
+  "recorteFrente": "recortes/p034-frente.webp",
+  "recorteEspalda": "recortes/p034-espalda.webp"
  },
  {
   "id": "p035",
@@ -1197,7 +1221,11 @@
   "creado": 46,
   "editado": 46,
   "tm": "https://www.transfermarkt.es/marcelo-tabarez/profil/spieler/264582",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p046-frente.jpg",
+  "fotoEspalda": "fotos/p046-espalda.jpg",
+  "recorteFrente": "recortes/p046-frente.webp",
+  "recorteEspalda": "recortes/p046-espalda.webp"
  },
  {
   "id": "p047",
@@ -1909,7 +1937,11 @@
   "creado": 74,
   "editado": 74,
   "tm": "https://www.transfermarkt.es/diego-forlan/profil/spieler/3408",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p074-frente.jpg",
+  "fotoEspalda": "fotos/p074-espalda.jpg",
+  "recorteFrente": "recortes/p074-frente.webp",
+  "recorteEspalda": "recortes/p074-espalda.webp"
  },
  {
   "id": "p075",
@@ -2013,7 +2045,11 @@
   "creado": 78,
   "editado": 78,
   "tm": "https://www.transfermarkt.es/santiago-mele/profil/spieler/320739",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p078-frente.jpg",
+  "fotoEspalda": "fotos/p078-espalda.jpg",
+  "recorteFrente": "recortes/p078-frente.webp",
+  "recorteEspalda": "recortes/p078-espalda.webp"
  },
  {
   "id": "p079",
@@ -2841,7 +2877,11 @@
   "creado": 84.5,
   "editado": 84.5,
   "tm": "https://www.transfermarkt.es/joaquin-lavega/profil/spieler/895926",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p103-frente.jpg",
+  "fotoEspalda": "fotos/p103-espalda.jpg",
+  "recorteFrente": "recortes/p103-frente.webp",
+  "recorteEspalda": "recortes/p103-espalda.webp"
  },
  {
   "id": "p104",
@@ -2864,7 +2904,11 @@
   "creado": 77.5,
   "editado": 77.5,
   "tm": "",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p104-frente.jpg",
+  "fotoEspalda": "fotos/p104-espalda.jpg",
+  "recorteFrente": "recortes/p104-frente.webp",
+  "recorteEspalda": "recortes/p104-espalda.webp"
  },
  {
   "id": "p105",
@@ -2887,7 +2931,11 @@
   "creado": 14.5,
   "editado": 14.5,
   "tm": "https://www.transfermarkt.es/carlos-grossmuller/profil/spieler/50791",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p105-frente.jpg",
+  "fotoEspalda": "fotos/p105-espalda.jpg",
+  "recorteFrente": "recortes/p105-frente.webp",
+  "recorteEspalda": "recortes/p105-espalda.webp"
  },
  {
   "id": "p106",
@@ -2910,7 +2958,11 @@
   "creado": 82.5,
   "editado": 82.5,
   "tm": "",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p106-frente.jpg",
+  "fotoEspalda": "fotos/p106-espalda.jpg",
+  "recorteFrente": "recortes/p106-frente.webp",
+  "recorteEspalda": "recortes/p106-espalda.webp"
  },
  {
   "id": "p107",
@@ -2933,6 +2985,10 @@
   "creado": 82.6,
   "editado": 82.6,
   "tm": "",
-  "fotografiada": true
+  "fotografiada": true,
+  "fotoFrente": "fotos/p107-frente.jpg",
+  "fotoEspalda": "fotos/p107-espalda.jpg",
+  "recorteFrente": "recortes/p107-frente.webp",
+  "recorteEspalda": "recortes/p107-espalda.webp"
  }
 ]
