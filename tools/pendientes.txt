@@ -1,7 +1,3 @@
 Detalles para rehacer algún día (19/11/2026)
-- p007 Cerrito 2020 frente: sponsor dice "SOL", debe decir "GOL Rent-a-Car"
-- p012 Racing 2019 espalda: dice "AGUAS DEL PLATA", debe decir "RUTAS DEL PLATA"
-- p069 Cerrito 2022 frente: texto chico del sponsor salió mal ("RENT-A-PAR")
-- p008 Progreso espalda: dice "RUTA DEL PLATA" sin la S
 - p099 Deportivo Maldonado 2018 #30: llegó en 2018, jugador por confirmar (Felipe lo chequea)
 - p101 Cavani: Eliminatorias 2020; confirmar cuándo llegó (aprox. 2022)
